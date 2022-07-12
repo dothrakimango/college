@@ -1,6 +1,5 @@
 import './App.css';
 import React from "react";
-import { parse } from "papaparse";
 import Schools from "./schools.json";
 
 export default function App() {
@@ -14,7 +13,7 @@ export default function App() {
   }
 
   
-  var schools = data.map(([name, satLower, satUpper, actLower, actUpper]) =>
+  var schools = Schools.map(([name, satLower, satUpper, actLower, actUpper]) =>
     ({name, satLower, satUpper, actLower, actUpper}));
   return(
     <h1>{schools[0]}</h1>
