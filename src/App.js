@@ -1,7 +1,7 @@
 import './App.css';
 import React from "react";
 import { parse } from "papaparse";
-//import Schools from "./schools.json";
+import Schools from "./schools.json";
 
 export default function App() {
   const School = (name, satLower, satUpper, actLower, actUpper) =>
@@ -12,14 +12,7 @@ export default function App() {
         actLower: actLower,
         actUpper: actUpper }
   }
-  
-  
-  fetch("./satscores copy.csv")
-    .then(schoolinfo => schoolinfo.text())
-    .then(schoolinfo => {
-      var data = parse(schoolinfo);
-      console.log("data:", data);
-    });
+
   
   var schools = data.map(([name, satLower, satUpper, actLower, actUpper]) =>
     ({name, satLower, satUpper, actLower, actUpper}));
