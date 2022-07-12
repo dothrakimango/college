@@ -3,27 +3,57 @@ import React from "react";
 import Schools from "./schools.json";
 
 export default function App() {
-  const School = (name, satLower, satUpper, actLower, actUpper) =>
-    { return {
-        name: name,
-        satLower: satLower,
-        satUpper: satUpper,
-        actLower: actLower,
-        actUpper: actUpper }
-  }
+  const School = Schools.map(
+    (schools)=>{
+      return (
+        <tr>
+          <td>{schools.name}</td>
+          <td>{schools.satLower}</td>
+          <td>{schools.satUpper}</td>
+          <td>{schools.actLower}</td>
+          <td>{schools.actUpper}</td>
+        </tr>
+      )
+    }
+  )
+  
 
   
-  var schools = Schools.map(([name, satLower, satUpper, actLower, actUpper]) =>
-    ({name, satLower, satUpper, actLower, actUpper}));
+
   return(
-    <h1>{schools[0]}</h1>
+    <div>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                    <th>School</th>
+                    <th>SAT Lower</th>
+                    <th>SAT Upper</th>
+                    <th>ACT Lower</th>
+                    <th>ACT Upper</th>
+                    </tr>
+                </thead>
+                <tbody>
+                 
+                    
+                    {School}
+                    
+                </tbody>
+            </table>
+             
+        </div>
   )
 }
 
 
 
 
+// (name, satLower, satUpper, actLower, actUpper)
 
+//name: name,
+//satLower: satLower,
+//satUpper: satUpper,
+//actLower: actLower,
+//actUpper: actUpper 
 
 //<div>
   //Schools && Schools.map( school => {
