@@ -4,1126 +4,1288 @@
    "satLower": 1110,
    "satUpper": 1310,
    "actLower": 21,
-   "actUpper": 28
+   "actUpper": 28,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Babson College",
    "satLower": 1270,
    "satUpper": 1450,
    "actLower": 27,
-   "actUpper": 32
+   "actUpper": 32,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Bard College",
    "satLower": 1220,
    "satUpper": 1420,
    "actLower": 27,
-   "actUpper": 32
+   "actUpper": 32,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Barnard College",
    "satLower": 1370,
    "satUpper": 1500,
    "actLower": 31,
-   "actUpper": 34
+   "actUpper": 34,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Bates College",
    "satLower": 1210,
    "satUpper": 1420,
    "actLower": 27,
-   "actUpper": 33
+   "actUpper": 33,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Baylor University",
    "satLower": 1200,
    "satUpper": 1350,
    "actLower": 26,
-   "actUpper": 31
+   "actUpper": 31,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Beloit College",
    "satLower": 1100,
    "satUpper": 1290,
    "actLower": 21,
-   "actUpper": 29
+   "actUpper": 29,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Bennington College",
    "satLower": 1240,
    "satUpper": 1360,
    "actLower": 25,
-   "actUpper": 31
+   "actUpper": 31,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Bentley University",
    "satLower": 1230,
    "satUpper": 1410,
    "actLower": 27,
-   "actUpper": 31
+   "actUpper": 31,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Boston College",
    "satLower": 1350,
    "satUpper": 1480,
    "actLower": 31,
-   "actUpper": 34
+   "actUpper": 34,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Boston University",
    "satLower": 1340,
    "satUpper": 1460,
    "actLower": 30,
-   "actUpper": 34
+   "actUpper": 34,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Bowdoin College",
    "satLower": 1340,
    "satUpper": 1510,
    "actLower": 30,
-   "actUpper": 34
+   "actUpper": 34,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Brandeis University",
    "satLower": 1350,
    "satUpper": 1470,
    "actLower": 31,
-   "actUpper": 33
+   "actUpper": 33,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Brown University",
    "satLower": 1440,
    "satUpper": 1550,
    "actLower": 33,
-   "actUpper": 35
+   "actUpper": 35,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Bryn Mawr College",
    "satLower": 1260,
    "satUpper": 1470,
    "actLower": 26,
-   "actUpper": 32
+   "actUpper": 32,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Bucknell University",
    "satLower": 1230,
    "satUpper": 1390,
    "actLower": 27,
-   "actUpper": 31
+   "actUpper": 31,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "California Institute of Technology",
    "satLower": 1510,
    "satUpper": 1570,
    "actLower": 35,
-   "actUpper": 36
+   "actUpper": 36,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Carleton College",
    "satLower": 1330,
    "satUpper": 1530,
    "actLower": 30,
-   "actUpper": 34
+   "actUpper": 34,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Carnegie Mellon University",
    "satLower": 1460,
    "satUpper": 1560,
    "actLower": 33,
-   "actUpper": 35
+   "actUpper": 35,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Case Western Reserve University",
    "satLower": 1350,
    "satUpper": 1490,
    "actLower": 31,
-   "actUpper": 34
+   "actUpper": 34,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Chapman University",
    "satLower": 1180,
    "satUpper": 1350,
    "actLower": 25,
-   "actUpper": 30
+   "actUpper": 30,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Claremont McKenna College",
    "satLower": 1330,
    "satUpper": 1460,
    "actLower": 31,
-   "actUpper": 34
+   "actUpper": 34,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Clark University",
    "satLower": 1160,
    "satUpper": 1360,
    "actLower": 27,
-   "actUpper": 32
+   "actUpper": 32,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Clemson University",
    "satLower": 1230,
    "satUpper": 1380,
    "actLower": 27,
-   "actUpper": 32
+   "actUpper": 32,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Colby College",
    "satLower": 1390,
    "satUpper": 1530,
    "actLower": 32,
-   "actUpper": 34
+   "actUpper": 34,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Colgate University",
    "satLower": 1300,
    "satUpper": 1460,
    "actLower": 30,
-   "actUpper": 33
+   "actUpper": 33,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "College of the Holy Cross",
    "satLower": 1300,
    "satUpper": 1410,
    "actLower": 29,
-   "actUpper": 32
+   "actUpper": 32,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "College of William and Mary",
    "satLower": 1300,
    "satUpper": 1490,
    "actLower": 30,
-   "actUpper": 34
+   "actUpper": 34,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Colorado College",
    "satLower": 1260,
    "satUpper": 1440,
    "actLower": 29,
-   "actUpper": 33
+   "actUpper": 33,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Columbia University",
    "satLower": 1500,
    "satUpper": 1560,
    "actLower": 34,
-   "actUpper": 35
+   "actUpper": 35,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Connecticut College",
    "satLower": 1310,
    "satUpper": 1420,
    "actLower": 30,
-   "actUpper": 33
+   "actUpper": 33,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Cooper Union for the Advancement of Science and Art",
    "satLower": 1305,
    "satUpper": 1530,
    "actLower": 30,
-   "actUpper": 35
+   "actUpper": 35,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Cornell University",
    "satLower": 1410,
    "satUpper": 1530,
    "actLower": 32,
-   "actUpper": 35
+   "actUpper": 35,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Dartmouth College",
    "satLower": 1430,
    "satUpper": 1550,
    "actLower": 32,
-   "actUpper": 35
+   "actUpper": 35,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Davidson College",
    "satLower": 1310,
    "satUpper": 1460,
    "actLower": 30,
-   "actUpper": 33
+   "actUpper": 33,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Denison University",
    "satLower": 1220,
    "satUpper": 1430,
    "actLower": 28,
-   "actUpper": 32
+   "actUpper": 32,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "DePaul University",
    "satLower": 1070,
    "satUpper": 1280,
    "actLower": 23,
-   "actUpper": 27
+   "actUpper": 27,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Dickinson College",
    "satLower": 1250,
    "satUpper": 1370,
    "actLower": 27,
-   "actUpper": 31
+   "actUpper": 31,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Duke University",
    "satLower": 1480,
    "satUpper": 1570,
    "actLower": 33,
-   "actUpper": 35
+   "actUpper": 35,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Elon University",
    "satLower": 1160,
    "satUpper": 1310,
    "actLower": 25,
-   "actUpper": 30
+   "actUpper": 30,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Emerson College",
    "satLower": 1200,
    "satUpper": 1390,
    "actLower": 27,
-   "actUpper": 31
+   "actUpper": 31,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Emory University",
    "satLower": 1400,
    "satUpper": 1510,
    "actLower": 31,
-   "actUpper": 34
+   "actUpper": 34,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Fordham University",
    "satLower": 1300,
    "satUpper": 1450,
    "actLower": 29,
-   "actUpper": 33
+   "actUpper": 33,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Franklin and Marshall College",
    "satLower": 1250,
    "satUpper": 1390,
    "actLower": 28,
-   "actUpper": 31
+   "actUpper": 31,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "George Washington University",
    "satLower": 1290,
    "satUpper": 1430,
    "actLower": 29,
-   "actUpper": 33
+   "actUpper": 33,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Georgetown University",
    "satLower": 1380,
    "satUpper": 1530,
    "actLower": 31,
-   "actUpper": 35
+   "actUpper": 35,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Gettysburg College",
    "satLower": 1270,
    "satUpper": 1410,
    "actLower": 27,
-   "actUpper": 32
+   "actUpper": 32,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Gonzaga University",
    "satLower": 1180,
    "satUpper": 1330,
    "actLower": 25,
-   "actUpper": 30
+   "actUpper": 30,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Grinnell College",
    "satLower": 1370,
    "satUpper": 1530,
    "actLower": 30,
-   "actUpper": 34
+   "actUpper": 34,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Grove City College",
    "satLower": 1130,
    "satUpper": 1380,
    "actLower": 24,
-   "actUpper": 30
+   "actUpper": 30,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Hamilton College",
    "satLower": 1410,
    "satUpper": 1500,
    "actLower": 32,
-   "actUpper": 34
+   "actUpper": 34,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Harvard College",
    "satLower": 1460,
    "satUpper": 1580,
    "actLower": 33,
-   "actUpper": 35
+   "actUpper": 35,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Harvey Mudd College",
    "satLower": 1490,
    "satUpper": 1560,
    "actLower": 34,
-   "actUpper": 35
+   "actUpper": 35,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Haverford College",
    "satLower": 1370,
    "satUpper": 1510,
    "actLower": 32,
-   "actUpper": 35
+   "actUpper": 35,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Hendrix College",
    "satLower": 1150,
    "satUpper": 1370,
    "actLower": 25,
-   "actUpper": 31
+   "actUpper": 31,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Hillsdale College",
    "satLower": 1290,
    "satUpper": 1460,
    "actLower": 29,
-   "actUpper": 33
+   "actUpper": 33,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Howard University",
    "satLower": 1130,
    "satUpper": 1260,
    "actLower": 22,
-   "actUpper": 26
+   "actUpper": 26,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Indiana University, Bloomington",
    "satLower": 1150,
    "satUpper": 1360,
    "actLower": 24,
-   "actUpper": 31
+   "actUpper": 31,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Johns Hopkins University",
    "satLower": 1470,
    "satUpper": 1570,
    "actLower": 33,
-   "actUpper": 35
+   "actUpper": 35,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Kalamazoo College",
    "satLower": 1150,
    "satUpper": 1360,
    "actLower": 25,
-   "actUpper": 30
+   "actUpper": 30,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Kenyon College",
    "satLower": 1280,
    "satUpper": 1460,
    "actLower": 30,
-   "actUpper": 33
+   "actUpper": 33,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Lafayette College",
    "satLower": 1270,
    "satUpper": 1420,
    "actLower": 28,
-   "actUpper": 33
+   "actUpper": 33,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Lawrence University",
    "satLower": 1210,
    "satUpper": 1400,
    "actLower": 26,
-   "actUpper": 32
+   "actUpper": 32,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Lehigh University",
    "satLower": 1280,
    "satUpper": 1420,
    "actLower": 29,
-   "actUpper": 33
+   "actUpper": 33,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Lewis & Clark College",
    "satLower": 1220,
    "satUpper": 1363,
    "actLower": 27,
-   "actUpper": 31
+   "actUpper": 31,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Loyola Marymount University",
    "satLower": 1230,
    "satUpper": 1380,
    "actLower": 27,
-   "actUpper": 31
+   "actUpper": 31,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Loyola University, Chicago",
    "satLower": 1170,
    "satUpper": 1370,
    "actLower": 25,
-   "actUpper": 31
+   "actUpper": 31,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Loyola University, Maryland",
    "satLower": 1150,
    "satUpper": 1310,
    "actLower": 25,
-   "actUpper": 30
+   "actUpper": 30,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Marquette University",
    "satLower": 1170,
    "satUpper": 1320,
    "actLower": 25,
-   "actUpper": 30
+   "actUpper": 30,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Massachusetts Institute of Technology",
    "satLower": 1510,
    "satUpper": 1570,
    "actLower": 34,
-   "actUpper": 36
+   "actUpper": 36,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Michigan State University",
    "satLower": 1110,
    "satUpper": 1280,
    "actLower": 23,
-   "actUpper": 29
+   "actUpper": 29,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Middlebury College",
    "satLower": 1340,
    "satUpper": 1520,
    "actLower": 31,
-   "actUpper": 34
+   "actUpper": 34,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Mount Holyoke College",
    "satLower": 1320,
    "satUpper": 1450,
    "actLower": 27,
-   "actUpper": 30
+   "actUpper": 30,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Muhlenberg College",
    "satLower": 1170,
    "satUpper": 1340,
    "actLower": 26,
-   "actUpper": 31
+   "actUpper": 31,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "New College of Florida",
    "satLower": 1190,
    "satUpper": 1365,
    "actLower": 25,
-   "actUpper": 30
+   "actUpper": 30,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "New Mexico Institute of Mining and Technology",
    "satLower": 1150,
    "satUpper": 1370,
    "actLower": 23,
-   "actUpper": 30
+   "actUpper": 30,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "New York University",
    "satLower": 1390,
    "satUpper": 1510,
    "actLower": 31,
-   "actUpper": 34
+   "actUpper": 34,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Northeastern University",
    "satLower": 1430,
    "satUpper": 1540,
    "actLower": 33,
-   "actUpper": 35
+   "actUpper": 35,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Northwestern University",
    "satLower": 1430,
    "satUpper": 1540,
    "actLower": 33,
-   "actUpper": 35
+   "actUpper": 35,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Oberlin College",
    "satLower": 1270,
    "satUpper": 1450,
    "actLower": 28,
-   "actUpper": 33
+   "actUpper": 33,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Occidental College",
    "satLower": 1290,
    "satUpper": 1440,
    "actLower": 28,
-   "actUpper": 33
+   "actUpper": 33,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Ohio State University, Columbus",
    "satLower": 1230,
    "satUpper": 1390,
    "actLower": 26,
-   "actUpper": 32
+   "actUpper": 32,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Penn State, University Park",
    "satLower": 1150,
    "satUpper": 1340,
    "actLower": 25,
-   "actUpper": 30
+   "actUpper": 30,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Pepperdine University",
    "satLower": 1210,
    "satUpper": 1390,
    "actLower": 26,
-   "actUpper": 31
+   "actUpper": 31,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Pomona College",
    "satLower": 1390,
    "satUpper": 1530,
    "actLower": 32,
-   "actUpper": 35
+   "actUpper": 35,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Princeton University",
    "satLower": 1460,
    "satUpper": 1560,
    "actLower": 32,
-   "actUpper": 35
+   "actUpper": 35,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Providence College",
    "satLower": 1210,
    "satUpper": 1360,
    "actLower": 27,
-   "actUpper": 31
+   "actUpper": 31,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Quinnipiac University",
    "satLower": 1070,
    "satUpper": 1260,
    "actLower": 23,
-   "actUpper": 28
+   "actUpper": 28,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Rensselaer Polytechnic Institute",
    "satLower": 1290,
    "satUpper": 1490,
    "actLower": 29,
-   "actUpper": 34
+   "actUpper": 34,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Rhodes College",
    "satLower": 1250,
    "satUpper": 1400,
    "actLower": 27,
-   "actUpper": 32
+   "actUpper": 32,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Rice University",
    "satLower": 1460,
    "satUpper": 1570,
    "actLower": 34,
-   "actUpper": 36
+   "actUpper": 36,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Rollins College",
    "satLower": 1120,
    "satUpper": 1330,
    "actLower": 24,
-   "actUpper": 32
+   "actUpper": 32,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Rutgers University, New Brunswick",
    "satLower": 1180,
    "satUpper": 1410,
    "actLower": 25,
-   "actUpper": 32
+   "actUpper": 32,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Santa Clara University",
    "satLower": 1280,
    "satUpper": 1430,
    "actLower": 28,
-   "actUpper": 32
+   "actUpper": 32,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Sarah Lawrence College",
    "satLower": 1220,
    "satUpper": 1410,
    "actLower": 27,
-   "actUpper": 32
+   "actUpper": 32,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Scripps College",
    "satLower": 1320,
    "satUpper": 1470,
    "actLower": 29,
-   "actUpper": 33
+   "actUpper": 33,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Skidmore College",
    "satLower": 1250,
    "satUpper": 1390,
    "actLower": 27,
-   "actUpper": 31
+   "actUpper": 31,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Smith College",
    "satLower": 1350,
    "satUpper": 1490,
    "actLower": 31,
-   "actUpper": 34
+   "actUpper": 34,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "St. John's College (MD)",
    "satLower": 1210,
    "satUpper": 1430,
    "actLower": 26,
-   "actUpper": 32
+   "actUpper": 32,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "St. Lawrence University",
    "satLower": 1180,
    "satUpper": 1360,
    "actLower": 28,
-   "actUpper": 32
+   "actUpper": 32,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "St. Mary's College of California",
    "satLower": 1080,
    "satUpper": 1260,
    "actLower": 21,
-   "actUpper": 28
+   "actUpper": 28,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "St. Mary's College of Maryland",
    "satLower": 1090,
    "satUpper": 1250,
    "actLower": 23,
-   "actUpper": 29
+   "actUpper": 29,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "St. Olaf College",
    "satLower": 1160,
    "satUpper": 1370,
    "actLower": 25,
-   "actUpper": 32
+   "actUpper": 32,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Stanford University",
    "satLower": 1420,
    "satUpper": 1550,
    "actLower": 31,
-   "actUpper": 35
+   "actUpper": 35,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Stevens Institute of Technology",
    "satLower": 1320,
    "satUpper": 1480,
    "actLower": 31,
-   "actUpper": 34
+   "actUpper": 34,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "SUNY, Binghamton University",
    "satLower": 1320,
    "satUpper": 1440,
    "actLower": 29,
-   "actUpper": 32
+   "actUpper": 32,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "SUNY, Geneseo",
    "satLower": 1150,
    "satUpper": 1290,
    "actLower": 24,
-   "actUpper": 29
+   "actUpper": 29,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "SUNY, Stony Brook University",
    "satLower": 1240,
    "satUpper": 1420,
    "actLower": 26,
-   "actUpper": 32
+   "actUpper": 32,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Swarthmore College",
    "satLower": 1400,
    "satUpper": 1530,
    "actLower": 31,
-   "actUpper": 34
+   "actUpper": 34,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Syracuse University",
    "satLower": 1180,
    "satUpper": 1380,
    "actLower": 26,
-   "actUpper": 30
+   "actUpper": 30,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Texas A & M University",
    "satLower": 1170,
    "satUpper": 1380,
    "actLower": 25,
-   "actUpper": 32
+   "actUpper": 32,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Texas Christian University",
    "satLower": 1120,
    "satUpper": 1310,
    "actLower": 25,
-   "actUpper": 31
+   "actUpper": 31,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "The College of New Jersey",
    "satLower": 1150,
    "satUpper": 1300,
    "actLower": 24,
-   "actUpper": 30
+   "actUpper": 30,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "The New School",
    "satLower": 1150,
    "satUpper": 1380,
    "actLower": 25,
-   "actUpper": 30
+   "actUpper": 30,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Trinity College (CT)",
    "satLower": 1310,
    "satUpper": 1420,
    "actLower": 30,
-   "actUpper": 32
+   "actUpper": 32,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Tufts University",
    "satLower": 1400,
    "satUpper": 1510,
    "actLower": 32,
-   "actUpper": 35
+   "actUpper": 35,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Tulane University",
    "satLower": 1360,
    "satUpper": 1470,
    "actLower": 30,
-   "actUpper": 33
+   "actUpper": 33,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Union College",
    "satLower": 1210,
    "satUpper": 1400,
    "actLower": 28,
-   "actUpper": 33
+   "actUpper": 33,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "United States Air Force Academy",
    "satLower": 1220,
    "satUpper": 1420,
    "actLower": 29,
-   "actUpper": 33
+   "actUpper": 33,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "United States Coast Guard Academy",
    "satLower": 1220,
    "satUpper": 1400,
    "actLower": 25,
-   "actUpper": 30
+   "actUpper": 30,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "United States Military Academy",
    "satLower": 1220,
    "satUpper": 1440,
    "actLower": 28,
-   "actUpper": 33
+   "actUpper": 33,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "United States Naval Academy",
    "satLower": 1250,
    "satUpper": 1510,
    "actLower": 27,
-   "actUpper": 34
+   "actUpper": 34,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "University of Arizona",
    "satLower": 1110,
    "satUpper": 1340,
    "actLower": 21,
-   "actUpper": 29
+   "actUpper": 29,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "University of Chicago",
    "satLower": 1510,
    "satUpper": 1560,
    "actLower": 34,
-   "actUpper": 35
+   "actUpper": 35,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "University of Colorado, Boulder",
    "satLower": 1140,
    "satUpper": 1340,
    "actLower": 24,
-   "actUpper": 31
+   "actUpper": 31,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "University of Connecticut",
    "satLower": 1190,
    "satUpper": 1390,
    "actLower": 27,
-   "actUpper": 32
+   "actUpper": 32,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "University of Florida",
    "satLower": 1370,
    "satUpper": 1450,
    "actLower": 28,
-   "actUpper": 33
+   "actUpper": 33,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "University of Georgia",
    "satLower": 1220,
    "satUpper": 1390,
    "actLower": 27,
-   "actUpper": 32
+   "actUpper": 32,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "University of Illinois at Urbana-Champaign",
    "satLower": 1220,
    "satUpper": 1450,
    "actLower": 27,
-   "actUpper": 33
+   "actUpper": 33,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "University of Maryland, College Park",
    "satLower": 1290,
    "satUpper": 1460,
    "actLower": 29,
-   "actUpper": 34
+   "actUpper": 34,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "University of Massachusetts, Amherst",
    "satLower": 1190,
    "satUpper": 1390,
    "actLower": 26,
-   "actUpper": 32
+   "actUpper": 32,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "University of Miami (FL)",
    "satLower": 1260,
    "satUpper": 1400,
    "actLower": 28,
-   "actUpper": 32
+   "actUpper": 32,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "University of Michigan, Ann Arbor",
    "satLower": 1340,
    "satUpper": 1520,
    "actLower": 31,
-   "actUpper": 34
+   "actUpper": 34,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "University of North Carolina, Chapel Hill",
    "satLower": 1270,
    "satUpper": 1460,
    "actLower": 27,
-   "actUpper": 33
+   "actUpper": 33,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "University of Notre Dame",
    "satLower": 1400,
    "satUpper": 1550,
    "actLower": 32,
-   "actUpper": 35
+   "actUpper": 35,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "University of Pennsylvania",
    "satLower": 1460,
    "satUpper": 1570,
    "actLower": 33,
-   "actUpper": 35
+   "actUpper": 35,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "University of Puget Sound",
    "satLower": 1150,
    "satUpper": 1370,
    "actLower": 25,
-   "actUpper": 30
+   "actUpper": 30,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "University of Redlands",
    "satLower": 1130,
    "satUpper": 1250,
    "actLower": 26,
-   "actUpper": 28
+   "actUpper": 28,
+   "weights": [0.3, 0.4, 2, 2, 2]
+
  },
  {
    "name": "University of Richmond",
    "satLower": 1290,
    "satUpper": 1440,
    "actLower": 30,
-   "actUpper": 33
+   "actUpper": 33,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "University of Rochester",
    "satLower": 1310,
    "satUpper": 1500,
    "actLower": 29,
-   "actUpper": 33
+   "actUpper": 33,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "University of San Francisco",
    "satLower": 1130,
    "satUpper": 1330,
    "actLower": 23,
-   "actUpper": 29
+   "actUpper": 29,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "University of Southern California",
    "satLower": 1360,
    "satUpper": 1510,
    "actLower": 30,
-   "actUpper": 34
+   "actUpper": 34,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "University of Texas at Austin",
    "satLower": 1220,
    "satUpper": 1450,
    "actLower": 26,
-   "actUpper": 33
+   "actUpper": 33,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "University of Texas at Dallas",
    "satLower": 1230,
    "satUpper": 1430,
    "actLower": 26,
-   "actUpper": 33
+   "actUpper": 33,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "University of the Pacific",
    "satLower": 1130,
    "satUpper": 1360,
    "actLower": 23,
-   "actUpper": 31
+   "actUpper": 31,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "University of Virginia",
    "satLower": 1330,
    "satUpper": 1490,
    "actLower": 30,
-   "actUpper": 34
+   "actUpper": 34,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "University of Washington at Seattle",
    "satLower": 1220,
    "satUpper": 1430,
    "actLower": 27,
-   "actUpper": 33
+   "actUpper": 33,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "University of Wisconsin at Madison",
    "satLower": 1300,
    "satUpper": 1440,
    "actLower": 27,
-   "actUpper": 32
+   "actUpper": 32,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Ursinus College",
    "satLower": 1150,
    "satUpper": 1350,
    "actLower": 24,
-   "actUpper": 30
+   "actUpper": 30,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Vanderbilt University",
    "satLower": 1470,
    "satUpper": 1570,
    "actLower": 33,
-   "actUpper": 35
+   "actUpper": 35,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Vassar College",
    "satLower": 1380,
    "satUpper": 1490,
    "actLower": 32,
-   "actUpper": 34
+   "actUpper": 34,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Villanova University",
    "satLower": 1320,
    "satUpper": 1460,
    "actLower": 30,
-   "actUpper": 33
+   "actUpper": 33,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Wake Forest University",
    "satLower": 1300,
    "satUpper": 1460,
    "actLower": 30,
-   "actUpper": 33
+   "actUpper": 33,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Washington and Lee University",
    "satLower": 1350,
    "satUpper": 1500,
    "actLower": 32,
-   "actUpper": 34
+   "actUpper": 34,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Washington University in St. Louis",
    "satLower": 1480,
    "satUpper": 1560,
    "actLower": 33,
-   "actUpper": 35
+   "actUpper": 35,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Webb Institute",
    "satLower": 1420,
    "satUpper": 1530,
    "actLower": 33,
-   "actUpper": 36
+   "actUpper": 36,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Wellesley College",
    "satLower": 1370,
    "satUpper": 1510,
    "actLower": 31,
-   "actUpper": 34
+   "actUpper": 34,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Wesleyan University (CT)",
    "satLower": 1340,
    "satUpper": 1510,
    "actLower": 31,
-   "actUpper": 34
+   "actUpper": 34,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Wheaton College (MA)",
    "satLower": 1180,
    "satUpper": 1340,
    "actLower": 25,
-   "actUpper": 31
+   "actUpper": 31,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Williams College",
    "satLower": 1430,
    "satUpper": 1540,
    "actLower": 33,
-   "actUpper": 35
+   "actUpper": 35,
+   "weights": [0.3, 0.4, 2, 2, 2]
  },
  {
    "name": "Yale University",
    "satLower": 1470,
    "satUpper": 1560,
    "actLower": 33,
-   "actUpper": 35
+   "actUpper": 35,
+   "weights": [0.3, 0.4, 2, 2, 2]
  }
 ]
