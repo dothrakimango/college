@@ -1,6 +1,7 @@
 import './App.css';
 import React, {useState} from "react";
 import Schools from "./schools.json";
+import TabHolder from './TabHolder.js';
 
 //Define Score Values
 var SATVal = 0
@@ -105,8 +106,6 @@ export default function App() {
       var dr = (iSat - fin.satUpper) * fin.weights[0] + ECScore * fin.weights[2] + SummerScore * fin.weights[3] + ServiceScore * fin.weights[4]
       console.log(dr)
       setFinalText("We Estimate your score to be " + dr.toString())
-      
-      
     }
     else {
       setFinalText("Not Availibe School. Please Enter All Valid Information")
@@ -114,12 +113,14 @@ export default function App() {
     setSchoolSelection(e)
   }
 
-
-
   return(
     <>
     <div className = 'head'>
       <h1>Akala: Chance-Me Feature</h1>
+    </div>
+    <div className="App">
+      <TabHolder score = {satScore} setScore = {setSatScore} />
+      
     </div>
     <div className = 'inputs'>
     <p>Please Enter Your SAT Score</p>
