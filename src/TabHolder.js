@@ -1,10 +1,10 @@
 import React, {useState} from "react";
 import SatComponent from "./TabComponents/satComponent";
 import EcComponent from "./TabComponents/ecComponent";
+import GpaComponent from "./TabComponents/gpaComponent";
 
 export default function TabHolder(props) {
     const [activeTab, setActiveTab] = useState("SAT");
-    console.log(props.satScore)
 
     const TabContent = ({id, activeTab, children}) => {
         return (
@@ -41,7 +41,9 @@ export default function TabHolder(props) {
                 <SatComponent satScore = {props.satScore} setSatScore = {props.setSatScore}/>
             </TabContent>
             <TabContent id="GPA" activeTab={activeTab}>
-                <p>Tab 2 works!</p>
+                <GpaComponent gpaAverage = {props.gpaAverage} setGpaAverage = {props.setGpaAverage}
+                  isWeighted = {props.isWeighted} setIsWeighted = {props.setIsWeighted}
+                />
             </TabContent>
             <TabContent id="ECs" activeTab={activeTab}>
               <EcComponent extraCurricular = {props.extraCurricular} setExtraCurricular = {props.setExtraCurricular}/>

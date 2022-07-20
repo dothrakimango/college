@@ -15,6 +15,7 @@ export default function App() {
   //Define States i.e. the values of the numbers
   const [satScore, setSatScore] = useState("0")
   const [gpaAverage, setGpaAverage] = useState("0")
+  const [isWeighted, setIsWeighted] = useState(false)
   const [schoolSelection, setSchoolSelection] = useState("None")
   const [extraCurricular, setExtraCurricular] = useState("0")
   const [summerHours, setSummerHours] = useState("0")
@@ -117,6 +118,7 @@ export default function App() {
     console.log(satScore);
     console.log(extraCurricular);
     console.log(gpaAverage);
+    console.log(isWeighted);
   }
 
   return(
@@ -127,6 +129,7 @@ export default function App() {
     <div className="App">
       <TabHolder satScore = {satScore} setSatScore = {setSatScore} 
         gpaAverage = {gpaAverage} setGpaAverage = {setGpaAverage}
+        isWeighted = {isWeighted} setIsWeighted = {setIsWeighted}
         extraCurricular = {extraCurricular} setExtraCurricular = {setExtraCurricular}/>
       <button onClick={printScores}>log scores in console</button>
       

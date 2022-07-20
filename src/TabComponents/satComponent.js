@@ -1,7 +1,6 @@
 import React from "react";
 
 export default function SatComponent(props) {
-    console.log(props.satScore)
     return (
         <div className="SatClass">
             <h3>Please enter your SAT (both math and reading)</h3>
