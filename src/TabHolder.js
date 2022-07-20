@@ -1,8 +1,10 @@
 import React, {useState} from "react";
 import SatComponent from "./TabComponents/satComponent";
+import EcComponent from "./TabComponents/ecComponent";
 
-export default function TabHolder(score, setScore) {
+export default function TabHolder(props) {
     const [activeTab, setActiveTab] = useState("SAT");
+    console.log(props.satScore)
 
     const TabContent = ({id, activeTab, children}) => {
         return (
@@ -36,13 +38,13 @@ export default function TabHolder(score, setScore) {
           </ul>
           <div className="outlet">
             <TabContent id="SAT" activeTab={activeTab}>
-                <SatComponent satScore = {score} setSatScore = {setScore}/>
+                <SatComponent satScore = {props.satScore} setSatScore = {props.setSatScore}/>
             </TabContent>
             <TabContent id="GPA" activeTab={activeTab}>
                 <p>Tab 2 works!</p>
             </TabContent>
             <TabContent id="ECs" activeTab={activeTab}>
-                <p>Tab 3 works!</p>
+              <EcComponent extraCurricular = {props.extraCurricular} setExtraCurricular = {props.setExtraCurricular}/>
             </TabContent>
           </div>
         </div>

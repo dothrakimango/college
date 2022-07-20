@@ -113,13 +113,22 @@ export default function App() {
     setSchoolSelection(e)
   }
 
+  function printScores(){
+    console.log(satScore);
+    console.log(extraCurricular);
+    console.log(gpaAverage);
+  }
+
   return(
     <>
     <div className = 'head'>
       <h1>Akala: Chance-Me Feature</h1>
     </div>
     <div className="App">
-      <TabHolder score = {satScore} setScore = {setSatScore} />
+      <TabHolder satScore = {satScore} setSatScore = {setSatScore} 
+        gpaAverage = {gpaAverage} setGpaAverage = {setGpaAverage}
+        extraCurricular = {extraCurricular} setExtraCurricular = {setExtraCurricular}/>
+      <button onClick={printScores}>log scores in console</button>
       
     </div>
     <div className = 'inputs'>
