@@ -38,7 +38,7 @@ export default function TabHolder(props) {
           </ul>
           <div className="outlet">
             <TabContent id="SAT" activeTab={activeTab}>
-                <SatComponent satScore = {props.satScore} setSatScore = {props.setSatScore}/>
+                <SatComponent satMath = {props.satMath} setSatMath = {props.setSatMath} satERBW = {props.satERBW} setSatERBW = {props.setSatERBW}/>
             </TabContent>
             <TabContent id="GPA" activeTab={activeTab}>
                 <GpaComponent gpaAverage = {props.gpaAverage} setGpaAverage = {props.setGpaAverage}
@@ -46,7 +46,9 @@ export default function TabHolder(props) {
                 />
             </TabContent>
             <TabContent id="ECs" activeTab={activeTab}>
-              <EcComponent extraCurricular = {props.extraCurricular} setExtraCurricular = {props.setExtraCurricular}/>
+              <EcComponent extraCurricular = {props.extraCurricular} setExtraCurricular = {props.setExtraCurricular}
+                      serviceHours = {props.serviceHours} setServiceHours = {props.setServiceHours}
+                      summerHours = {props.summerHours} setSummerHours = {props.setSummerHours}/>
             </TabContent>
           </div>
         </div>

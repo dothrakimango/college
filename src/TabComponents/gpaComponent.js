@@ -3,14 +3,14 @@ import React from "react";
 export default function GpaComponent(props) {
     return (
         <div className="GpaClass">
-            <h3>Enter your GPA</h3>
+            <p>Enter your GPA</p>
             <input type = "text" 
                 name = "gpaBox" 
                 onChange = {(e) => props.setGpaAverage(e.target.value)} 
                 value = {props.gpaAverage} 
                 autoFocus
             />
-            <h3>Is your GPA weighted?</h3>
+            <p>Is your GPA weighted?</p>
             <input type = "radio"
                 id="yes"
                 checked={props.isWeighted==1}

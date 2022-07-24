@@ -4,8 +4,6 @@ import Schools from "./schools.json";
 import TabHolder from './TabHolder.js';
 
 //Define Score Values
-var SATVal = 0
-var GPAScore = 0
 var ECScore = 0
 var SummerScore = 0
 var ServiceScore = 0
@@ -20,6 +18,8 @@ export default function App() {
   const [extraCurricular, setExtraCurricular] = useState("0")
   const [summerHours, setSummerHours] = useState("0")
   const [communityServiceHours, setCommunityServiceHours] = useState("0")
+  const [satMath, setSatMath] = useState("0")
+  const [satERBW, setSatERBW] = useState("0")
 
   //Score Calculating Functions
   function calculateECValue(e) {
@@ -119,6 +119,21 @@ export default function App() {
     console.log(extraCurricular);
     console.log(gpaAverage);
     console.log(isWeighted);
+    const iSat = parseInt(satScore)
+    const iGPA = parseInt(gpaAverage)
+    const iECs = parseInt(extraCurricular)
+    const iSh = parseInt(summerHours)
+    const iCS = parseInt(communityServiceHours)
+    if (iSat && iGPA && iECs && iSh && iCS && SchoolNameArr.includes(schoolSelection)) {
+      const fin = Schools[SchoolNameArr.indexOf(schoolSelection)]
+      //var dr = (iSat - fin.satUpper) * fin.weights[0] + ECScore * fin[2] + SummerScore * fin[3] + ServiceScore * fin[4]
+      var dr = (iSat - fin.satUpper) * fin.weights[0] + ECScore * fin.weights[2] + SummerScore * fin.weights[3] + ServiceScore * fin.weights[4]
+      console.log(dr)
+      setFinalText("We Estimate your score to be " + dr.toString())
+    }
+    else {
+      setFinalText("Not Availibe School. Please Enter All Valid Information")
+    }
   }
 
   return(
@@ -127,25 +142,19 @@ export default function App() {
       <h1>Akala: Chance-Me Feature</h1>
     </div>
     <div className="App">
-      <TabHolder satScore = {satScore} setSatScore = {setSatScore} 
+      <TabHolder satMath = {satMath} setSatMath = {setSatMath} 
+        satERBW = {satERBW} setSatERBW = {setSatERBW} 
         gpaAverage = {gpaAverage} setGpaAverage = {setGpaAverage}
         isWeighted = {isWeighted} setIsWeighted = {setIsWeighted}
-        extraCurricular = {extraCurricular} setExtraCurricular = {setExtraCurricular}/>
+        extraCurricular = {extraCurricular} setExtraCurricular = {setExtraCurricular}
+        serviceHours = {communityServiceHours} setServiceHours = {setCommunityServiceHours}
+        summerHours = {summerHours} setSummerHours = {setSummerHours}
+        />
       <button onClick={printScores}>log scores in console</button>
       
     </div>
-    <div className = 'inputs'>
-    <p>Please Enter Your SAT Score</p>
-    <input type = "text" name = "name" onChange = {(e) => setSatScore(e.target.value)} value = {satScore}/>
-    <p>Please Enter Your GPA</p>
-    <input type = "text" name = "name" onChange = {(e) => setGpaAverage(e.target.value)} value = {gpaAverage}/>
-    <p>Please Enter Your EC Hours</p>
-    <input type = "text" name = "name" onChange = {(e) => calculateECValue(e.target.value)} value = {extraCurricular}/>
-    <p>Please Enter Your communityServiceHours Hours</p>
-    <input type = "text" name = "name" onChange = {(e) => calculateServiceScore(e.target.value)} value = {communityServiceHours}/>
-    <p>Please Enter Your Summer Experience Hours</p>
-    <input type = "text" name = "name" onChange = {(e) => calculateSummerScore(e.target.value)} value = {summerHours}/>
-    </div>
+    
+
     
     <div className = 'collegeSelect'>
     <p>Please Enter The College you want</p>
@@ -182,7 +191,20 @@ export default function App() {
 }
 
 
-
+/*
+    <div className = 'inputs'>
+    <p>Please Enter Your SAT Score</p>
+    <input type = "text" name = "name" onChange = {(e) => setSatScore(e.target.value)} value = {satScore}/>
+    <p>Please Enter Your GPA</p>
+    <input type = "text" name = "name" onChange = {(e) => setGpaAverage(e.target.value)} value = {gpaAverage}/>
+    <p>Please Enter Your EC Hours</p>
+    <input type = "text" name = "name" onChange = {(e) => calculateECValue(e.target.value)} value = {extraCurricular}/>
+    <p>Please Enter Your communityServiceHours Hours</p>
+    <input type = "text" name = "name" onChange = {(e) => calculateServiceScore(e.target.value)} value = {communityServiceHours}/>
+    <p>Please Enter Your Summer Experience Hours</p>
+    <input type = "text" name = "name" onChange = {(e) => calculateSummerScore(e.target.value)} value = {summerHours}/>
+    </div>
+*/
 
 
 
