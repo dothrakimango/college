@@ -903,6 +903,8 @@
     "name": "University of Florida",
     "satLower": 1370,
     "satUpper": 1450,
+    "erbw": 720,
+    "math": 740,
     "actLower": 28,
     "actUpper": 33,
     "weights": [0.3, 0.4, 2, 2, 2]
@@ -911,6 +913,8 @@
     "name": "University of Georgia",
     "satLower": 1220,
     "satUpper": 1390,
+    "erbw": 720,
+    "math": 730,
     "actLower": 27,
     "actUpper": 32,
     "weights": [0.3, 0.4, 2, 2, 2]
@@ -919,6 +923,8 @@
     "name": "University of Illinois at Urbana-Champaign",
     "satLower": 1220,
     "satUpper": 1450,
+    "erbw": 740,
+    "math": 790,
     "actLower": 27,
     "actUpper": 33,
     "weights": [0.3, 0.4, 2, 2, 2]
@@ -927,6 +933,8 @@
     "name": "University of Maryland, College Park",
     "satLower": 1290,
     "satUpper": 1460,
+    "erbw": 730,
+    "math": 780,
     "actLower": 29,
     "actUpper": 34,
     "weights": [0.3, 0.4, 2, 2, 2]
@@ -935,6 +943,8 @@
     "name": "University of Massachusetts, Amherst",
     "satLower": 1190,
     "satUpper": 1390,
+    "erbw": 710,
+    "math": 750,
     "actLower": 26,
     "actUpper": 32,
     "weights": [0.3, 0.4, 2, 2, 2]
@@ -943,6 +953,8 @@
     "name": "University of Miami (FL)",
     "satLower": 1260,
     "satUpper": 1400,
+    "erbw": 720,
+    "math": 740,
     "actLower": 28,
     "actUpper": 32,
     "weights": [0.3, 0.4, 2, 2, 2]
@@ -951,6 +963,8 @@
     "name": "University of Michigan, Ann Arbor",
     "satLower": 1340,
     "satUpper": 1520,
+    "erbw": 750,
+    "math": 780,
     "actLower": 31,
     "actUpper": 34,
     "weights": [0.3, 0.4, 2, 2, 2]
@@ -959,6 +973,8 @@
     "name": "University of North Carolina, Chapel Hill",
     "satLower": 1270,
     "satUpper": 1460,
+    "erbw": 740,
+    "math": 770,
     "actLower": 27,
     "actUpper": 33,
     "weights": [0.3, 0.4, 2, 2, 2]
@@ -967,6 +983,8 @@
     "name": "University of Notre Dame",
     "satLower": 1400,
     "satUpper": 1550,
+    "erbw": 760,
+    "math": 790,
     "actLower": 32,
     "actUpper": 35,
     "weights": [0.3, 0.4, 2, 2, 2]
@@ -975,6 +993,8 @@
     "name": "University of Pennsylvania",
     "satLower": 1460,
     "satUpper": 1570,
+    "erbw": 770,
+    "math": 800,
     "actLower": 33,
     "actUpper": 35,
     "weights": [0.3, 0.4, 2, 2, 2]
@@ -983,6 +1003,8 @@
     "name": "University of Richmond",
     "satLower": 1290,
     "satUpper": 1440,
+    "erbw": 730,
+    "math": 760,
     "actLower": 30,
     "actUpper": 33,
     "weights": [0.3, 0.4, 2, 2, 2]
@@ -991,6 +1013,8 @@
     "name": "University of Rochester",
     "satLower": 1310,
     "satUpper": 1500,
+    "erbw": 710,
+    "math": 790,
     "actLower": 29,
     "actUpper": 33,
     "weights": [0.3, 0.4, 2, 2, 2]
@@ -999,6 +1023,8 @@
     "name": "University of San Francisco",
     "satLower": 1130,
     "satUpper": 1330,
+    "erbw": 690,
+    "math": 700,
     "actLower": 23,
     "actUpper": 29,
     "weights": [0.3, 0.4, 2, 2, 2]
@@ -1007,6 +1033,8 @@
     "name": "University of Southern California",
     "satLower": 1360,
     "satUpper": 1510,
+    "erbw": 740,
+    "math": 780,
     "actLower": 30,
     "actUpper": 34,
     "weights": [0.3, 0.4, 2, 2, 2]
@@ -1015,6 +1043,8 @@
     "name": "University of Texas at Austin",
     "satLower": 1220,
     "satUpper": 1450,
+    "erbw": 730,
+    "math": 770,
     "actLower": 26,
     "actUpper": 33,
     "weights": [0.3, 0.4, 2, 2, 2]
@@ -1023,6 +1053,8 @@
     "name": "University of Texas at Dallas",
     "satLower": 1230,
     "satUpper": 1430,
+    "erbw": 690,
+    "math": 730,
     "actLower": 26,
     "actUpper": 33,
     "weights": [0.3, 0.4, 2, 2, 2]
@@ -1031,6 +1063,8 @@
     "name": "University of the Pacific",
     "satLower": 1130,
     "satUpper": 1360,
+    "erbw": 680,
+    "math": 700,
     "actLower": 23,
     "actUpper": 31,
     "weights": [0.3, 0.4, 2, 2, 2]
@@ -1039,6 +1073,8 @@
     "name": "University of Virginia",
     "satLower": 1330,
     "satUpper": 1490,
+    "erbw": 750,
+    "math": 780,
     "actLower": 30,
     "actUpper": 34,
     "weights": [0.3, 0.4, 2, 2, 2]
@@ -1047,6 +1083,8 @@
     "name": "University of Washington at Seattle",
     "satLower": 1220,
     "satUpper": 1430,
+    "erbw": 710,
+    "math": 760,
     "actLower": 27,
     "actUpper": 33,
     "weights": [0.3, 0.4, 2, 2, 2]
@@ -1055,6 +1093,8 @@
     "name": "University of Wisconsin at Madison",
     "satLower": 1300,
     "satUpper": 1440,
+    "erbw": 730,
+    "math": 780,
     "actLower": 27,
     "actUpper": 32,
     "weights": [0.3, 0.4, 2, 2, 2]
@@ -1063,6 +1103,8 @@
     "name": "Vanderbilt University",
     "satLower": 1470,
     "satUpper": 1570,
+    "erbw": 770,
+    "math": 800,
     "actLower": 33,
     "actUpper": 35,
     "weights": [0.3, 0.4, 2, 2, 2]
@@ -1071,6 +1113,8 @@
     "name": "Vassar College",
     "satLower": 1380,
     "satUpper": 1490,
+    "erbw": 760,
+    "math": 780,
     "actLower": 32,
     "actUpper": 34,
     "weights": [0.3, 0.4, 2, 2, 2]
@@ -1079,6 +1123,8 @@
     "name": "Villanova University",
     "satLower": 1320,
     "satUpper": 1460,
+    "erbw": 730,
+    "math": 760,
     "actLower": 30,
     "actUpper": 33,
     "weights": [0.3, 0.4, 2, 2, 2]
@@ -1087,6 +1133,8 @@
     "name": "Wake Forest University",
     "satLower": 1300,
     "satUpper": 1460,
+    "erbw": 730,
+    "math": 770,
     "actLower": 30,
     "actUpper": 33,
     "weights": [0.3, 0.4, 2, 2, 2]
@@ -1095,6 +1143,8 @@
     "name": "Washington and Lee University",
     "satLower": 1350,
     "satUpper": 1500,
+    "erbw": 750,
+    "math": 780,
     "actLower": 32,
     "actUpper": 34,
     "weights": [0.3, 0.4, 2, 2, 2]
@@ -1103,6 +1153,8 @@
     "name": "Washington University in St. Louis",
     "satLower": 1480,
     "satUpper": 1560,
+    "erbw": 760,
+    "math": 800,
     "actLower": 33,
     "actUpper": 35,
     "weights": [0.3, 0.4, 2, 2, 2]
@@ -1111,6 +1163,8 @@
     "name": "Wellesley College",
     "satLower": 1370,
     "satUpper": 1510,
+    "erbw": 760,
+    "math": 780,
     "actLower": 31,
     "actUpper": 34,
     "weights": [0.3, 0.4, 2, 2, 2]
@@ -1119,6 +1173,8 @@
     "name": "Wesleyan University (CT)",
     "satLower": 1340,
     "satUpper": 1510,
+    "erbw": 750,
+    "math": 760,
     "actLower": 31,
     "actUpper": 34,
     "weights": [0.3, 0.4, 2, 2, 2]
@@ -1127,6 +1183,8 @@
     "name": "Williams College",
     "satLower": 1430,
     "satUpper": 1540,
+    "erbw": 770,
+    "math": 790,
     "actLower": 33,
     "actUpper": 35,
     "weights": [0.3, 0.4, 2, 2, 2]
@@ -1135,6 +1193,8 @@
     "name": "Yale University",
     "satLower": 1470,
     "satUpper": 1560,
+    "erbw": 780,
+    "math": 800,
     "actLower": 33,
     "actUpper": 35,
     "weights": [0.3, 0.4, 2, 2, 2]
