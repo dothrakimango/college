@@ -463,6 +463,8 @@
     "name": "Lafayette College",
     "satLower": 1270,
     "satUpper": 1420,
+    "erbw": 710,
+    "math": 730,
     "actLower": 28,
     "actUpper": 33,
     "weights": [0.3, 0.4, 2, 2, 2]
@@ -471,6 +473,8 @@
     "name": "Lehigh University",
     "satLower": 1280,
     "satUpper": 1420,
+    "erbw": 693,
+    "math": 740,
     "actLower": 29,
     "actUpper": 33,
     "weights": [0.3, 0.4, 2, 2, 2]
@@ -479,6 +483,8 @@
     "name": "Lewis & Clark College",
     "satLower": 1220,
     "satUpper": 1363,
+    "erbw": 700,
+    "math": 680,
     "actLower": 27,
     "actUpper": 31,
     "weights": [0.3, 0.4, 2, 2, 2]
@@ -487,6 +493,8 @@
     "name": "Loyola Marymount University",
     "satLower": 1230,
     "satUpper": 1380,
+    "erbw": 690,
+    "math": 700,
     "actLower": 27,
     "actUpper": 31,
     "weights": [0.3, 0.4, 2, 2, 2]
@@ -495,22 +503,18 @@
     "name": "Loyola University, Chicago",
     "satLower": 1170,
     "satUpper": 1370,
+    "erbw": 660,
+    "math": 670,
     "actLower": 25,
     "actUpper": 31,
-    "weights": [0.3, 0.4, 2, 2, 2]
-  },
-  {
-    "name": "Loyola University, Maryland",
-    "satLower": 1150,
-    "satUpper": 1310,
-    "actLower": 25,
-    "actUpper": 30,
     "weights": [0.3, 0.4, 2, 2, 2]
   },
   {
     "name": "Marquette University",
     "satLower": 1170,
     "satUpper": 1320,
+    "erbw": 660,
+    "math": 700,
     "actLower": 25,
     "actUpper": 30,
     "weights": [0.3, 0.4, 2, 2, 2]
@@ -519,6 +523,8 @@
     "name": "Massachusetts Institute of Technology",
     "satLower": 1510,
     "satUpper": 1570,
+    "erbw": 780,
+    "math": 800,
     "actLower": 34,
     "actUpper": 36,
     "weights": [0.3, 0.4, 2, 2, 2]
@@ -527,6 +533,8 @@
     "name": "Michigan State University",
     "satLower": 1110,
     "satUpper": 1280,
+    "erbw": 640,
+    "math": 660,
     "actLower": 23,
     "actUpper": 29,
     "weights": [0.3, 0.4, 2, 2, 2]
@@ -535,22 +543,18 @@
     "name": "Middlebury College",
     "satLower": 1340,
     "satUpper": 1520,
+    "erbw": 750,
+    "math": 770,
     "actLower": 31,
     "actUpper": 34,
-    "weights": [0.3, 0.4, 2, 2, 2]
-  },
-  {
-    "name": "New College of Florida",
-    "satLower": 1190,
-    "satUpper": 1365,
-    "actLower": 25,
-    "actUpper": 30,
     "weights": [0.3, 0.4, 2, 2, 2]
   },
   {
     "name": "New York University",
     "satLower": 1390,
     "satUpper": 1510,
+    "erbw": 740,
+    "math": 800,
     "actLower": 31,
     "actUpper": 34,
     "weights": [0.3, 0.4, 2, 2, 2]
@@ -559,6 +563,8 @@
     "name": "Northeastern University",
     "satLower": 1430,
     "satUpper": 1540,
+    "erbw": 750,
+    "math": 790,
     "actLower": 33,
     "actUpper": 35,
     "weights": [0.3, 0.4, 2, 2, 2]
@@ -567,6 +573,8 @@
     "name": "Northwestern University",
     "satLower": 1430,
     "satUpper": 1540,
+    "erbw": 760,
+    "math": 790,
     "actLower": 33,
     "actUpper": 35,
     "weights": [0.3, 0.4, 2, 2, 2]
