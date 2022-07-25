@@ -119,15 +119,16 @@ export default function App() {
     console.log(extraCurricular);
     console.log(gpaAverage);
     console.log(isWeighted);
-    const iSat = parseInt(satScore)
+    const iSatM = parseInt(satMath)
+    const iSatE = parseInt(satERBW)
     const iGPA = parseInt(gpaAverage)
     const iECs = parseInt(extraCurricular)
     const iSh = parseInt(summerHours)
     const iCS = parseInt(communityServiceHours)
-    if (iSat && iGPA && iECs && iSh && iCS && SchoolNameArr.includes(schoolSelection)) {
+    if (iSatM && iSatE && iGPA && iECs && iSh && iCS && SchoolNameArr.includes(schoolSelection)) {
       const fin = Schools[SchoolNameArr.indexOf(schoolSelection)]
       //var dr = (iSat - fin.satUpper) * fin.weights[0] + ECScore * fin[2] + SummerScore * fin[3] + ServiceScore * fin[4]
-      var dr = (iSat - fin.satUpper) * fin.weights[0] + ECScore * fin.weights[2] + SummerScore * fin.weights[3] + ServiceScore * fin.weights[4]
+      var dr = ((iSatM + iSatE) - fin.satUpper) * fin.weights[0] + ECScore * fin.weights[2] + SummerScore * fin.weights[3] + ServiceScore * fin.weights[4]
       console.log(dr)
       setFinalText("We Estimate your score to be " + dr.toString())
     }
