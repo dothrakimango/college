@@ -22,57 +22,54 @@ export default function App() {
   const [satERBW, setSatERBW] = useState("0")
 
   //Score Calculating Functions
+
   function calculateECValue(e) {
-    setExtraCurricular(e)
     const pd = parseInt(e)
-    console.log(pd)
     if (pd) {
       if (pd > 3) {
-        ECScore = 5
+        return 5
       }
       if (pd <= 3 && pd > 2) {
-        ECScore = 4
+        return 4
       }
       if (pd > 0 && pd < 2) {
-        ECScore = 2
+        return 2
       }
     }
-    console.log(ECScore)
+    return 0
   }
 
   function calculateSummerScore(e) {
-    setSummerHours(e)
     const pd = parseInt(e)
-    console.log("hi")
     if (pd) {
       if (pd > 3) {
-        SummerScore = 5
+        return 5
       }
       if (pd <= 3 && pd > 2) {
-        SummerScore = 4
+        return 4
       }
       if (pd > 0 && pd <= 2) {
-        SummerScore = 2
+        return 2
       }
     }
-    console.log(SummerScore)
+    return 0
   }
 
   function calculateServiceScore(e) {
-    setCommunityServiceHours(e)
     const pd = parseInt(e)
     
     if (pd) {
       if (pd > 3) {
-        ServiceScore = 5
+        return 5
       }
       if (pd <= 3 && pd > 2) {
-        ServiceScore = 4
+        return 4
       }
       if (pd > 0 && pd <= 2) {
-        ServiceScore = 2
+        return 2
       }
     }
+    return 0
   }
 
   const School = Schools.map(
@@ -129,12 +126,47 @@ export default function App() {
       const fin = Schools[SchoolNameArr.indexOf(schoolSelection)]
       //var dr = (iSat - fin.satUpper) * fin.weights[0] + ECScore * fin[2] + SummerScore * fin[3] + ServiceScore * fin[4]
       var dr = ((iSatM + iSatE) - fin.satUpper) * fin.weights[0] + ECScore * fin.weights[2] + SummerScore * fin.weights[3] + ServiceScore * fin.weights[4]
-      console.log(dr)
       setFinalText("We Estimate your score to be " + dr.toString())
     }
     else {
       setFinalText("Not Availibe School. Please Enter All Valid Information")
     }
+  }
+
+  function printScoresVolumeTwo () {
+    const iSatM = parseInt(satMath)
+    const iSatE = parseInt(satERBW)
+    const iGPA = parseInt(gpaAverage)
+    const iECs = parseInt(extraCurricular)
+    const iSh = parseInt(summerHours)
+    const iCS = parseInt(communityServiceHours)
+    var fin = 0
+    if (iSatM && iSatE && iGPA && iECs && iSh && iCS && SchoolNameArr.includes(schoolSelection)) {
+      const sch = Schools[SchoolNameArr.indexOf(schoolSelection)]
+      if (iSatM >= sch.math) {
+        fin += 3
+      }
+      if (iSatM >= sch.math - 20 && iSatM < sch.math) {
+        fin += 2
+      }
+      if (iSatM >= sch.math - 50 && iSatM < sch.math - 20) {
+        fin += 1
+      }
+      if (iSatE >= sch.erbw) {
+        fin += 3
+      }
+      if (iSatE >= sch.erbw - 20 && iSatE < sch.erbw) {
+        fin += 2
+      }
+      if (iSatE >= sch.math - 50 && iSatM < sch.math - 20) {
+        fin += 1
+      }
+      fin = fin + calculateECValue(iECs)
+      fin = fin + calculateSummerScore(iSh)
+      fin = fin + calculateServiceScore(iCS)
+      setFinalText("We Estimate your score to be " + (fin).toString())
+    }
+    
   }
 
   return(
@@ -151,16 +183,17 @@ export default function App() {
         serviceHours = {communityServiceHours} setServiceHours = {setCommunityServiceHours}
         summerHours = {summerHours} setSummerHours = {setSummerHours}
         />
-      <button onClick={printScores}>log scores in console</button>
+        <div className = 'collegeSelect'>
+          <p>Please Enter The College you want</p>
+          <input type = "text" name = "name" onChange = {(e) => setSchoolSelection(e.target.value)} value = {schoolSelection}/>
+        </div>
+      <button onClick={printScoresVolumeTwo}>log scores in console</button>
       
     </div>
     
 
     
-    <div className = 'collegeSelect'>
-    <p>Please Enter The College you want</p>
-    <input type = "text" name = "name" onChange = {(e) => schoolChange(e.target.value, satScore, gpaAverage)} value = {schoolSelection}/>
-    </div>
+
     
     
     

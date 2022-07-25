@@ -10,14 +10,14 @@ export default function EcComponent(props) {
                 value = {props.extraCurricular} 
 
             />
-            <p>Enter your summer hours per week on average</p>
+            <p>Please enter how many hours you spent on activities this past sumnmer</p>
             <input type = "text" 
                 name = "ecBox" 
                 onChange = {(e) => props.setSummerHours(e.target.value)} 
                 value = {props.summerHours} 
 
             />
-            <p>Enter your community Service hours per week on average</p>
+            <p>Enter your community service hours per week on average</p>
             <input type = "text" 
                 name = "ecBox" 
                 onChange = {(e) => props.setServiceHours(e.target.value)} 
