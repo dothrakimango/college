@@ -8,21 +8,19 @@ export default function GpaComponent(props) {
                 name = "gpaBox" 
                 onChange = {(e) => props.setGpaAverage(e.target.value)} 
                 value = {props.gpaAverage} 
-                autoFocus
             />
-            <p>Is your GPA weighted?</p>
-            <input type = "radio"
-                id="yes"
-                checked={props.isWeighted==1}
-                onChange = {(e) => props.setIsWeighted(true)}
+            <p>How many AP (or equivalent) classes will you be eligible to take by the end of your senior year?</p>
+            <input type = "text" 
+                name = "APBox1" 
+                onChange = {(e) => props.setAvailableAPs(e.target.value)} 
+                value = {props.availableAPs} 
             />
-            <label htmlFor="yes">Yes</label>
-            <input type = "radio"
-                id="no"
-                checked={props.isWeighted==0}
-                onChange = {(e) => props.setIsWeighted(false)}
+            <p>How many will you have taken by the end of your senior year?</p>
+            <input type = "text" 
+                name = "APBox2" 
+                onChange = {(e) => props.setTakenAPs(e.target.value)} 
+                value = {props.takenAPs}
             />
-            <label htmlFor="no">No</label>
         </div>
     )
 }

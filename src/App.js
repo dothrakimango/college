@@ -13,13 +13,14 @@ export default function App() {
   //Define States i.e. the values of the numbers
   const [satScore, setSatScore] = useState("0")
   const [gpaAverage, setGpaAverage] = useState("0")
-  const [isWeighted, setIsWeighted] = useState(false)
   const [schoolSelection, setSchoolSelection] = useState("None")
   const [extraCurricular, setExtraCurricular] = useState("0")
   const [summerHours, setSummerHours] = useState("0")
   const [communityServiceHours, setCommunityServiceHours] = useState("0")
   const [satMath, setSatMath] = useState("0")
   const [satERBW, setSatERBW] = useState("0")
+  const [availableAPs, setAvailableAPs] = useState("0")
+  const [takenAPs, setTakenAPs] = useState("0")
 
   //Score Calculating Functions
 
@@ -72,6 +73,31 @@ export default function App() {
     return 0
   }
 
+  function calculateRigor(eligible, taken) {
+    const eAPs = parseInt(eligible)
+    const tAPs = parseInt(taken)
+    
+    if (eAPs) {
+      var rigor = tAPs/eAPs
+      if (rigor == 1){
+        return 5
+      }
+      if (rigor <= .75 && rigor > .5){
+        return 4
+      }
+      if (rigor <= .5 && rigor > .25){
+        return 2
+      }
+      if (rigor <= .25 && rigor > 0){
+        return 1
+      }
+    }
+    if (eAPs == 0 && tAPs == 0){
+      return 5
+    }
+    return 0
+  }
+
   const School = Schools.map(
     (schools)=>{
       return (
@@ -115,7 +141,6 @@ export default function App() {
     console.log(satScore);
     console.log(extraCurricular);
     console.log(gpaAverage);
-    console.log(isWeighted);
     const iSatM = parseInt(satMath)
     const iSatE = parseInt(satERBW)
     const iGPA = parseInt(gpaAverage)
@@ -140,6 +165,8 @@ export default function App() {
     const iECs = parseInt(extraCurricular)
     const iSh = parseInt(summerHours)
     const iCS = parseInt(communityServiceHours)
+    const iEAP = parseInt(availableAPs)
+    const iTAP = parseInt(takenAPs)
     var fin = 0
     if (iSatM && iSatE && iGPA && iECs && iSh && iCS && SchoolNameArr.includes(schoolSelection)) {
       const sch = Schools[SchoolNameArr.indexOf(schoolSelection)]
@@ -158,12 +185,13 @@ export default function App() {
       if (iSatE >= sch.erbw - 20 && iSatE < sch.erbw) {
         fin += 2
       }
-      if (iSatE >= sch.math - 50 && iSatM < sch.math - 20) {
+      if (iSatE >= sch.erbw - 50 && iSatM < sch.erbw - 20) {
         fin += 1
       }
       fin = fin + calculateECValue(iECs)
       fin = fin + calculateSummerScore(iSh)
       fin = fin + calculateServiceScore(iCS)
+      fin += calculateRigor(iEAP, iTAP)
       setFinalText("We Estimate your score to be " + (fin).toString())
     }
     
@@ -178,10 +206,11 @@ export default function App() {
       <TabHolder satMath = {satMath} setSatMath = {setSatMath} 
         satERBW = {satERBW} setSatERBW = {setSatERBW} 
         gpaAverage = {gpaAverage} setGpaAverage = {setGpaAverage}
-        isWeighted = {isWeighted} setIsWeighted = {setIsWeighted}
         extraCurricular = {extraCurricular} setExtraCurricular = {setExtraCurricular}
         serviceHours = {communityServiceHours} setServiceHours = {setCommunityServiceHours}
         summerHours = {summerHours} setSummerHours = {setSummerHours}
+        availableAPs = {availableAPs} setAvailableAPs = {setAvailableAPs}
+        takenAPs = {takenAPs} setTakenAPs = {setTakenAPs}
         />
         <div className = 'collegeSelect'>
           <p>Please Enter The College you want</p>
@@ -199,26 +228,7 @@ export default function App() {
     
     <p>{finalText}</p>
     <p>{SchoolNameArr.includes("")}</p>
-    <div>
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                    <th>School</th>
-                    <th>SAT Lower</th>
-                    <th>SAT Upper</th>
-                    <th>ACT Lower</th>
-                    <th>ACT Upper</th>
-                    </tr>
-                </thead>
-                <tbody>
-                 
-                    
-                    {School}
-                    
-                </tbody>
-            </table>
-             
-        </div>
+
     </>
     
   )
@@ -240,7 +250,28 @@ export default function App() {
     </div>
 */
 
-
+/*
+    <div>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                    <th>School</th>
+                    <th>SAT Lower</th>
+                    <th>SAT Upper</th>
+                    <th>ACT Lower</th>
+                    <th>ACT Upper</th>
+                    </tr>
+                </thead>
+                <tbody>
+                 
+                    
+                    {School}
+                    
+                </tbody>
+            </table>
+             
+        </div>
+*/
 
 //<div>
   //Schools && Schools.map( school => {

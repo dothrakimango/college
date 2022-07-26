@@ -42,7 +42,8 @@ export default function TabHolder(props) {
             </TabContent>
             <TabContent id="GPA" activeTab={activeTab}>
                 <GpaComponent gpaAverage = {props.gpaAverage} setGpaAverage = {props.setGpaAverage}
-                  isWeighted = {props.isWeighted} setIsWeighted = {props.setIsWeighted}
+                  availableAPs = {props.availableAPs} setAvailableAPs = {props.setAvailableAPs}
+                  takenAPs = {props.takenAPs} setTakenAPs = {props.setTakenAPs}
                 />
             </TabContent>
             <TabContent id="ECs" activeTab={activeTab}>
