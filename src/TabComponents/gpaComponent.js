@@ -3,7 +3,7 @@ import React from "react";
 export default function GpaComponent(props) {
     return (
         <div className="GpaClass">
-            <p>Enter your GPA</p>
+            <p>Enter your GPA (out of 4.33)</p>
             <input type = "text" 
                 name = "gpaBox" 
                 onChange = {(e) => props.setGpaAverage(e.target.value)} 

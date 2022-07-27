@@ -194,6 +194,9 @@ export default function App() {
       fin += calculateRigor(iEAP, iTAP)
       setFinalText("We Estimate your score to be " + (fin).toString())
     }
+    else {
+      setFinalText("Not Availibe School. Please Enter All Valid Information")
+    }
     
   }
 
@@ -219,13 +222,6 @@ export default function App() {
       <button onClick={printScoresVolumeTwo}>log scores in console</button>
       
     </div>
-    
-
-    
-
-    
-    
-    
     <p>{finalText}</p>
     <p>{SchoolNameArr.includes("")}</p>
 
