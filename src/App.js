@@ -17,6 +17,7 @@ export default function App() {
                       "Good",
                       "Good",
                       "Excellent!"]
+  // Scores 1-5 for each metric
   const [scores, setScores] = useState([0, 0, 0, 0, 0, 0])
   const [satScore, setSatScore] = useState("0")
   const [gpaAverage, setGpaAverage] = useState("0")
@@ -28,9 +29,40 @@ export default function App() {
   const [satERBW, setSatERBW] = useState("0")
   const [availableAPs, setAvailableAPs] = useState("0")
   const [takenAPs, setTakenAPs] = useState("0")
+  // Whether report is shown (only if school and scores are valid)
   const [isShown, setIsShown] = useState(false)
 
   //Score Calculating Functions
+
+  function calculateSATMath(satM, schoolName) {
+    if (satM && schoolName){
+      if (satM >= schoolName.math) {
+        return 5
+      }
+      if (satM >= schoolName.math - 20 && satM < schoolName.math) {
+        return 3
+      }
+      if (satM >= schoolName.math - 50 && satM < schoolName.math - 20) {
+        return 1
+      }
+    }
+    return 0
+  }
+
+  function calculateSATEnglish(satE, schoolName) {
+    if (satE && schoolName){
+      if (satE >= schoolName.erbw) {
+        return 5
+      }
+      if (satE >= schoolName.erbw - 20 && satE < schoolName.erbw) {
+        return 3
+      }
+      if (satE >= schoolName.erbw - 50 && satE < schoolName.erbw - 20) {
+        return 1
+      }
+    }
+    return 0
+  }
 
   function calculateECValue(e) {
     const pd = parseInt(e)
@@ -110,7 +142,7 @@ export default function App() {
   }
 
 
-
+/*
   const School = Schools.map(
     (schools)=>{
       return (
@@ -124,7 +156,7 @@ export default function App() {
       )
     }
   )
-
+*/
 
   const [finalText, setFinalText] = useState("Not Applicable Account")
 
@@ -145,7 +177,7 @@ export default function App() {
       setFinalText("We Estimate your score to be " + dr.toString())
     }
     else {
-      setFinalText("Not Availibe School. Please Enter All Valid Information")
+      setFinalText("Not Available School. Please Enter All Valid Information")
     }
     setSchoolSelection(e)
   }
@@ -167,40 +199,12 @@ export default function App() {
       setFinalText("We Estimate your score to be " + dr.toString())
     }
     else {
-      setFinalText("Not Availibe School. Please Enter All Valid Information")
+      setFinalText("Not Available School. Please Enter All Valid Information")
     }
   }
 
-  function calculateSATMath(satM, schoolName) {
-    if (satM && schoolName){
-      if (satM >= schoolName.math) {
-        return 5
-      }
-      if (satM >= schoolName.math - 20 && satM < schoolName.math) {
-        return 3
-      }
-      if (satM >= schoolName.math - 50 && satM < schoolName.math - 20) {
-        return 1
-      }
-    }
-    return 0
-  }
 
-  function calculateSATEnglish(satE, schoolName) {
-    if (satE && schoolName){
-      if (satE >= schoolName.erbw) {
-        return 5
-      }
-      if (satE >= schoolName.erbw - 20 && satE < schoolName.erbw) {
-        return 3
-      }
-      if (satE >= schoolName.erbw - 50 && satE < schoolName.erbw - 20) {
-        return 1
-      }
-    }
-    return 0
-  }
-
+  // Describes each score
   function PrintReport(satM, satE, ecH, sumH, serH, rig, sch) {
     return(
       <div>
@@ -266,7 +270,7 @@ export default function App() {
       setFinalText("We Estimate your score to be " + (fin).toString())
     }
     else {
-      setFinalText("Not Availibe School. Please Enter All Valid Information")
+      setFinalText("Not Available School. Please Enter All Valid Information")
     }
     
   }
