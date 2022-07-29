@@ -174,10 +174,10 @@ export default function App() {
   function calculateSATMath(satM, schoolName) {
     if (satM && schoolName){
       if (satM >= schoolName.math) {
-        return 3
+        return 5
       }
       if (satM >= schoolName.math - 20 && satM < schoolName.math) {
-        return 2
+        return 3
       }
       if (satM >= schoolName.math - 50 && satM < schoolName.math - 20) {
         return 1
@@ -189,10 +189,10 @@ export default function App() {
   function calculateSATEnglish(satE, schoolName) {
     if (satE && schoolName){
       if (satE >= schoolName.erbw) {
-        return 3
+        return 5
       }
       if (satE >= schoolName.erbw - 20 && satE < schoolName.erbw) {
-        return 2
+        return 3
       }
       if (satE >= schoolName.erbw - 50 && satE < schoolName.erbw - 20) {
         return 1
