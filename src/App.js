@@ -11,6 +11,13 @@ var ServiceScore = 0
 export default function App() {
 
   //Define States i.e. the values of the numbers
+  const scoreDesc = ["N/A",
+                      "Needs improvement",
+                      "Needs improvement",
+                      "Good",
+                      "Good",
+                      "Excellent!"]
+  const [scores, setScores] = useState([0, 0, 0, 0, 0, 0])
   const [satScore, setSatScore] = useState("0")
   const [gpaAverage, setGpaAverage] = useState("0")
   const [schoolSelection, setSchoolSelection] = useState("None")
@@ -21,6 +28,7 @@ export default function App() {
   const [satERBW, setSatERBW] = useState("0")
   const [availableAPs, setAvailableAPs] = useState("0")
   const [takenAPs, setTakenAPs] = useState("0")
+  const [isShown, setIsShown] = useState(false)
 
   //Score Calculating Functions
 
@@ -82,8 +90,11 @@ export default function App() {
       if (rigor == 1){
         return 5
       }
-      if (rigor <= .75 && rigor > .5){
+      if (rigor <= 1 && rigor > .75){
         return 4
+      }
+      if (rigor <= .75 && rigor > .5){
+        return 3
       }
       if (rigor <= .5 && rigor > .25){
         return 2
@@ -97,6 +108,8 @@ export default function App() {
     }
     return 0
   }
+
+
 
   const School = Schools.map(
     (schools)=>{
@@ -158,6 +171,55 @@ export default function App() {
     }
   }
 
+  function calculateSATMath(satM, schoolName) {
+    if (satM && schoolName){
+      if (satM >= schoolName.math) {
+        return 3
+      }
+      if (satM >= schoolName.math - 20 && satM < schoolName.math) {
+        return 2
+      }
+      if (satM >= schoolName.math - 50 && satM < schoolName.math - 20) {
+        return 1
+      }
+    }
+    return 0
+  }
+
+  function calculateSATEnglish(satE, schoolName) {
+    if (satE && schoolName){
+      if (satE >= schoolName.erbw) {
+        return 3
+      }
+      if (satE >= schoolName.erbw - 20 && satE < schoolName.erbw) {
+        return 2
+      }
+      if (satE >= schoolName.erbw - 50 && satE < schoolName.erbw - 20) {
+        return 1
+      }
+    }
+    return 0
+  }
+
+  function PrintReport(satM, satE, ecH, sumH, serH, rig, sch) {
+    return(
+      <div>
+        <h3>SAT Math</h3>
+          <p>{scoreDesc[scores[0]]}</p>
+        <h3>SAT English</h3>
+          <p>{scoreDesc[scores[1]]}</p>
+        <h3>Extracurriculars</h3>
+          <p>{scoreDesc[scores[2]]}</p>
+        <h3>Summer Experience</h3>
+          <p>{scoreDesc[scores[3]]}</p>
+        <h3>Community Service</h3>
+          <p>{scoreDesc[scores[4]]}</p>
+        <h3>Course Rigor</h3>
+          <p>{scoreDesc[scores[5]]}</p>
+      </div>
+    )
+    }
+
   function printScoresVolumeTwo () {
     const iSatM = parseInt(satMath)
     const iSatE = parseInt(satERBW)
@@ -188,10 +250,19 @@ export default function App() {
       if (iSatE >= sch.erbw - 50 && iSatM < sch.erbw - 20) {
         fin += 1
       }
+      
       fin = fin + calculateECValue(iECs)
       fin = fin + calculateSummerScore(iSh)
       fin = fin + calculateServiceScore(iCS)
       fin += calculateRigor(iEAP, iTAP)
+      setScores([calculateSATMath(iSatM, sch),
+                  calculateSATEnglish(iSatE, sch),
+                  calculateECValue(iECs),
+                  calculateSummerScore(iSh),
+                  calculateServiceScore(iCS),
+                  calculateRigor(iEAP, iTAP)])
+      console.log(scoreDesc[5])
+      setIsShown(true)
       setFinalText("We Estimate your score to be " + (fin).toString())
     }
     else {
@@ -220,8 +291,8 @@ export default function App() {
           <input type = "text" name = "name" onChange = {(e) => setSchoolSelection(e.target.value)} value = {schoolSelection}/>
         </div>
       <button onClick={printScoresVolumeTwo}>log scores in console</button>
-      
     </div>
+    {isShown && <PrintReport />}
     <p>{finalText}</p>
     <p>{SchoolNameArr.includes("")}</p>
 
