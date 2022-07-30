@@ -72,6 +72,7 @@ export default function App() {
     }
     return 0
   }
+  
 
   function calculateRigor(eligible, taken) {
     const eAPs = parseInt(eligible)
@@ -80,20 +81,20 @@ export default function App() {
     if (eAPs) {
       var rigor = tAPs/eAPs
       if (rigor == 1){
-        return 5
-      }
-      if (rigor <= .75 && rigor > .5){
-        return 4
-      }
-      if (rigor <= .5 && rigor > .25){
         return 2
       }
-      if (rigor <= .25 && rigor > 0){
+      if (rigor <= .75 && rigor > .5){
         return 1
+      }
+      if (rigor <= .5 && rigor > .25){
+        return 0
+      }
+      if (rigor <= .25 && rigor > 0){
+        return 0
       }
     }
     if (eAPs == 0 && tAPs == 0){
-      return 5
+      return 2
     }
     return 0
   }
@@ -116,7 +117,7 @@ export default function App() {
   const [finalText, setFinalText] = useState("Not Applicable Account")
 
   const SchoolNameArr = Schools.map((schools) => {return (schools.name)})
-
+/*
   function schoolChange (e, sat, gpa) {
     console.log(ECScore)
     const iSat = parseInt(sat)
@@ -136,7 +137,7 @@ export default function App() {
     }
     setSchoolSelection(e)
   }
-
+/*
   function printScores(){
     console.log(satScore);
     console.log(extraCurricular);
@@ -157,11 +158,12 @@ export default function App() {
       setFinalText("Not Availibe School. Please Enter All Valid Information")
     }
   }
+*/
 
   function printScoresVolumeTwo () {
     const iSatM = parseInt(satMath)
     const iSatE = parseInt(satERBW)
-    const iGPA = parseInt(gpaAverage)
+    const iGPA = parseFloat(gpaAverage)
     const iECs = parseInt(extraCurricular)
     const iSh = parseInt(summerHours)
     const iCS = parseInt(communityServiceHours)
@@ -188,6 +190,21 @@ export default function App() {
       if (iSatE >= sch.erbw - 50 && iSatM < sch.erbw - 20) {
         fin += 1
       }
+
+      if (iGPA >= sch.gpa + 0.1) {
+        fin += 5
+      }
+      if (iGPA >= sch.gpa - 0.1 && iGPA < sch.gpa + 0.1) {
+        fin += 4
+      }
+      if (iGPA >= sch.gpa - 0.3 && iGPA < sch.gpa - 0.1) {
+        fin += 3
+      }
+      if (iGPA >= sch.gpa - 0.5 && iGPA < sch.gpa - 0.3) {
+        fin += 1
+      }
+      console.log(iGPA)
+
       fin = fin + calculateECValue(iECs)
       fin = fin + calculateSummerScore(iSh)
       fin = fin + calculateServiceScore(iCS)
