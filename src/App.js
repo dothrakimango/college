@@ -117,32 +117,27 @@ export default function App() {
   function calculateRigor(eligible, taken) {
     const eAPs = parseInt(eligible)
     const tAPs = parseInt(taken)
-    
+    console.log(tAPs/eAPs)
     if (eAPs) {
       var rigor = tAPs/eAPs
       if (rigor == 1){
-        return 2
+        return 5
       }
-<<<<<<< HEAD
-      if (rigor <= .75 && rigor > .5){
-        return 1
-=======
       if (rigor <= 1 && rigor > .75){
         return 4
->>>>>>> 0670a94c9c348a28e049021a88daad66f1689920
       }
       if (rigor <= .75 && rigor > .5){
         return 3
       }
       if (rigor <= .5 && rigor > .25){
-        return 0
+        return 2
       }
       if (rigor <= .25 && rigor > 0){
-        return 0
+        return 1
       }
     }
     if (eAPs == 0 && tAPs == 0){
-      return 2
+      return 0
     }
     return 0
   }
@@ -210,7 +205,6 @@ export default function App() {
   }
 */
 
-
   // Describes each score
   function PrintReport(satM, satE, ecH, sumH, serH, rig, sch) {
     return(
@@ -261,7 +255,6 @@ export default function App() {
       if (iSatE >= sch.erbw - 50 && iSatM < sch.erbw - 20) {
         fin += 1
       }
-<<<<<<< HEAD
 
       if (iGPA >= sch.gpa + 0.1) {
         fin += 5
@@ -277,9 +270,6 @@ export default function App() {
       }
       console.log(iGPA)
 
-=======
-      
->>>>>>> 0670a94c9c348a28e049021a88daad66f1689920
       fin = fin + calculateECValue(iECs)
       fin = fin + calculateSummerScore(iSh)
       fin = fin + calculateServiceScore(iCS)
@@ -306,15 +296,67 @@ export default function App() {
       <h1>Akala: Chance-Me Feature</h1>
     </div>
     <div className="App">
-      <TabHolder satMath = {satMath} setSatMath = {setSatMath} 
-        satERBW = {satERBW} setSatERBW = {setSatERBW} 
-        gpaAverage = {gpaAverage} setGpaAverage = {setGpaAverage}
-        extraCurricular = {extraCurricular} setExtraCurricular = {setExtraCurricular}
-        serviceHours = {communityServiceHours} setServiceHours = {setCommunityServiceHours}
-        summerHours = {summerHours} setSummerHours = {setSummerHours}
-        availableAPs = {availableAPs} setAvailableAPs = {setAvailableAPs}
-        takenAPs = {takenAPs} setTakenAPs = {setTakenAPs}
+      <div className="SatClass">
+        <h3>Standardized Test Scores</h3>
+        <p>Please input your SAT ERBW here</p>
+        <input type = "text" 
+            name = "erbwBox" 
+            onChange = {(e) => setSatERBW(e.target.value)} 
+            value = {satERBW} 
+            autoFocus
         />
+        <p>Please input your SAT Math here</p>
+        <input type = "text" 
+            name = "mathBox" 
+            onChange = {(e) => setSatMath(e.target.value)} 
+            value = {satMath} 
+            autoFocus
+        />
+      </div>
+      <div className="GpaClass">
+        <h3>Academics</h3>
+        <p>Enter your GPA (out of 4.33)</p>
+        <input type = "text" 
+            name = "gpaBox" 
+            onChange = {(e) => setGpaAverage(e.target.value)} 
+            value = {gpaAverage} 
+        />
+        <p>How many AP (or equivalent) classes will you be eligible to take by the end of your senior year?</p>
+        <input type = "text" 
+            name = "APBox1" 
+            onChange = {(e) => setAvailableAPs(e.target.value)} 
+            value = {availableAPs} 
+        />
+        <p>How many will you have taken by the end of your senior year?</p>
+        <input type = "text" 
+            name = "APBox2" 
+            onChange = {(e) => setTakenAPs(e.target.value)} 
+            value = {takenAPs}
+        />
+      </div>
+      <div className="EcClass">
+        <h3>Extracurriculars</h3>
+        <p>Enter your extracurricular hours per week on average</p>
+        <input type = "text" 
+            name = "ecBox" 
+            onChange = {(e) => setExtraCurricular(e.target.value)} 
+            value = {extraCurricular} 
+
+        />
+        <p>Please enter how many hours you spent on activities this past sumnmer</p>
+        <input type = "text" 
+            name = "ecBox" 
+            onChange = {(e) => setSummerHours(e.target.value)} 
+            value = {summerHours} 
+
+        />
+        <p>Enter your community service hours per week on average</p>
+        <input type = "text" 
+            name = "ecBox" 
+            onChange = {(e) => setCommunityServiceHours(e.target.value)} 
+            value = {communityServiceHours} 
+        />
+      </div>
         <div className = 'collegeSelect'>
           <p>Please Enter The College you want</p>
           <input type = "text" name = "name" onChange = {(e) => setSchoolSelection(e.target.value)} value = {schoolSelection}/>
@@ -323,14 +365,26 @@ export default function App() {
     </div>
     {isShown && <PrintReport />}
     <p>{finalText}</p>
-    <p>{SchoolNameArr.includes("")}</p>
+    
 
     </>
     
   )
 }
 
+/*
+<TabHolder satMath = {satMath} setSatMath = {setSatMath} 
+satERBW = {satERBW} setSatERBW = {setSatERBW} 
+gpaAverage = {gpaAverage} setGpaAverage = {setGpaAverage}
+extraCurricular = {extraCurricular} setExtraCurricular = {setExtraCurricular}
+serviceHours = {communityServiceHours} setServiceHours = {setCommunityServiceHours}
+summerHours = {summerHours} setSummerHours = {setSummerHours}
+availableAPs = {availableAPs} setAvailableAPs = {setAvailableAPs}
+takenAPs = {takenAPs} setTakenAPs = {setTakenAPs}
+/>
+*/
 
+//<p>{SchoolNameArr.includes("")}</p>
 /*
     <div className = 'inputs'>
     <p>Please Enter Your SAT Score</p>
