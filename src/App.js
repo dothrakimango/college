@@ -14,11 +14,11 @@ export default function App() {
   const scoreDesc = ["N/A",
                       "Needs improvement",
                       "Needs improvement",
-                      "Good",
+                      "Okay",
                       "Good",
                       "Excellent!"]
   // Scores 1-5 for each metric
-  const [scores, setScores] = useState([0, 0, 0, 0, 0, 0])
+  const [scores, setScores] = useState([0, 0, 0, 0, 0, 0, 0])
   const [satScore, setSatScore] = useState("0")
   const [gpaAverage, setGpaAverage] = useState("0")
   const [schoolSelection, setSchoolSelection] = useState("None")
@@ -40,7 +40,7 @@ export default function App() {
         return 5
       }
       if (satM >= schoolName.math - 20 && satM < schoolName.math) {
-        return 3
+        return 4
       }
       if (satM >= schoolName.math - 50 && satM < schoolName.math - 20) {
         return 1
@@ -55,7 +55,7 @@ export default function App() {
         return 5
       }
       if (satE >= schoolName.erbw - 20 && satE < schoolName.erbw) {
-        return 3
+        return 4
       }
       if (satE >= schoolName.erbw - 50 && satE < schoolName.erbw - 20) {
         return 1
@@ -94,6 +94,26 @@ export default function App() {
       }
     }
     return 0
+  }
+
+  function calculateGPAScore(gpa, schoolName){
+    const schoolGPA = schoolName.gpa >= 4.33 ? 4.33 : schoolName.gpa
+    if (gpa >= 4.33){
+      return 5
+    }
+    if (gpa >= schoolGPA + 0.1) {
+      return 5
+    }
+    if (gpa >= schoolGPA - 0.1 && gpa < schoolGPA + 0.1) {
+      return 4
+    }
+    if (gpa >= schoolGPA - 0.3 && gpa < schoolGPA - 0.1) {
+      return 3
+    }
+    if (gpa >= schoolGPA - 0.5 && gpa < schoolGPA - 0.3) {
+      return 2
+    }
+    return 1
   }
 
   function calculateServiceScore(e) {
@@ -219,8 +239,10 @@ export default function App() {
           <p>{scoreDesc[scores[3]]}</p>
         <h3>Community Service</h3>
           <p>{scoreDesc[scores[4]]}</p>
+        <h3>GPA</h3>
+          <p>{scoreDesc[scores[5]]}</p>          
         <h3>Course Rigor</h3>
-          <p>{scoreDesc[scores[5]]}</p>
+          <p>{scoreDesc[scores[6]]}</p>
       </div>
     )
     }
@@ -256,18 +278,7 @@ export default function App() {
         fin += 1
       }
 
-      if (iGPA >= sch.gpa + 0.1) {
-        fin += 5
-      }
-      if (iGPA >= sch.gpa - 0.1 && iGPA < sch.gpa + 0.1) {
-        fin += 4
-      }
-      if (iGPA >= sch.gpa - 0.3 && iGPA < sch.gpa - 0.1) {
-        fin += 3
-      }
-      if (iGPA >= sch.gpa - 0.5 && iGPA < sch.gpa - 0.3) {
-        fin += 1
-      }
+
       console.log(iGPA)
 
       fin = fin + calculateECValue(iECs)
@@ -279,6 +290,7 @@ export default function App() {
                   calculateECValue(iECs),
                   calculateSummerScore(iSh),
                   calculateServiceScore(iCS),
+                  calculateGPAScore(iGPA, sch),
                   calculateRigor(iEAP, iTAP)])
       console.log(scoreDesc[5])
       setIsShown(true)
@@ -371,6 +383,30 @@ export default function App() {
     
   )
 }
+
+/*
+  function calculateGPAScore(gpa, schoolName) {
+    const schoolGPA = schoolName.gpa >= 4.33 ? 4.33 : schoolName.gpa
+    if (gpa){
+      if (gpa >= 4.33){
+        return 5
+      }
+      if (gpa >= schoolGPA+.5 && gpa < 4.33){
+        return 5
+      }
+      if (gpa >= schoolGPA && gpa < 4.33){
+        return 4
+      }
+      if (gpa >= schoolGPA-.3 && gpa < schoolGPA){
+        return 3
+      }
+      if (gpa < schoolGPA-.2){
+        return 3
+      }
+    }
+  }
+
+*/
 
 /*
 <TabHolder satMath = {satMath} setSatMath = {setSatMath} 
