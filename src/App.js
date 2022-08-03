@@ -2,6 +2,7 @@ import './App.css';
 import React, {useState} from "react";
 import Schools from "./schools.json";
 import TabHolder from './TabHolder.js';
+import PrintScoresTwo from './ReturnComponents/PrintScoresTwo';
 
 //Define Score Values
 var ECScore = 0
@@ -291,83 +292,84 @@ export default function App() {
   }
 
   return(
-    <>
-    <div className = 'head'>
-      <h1>Akala: Chance-Me Feature</h1>
-    </div>
-    <div className="App">
-      <div className="SatClass">
-        <h3>Standardized Test Scores</h3>
-        <p>Please input your SAT ERBW here</p>
-        <input type = "text" 
+    <div className = "chance-me">
+      <div className = 'head'>
+        <h1>Akala: Chance-Me Feature</h1>
+      </div>
+      <div className="App">
+        <div className="SatClass">
+          <h3>Standardized Test Scores</h3>
+          <p>Please input your SAT ERBW here</p>
+          <input type = "text" 
             name = "erbwBox" 
+            className = "erbwBox"
             onChange = {(e) => setSatERBW(e.target.value)} 
             value = {satERBW} 
             autoFocus
-        />
-        <p>Please input your SAT Math here</p>
-        <input type = "text" 
+            />
+          <p>Please input your SAT Math here</p>
+          <input type = "text" 
             name = "mathBox" 
             onChange = {(e) => setSatMath(e.target.value)} 
             value = {satMath} 
             autoFocus
-        />
-      </div>
-      <div className="GpaClass">
-        <h3>Academics</h3>
-        <p>Enter your GPA (out of 4.33)</p>
-        <input type = "text" 
-            name = "gpaBox" 
-            onChange = {(e) => setGpaAverage(e.target.value)} 
-            value = {gpaAverage} 
-        />
-        <p>How many AP (or equivalent) classes will you be eligible to take by the end of your senior year?</p>
-        <input type = "text" 
-            name = "APBox1" 
-            onChange = {(e) => setAvailableAPs(e.target.value)} 
-            value = {availableAPs} 
-        />
-        <p>How many will you have taken by the end of your senior year?</p>
-        <input type = "text" 
-            name = "APBox2" 
-            onChange = {(e) => setTakenAPs(e.target.value)} 
-            value = {takenAPs}
-        />
-      </div>
-      <div className="EcClass">
-        <h3>Extracurriculars</h3>
-        <p>Enter your extracurricular hours per week on average</p>
-        <input type = "text" 
-            name = "ecBox" 
-            onChange = {(e) => setExtraCurricular(e.target.value)} 
-            value = {extraCurricular} 
-
-        />
-        <p>Please enter how many hours you spent on activities this past sumnmer</p>
-        <input type = "text" 
-            name = "ecBox" 
-            onChange = {(e) => setSummerHours(e.target.value)} 
-            value = {summerHours} 
-
-        />
-        <p>Enter your community service hours per week on average</p>
-        <input type = "text" 
-            name = "ecBox" 
-            onChange = {(e) => setCommunityServiceHours(e.target.value)} 
-            value = {communityServiceHours} 
-        />
-      </div>
-        <div className = 'collegeSelect'>
-          <p>Please Enter The College you want</p>
-          <input type = "text" name = "name" onChange = {(e) => setSchoolSelection(e.target.value)} value = {schoolSelection}/>
+          />
         </div>
-      <button onClick={printScoresVolumeTwo}>log scores in console</button>
+        <div className="GpaClass">
+          <h3>Academics</h3>
+          <p>Enter your GPA (out of 4.33)</p>
+          <input type = "text" 
+              name = "gpaBox" 
+              onChange = {(e) => setGpaAverage(e.target.value)} 
+              value = {gpaAverage} 
+          />
+          <p>How many AP (or equivalent) classes will you be eligible to take by the end of your senior year?</p>
+          <input type = "text" 
+              name = "APBox1" 
+              onChange = {(e) => setAvailableAPs(e.target.value)} 
+              value = {availableAPs} 
+          />
+          <p>How many will you have taken by the end of your senior year?</p>
+          <input type = "text" 
+              name = "APBox2" 
+              onChange = {(e) => setTakenAPs(e.target.value)} 
+              value = {takenAPs}
+          />
+        </div>
+        <div className="EcClass">
+          <h3>Extracurriculars</h3>
+          <p>Enter your extracurricular hours per week on average</p>
+          <input type = "text" 
+              name = "ecBox" 
+              onChange = {(e) => setExtraCurricular(e.target.value)} 
+              value = {extraCurricular} 
+
+          />
+          <p>Please enter how many hours you spent on activities this past sumnmer</p>
+          <input type = "text" 
+              name = "ecBox" 
+              onChange = {(e) => setSummerHours(e.target.value)} 
+              value = {summerHours} 
+
+          />
+          <p>Enter your community service hours per week on average</p>
+          <input type = "text" 
+              name = "ecBox" 
+              onChange = {(e) => setCommunityServiceHours(e.target.value)} 
+              value = {communityServiceHours} 
+          />
+        </div>
+          <div className = 'collegeSelect'>
+            <p>Please Enter The College you want</p>
+            <input type = "text" name = "name" onChange = {(e) => setSchoolSelection(e.target.value)} value = {schoolSelection}/>
+          </div>
+        <button onClick={printScoresVolumeTwo}>log scores in console</button>
     </div>
+    <PrintScoresTwo></PrintScoresTwo>
     {isShown && <PrintReport />}
     <p>{finalText}</p>
-    
 
-    </>
+    </div>
     
   )
 }
