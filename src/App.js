@@ -377,7 +377,16 @@ export default function App() {
           </div>
         <button onClick={printScoresVolumeTwo}>log scores in console</button>
     </div>
-    <PrintScoresTwo></PrintScoresTwo>
+    <PrintScoresTwo 
+      satM = {parseInt(satMath)} 
+      satR = {parseInt(satERBW)} 
+      gpa = {parseFloat(gpaAverage)} 
+      ec = {parseInt(extraCurricular)} 
+      cs = {parseInt(communityServiceHours)} 
+      se = {parseInt(summerHours)}
+      cr = {parseInt(takenAPs)/parseInt(availableAPs)}
+      school = {schoolSelection}
+      />
     {isShown && <PrintReport />}
     <p>{finalText}</p>
 
@@ -385,86 +394,3 @@ export default function App() {
     
   )
 }
-
-/*
-  function calculateGPAScore(gpa, schoolName) {
-    const schoolGPA = schoolName.gpa >= 4.33 ? 4.33 : schoolName.gpa
-    if (gpa){
-      if (gpa >= 4.33){
-        return 5
-      }
-      if (gpa >= schoolGPA+.5 && gpa < 4.33){
-        return 5
-      }
-      if (gpa >= schoolGPA && gpa < 4.33){
-        return 4
-      }
-      if (gpa >= schoolGPA-.3 && gpa < schoolGPA){
-        return 3
-      }
-      if (gpa < schoolGPA-.2){
-        return 3
-      }
-    }
-  }
-
-*/
-
-/*
-<TabHolder satMath = {satMath} setSatMath = {setSatMath} 
-satERBW = {satERBW} setSatERBW = {setSatERBW} 
-gpaAverage = {gpaAverage} setGpaAverage = {setGpaAverage}
-extraCurricular = {extraCurricular} setExtraCurricular = {setExtraCurricular}
-serviceHours = {communityServiceHours} setServiceHours = {setCommunityServiceHours}
-summerHours = {summerHours} setSummerHours = {setSummerHours}
-availableAPs = {availableAPs} setAvailableAPs = {setAvailableAPs}
-takenAPs = {takenAPs} setTakenAPs = {setTakenAPs}
-/>
-*/
-
-//<p>{SchoolNameArr.includes("")}</p>
-/*
-    <div className = 'inputs'>
-    <p>Please Enter Your SAT Score</p>
-    <input type = "text" name = "name" onChange = {(e) => setSatScore(e.target.value)} value = {satScore}/>
-    <p>Please Enter Your GPA</p>
-    <input type = "text" name = "name" onChange = {(e) => setGpaAverage(e.target.value)} value = {gpaAverage}/>
-    <p>Please Enter Your EC Hours</p>
-    <input type = "text" name = "name" onChange = {(e) => calculateECValue(e.target.value)} value = {extraCurricular}/>
-    <p>Please Enter Your communityServiceHours Hours</p>
-    <input type = "text" name = "name" onChange = {(e) => calculateServiceScore(e.target.value)} value = {communityServiceHours}/>
-    <p>Please Enter Your Summer Experience Hours</p>
-    <input type = "text" name = "name" onChange = {(e) => calculateSummerScore(e.target.value)} value = {summerHours}/>
-    </div>
-*/
-
-/*
-    <div>
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                    <th>School</th>
-                    <th>SAT Lower</th>
-                    <th>SAT Upper</th>
-                    <th>ACT Lower</th>
-                    <th>ACT Upper</th>
-                    </tr>
-                </thead>
-                <tbody>
-                 
-                    
-                    {School}
-                    
-                </tbody>
-            </table>
-             
-        </div>
-*/
-
-//<div>
-  //Schools && Schools.map( school => {
-    //return(
-      //<div key={school.name}>
-      
-      //</div>
-//</div>
