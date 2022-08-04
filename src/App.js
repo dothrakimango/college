@@ -224,6 +224,8 @@ export default function App() {
       setFinalText("Not Available School. Please Enter All Valid Information")
     }
   }
+
+             <input type = "text" name = "name" onChange = {(e) => setSchoolSelection(e.target.value)} value = {schoolSelection}/>
 */
 
   // Describes each score
@@ -371,10 +373,20 @@ export default function App() {
           />
         </div>
           <div className = 'collegeSelect'>
-            <p>Please Enter The College you want</p>
-            <input type = "text" name = "name" onChange = {(e) => setSchoolSelection(e.target.value)} value = {schoolSelection}/>
+            <p>Please Select The College you want</p>
+            <select
+              name="choose school"
+              options={SchoolNameArr}
+              value={schoolSelection}
+              onChange = {(e) => setSchoolSelection(e.target.value)}>
+                {Schools.map((option) => (
+                  <option key={option.name}>
+                    {option.name}
+                  </option>
+                ))}
+              </select>
           </div>
-        <button onClick={printScoresVolumeTwo}>log scores in console</button>
+        <button onClick={printScoresVolumeTwo}>Show report</button>
     </div>
     <PrintScoresTwo 
     // SATmath, SATeng, ECs, SumEx, CS, GPA, Rigor
