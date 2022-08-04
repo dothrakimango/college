@@ -18,7 +18,7 @@ export default function App() {
                       "Okay",
                       "Good",
                       "Excellent!"]
-  // Scores 1-5 for each metric
+  // SATmath, SATeng, ECs, SumEx, CS, GPA, Rigor
   const [scores, setScores] = useState([0, 0, 0, 0, 0, 0, 0])
   const [satScore, setSatScore] = useState("0")
   const [gpaAverage, setGpaAverage] = useState("0")
@@ -139,6 +139,9 @@ export default function App() {
     const eAPs = parseInt(eligible)
     const tAPs = parseInt(taken)
     console.log(tAPs/eAPs)
+    if (eAPs == 0 && tAPs == 0){
+      return 0
+    }
     if (eAPs) {
       var rigor = tAPs/eAPs
       if (rigor == 1){
@@ -156,9 +159,6 @@ export default function App() {
       if (rigor <= .25 && rigor > 0){
         return 1
       }
-    }
-    if (eAPs == 0 && tAPs == 0){
-      return 0
     }
     return 0
   }
@@ -377,13 +377,14 @@ export default function App() {
         <button onClick={printScoresVolumeTwo}>log scores in console</button>
     </div>
     <PrintScoresTwo 
-      satM = {parseInt(satMath)} 
-      satR = {parseInt(satERBW)} 
-      gpa = {parseFloat(gpaAverage)} 
-      ec = {parseInt(extraCurricular)} 
-      cs = {parseInt(communityServiceHours)} 
-      se = {parseInt(summerHours)}
-      cr = {parseInt(takenAPs)/parseInt(availableAPs)}
+    // SATmath, SATeng, ECs, SumEx, CS, GPA, Rigor
+      satM = {parseInt(scores[0])} 
+      satR = {parseInt(scores[1])} 
+      gpa = {parseFloat(scores[5])} 
+      ec = {parseInt(scores[2])} 
+      cs = {parseInt(scores[4])} 
+      se = {parseInt(scores[3])}
+      cr = {parseInt(scores[6])}
       school = {schoolSelection}
       />
     {isShown && <PrintReport />}
