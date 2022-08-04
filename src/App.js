@@ -68,13 +68,16 @@ export default function App() {
   function calculateECValue(e) {
     const pd = parseInt(e)
     if (pd) {
-      if (pd > 3) {
+      if (pd > 10){
         return 5
       }
-      if (pd <= 3 && pd > 2) {
+      if (pd <= 10 && pd > 6) {
         return 4
       }
-      if (pd > 0 && pd < 2) {
+      if (pd <= 6 && pd > 3) {
+        return 3
+      }
+      if (pd > 0 && pd <= 3) {
         return 2
       }
     }
@@ -84,13 +87,16 @@ export default function App() {
   function calculateSummerScore(e) {
     const pd = parseInt(e)
     if (pd) {
-      if (pd > 3) {
+      if (pd > 30) {
         return 5
       }
-      if (pd <= 3 && pd > 2) {
+      if (pd <= 30 && pd > 20) {
         return 4
       }
-      if (pd > 0 && pd <= 2) {
+      if (pd <= 20 && pd > 10) {
+        return 3
+      }
+      if (pd > 0 && pd <= 10) {
         return 2
       }
     }
@@ -121,10 +127,10 @@ export default function App() {
     const pd = parseInt(e)
     
     if (pd) {
-      if (pd > 3) {
+      if (pd > 4) {
         return 5
       }
-      if (pd <= 3 && pd > 2) {
+      if (pd <= 4 && pd > 2) {
         return 4
       }
       if (pd > 0 && pd <= 2) {
