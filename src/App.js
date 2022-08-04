@@ -314,7 +314,6 @@ export default function App() {
           <p>Please input your SAT ERBW here</p>
           <input type = "text" 
             name = "erbwBox" 
-            className = "erbwBox"
             onChange = {(e) => setSatERBW(e.target.value)} 
             value = {satERBW} 
             autoFocus
