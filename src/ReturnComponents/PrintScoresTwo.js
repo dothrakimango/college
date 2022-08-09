@@ -11,21 +11,114 @@ export default function PrintScoresTwo (props) {
 
     return (
         <div>
-            <Bar 
-                data = {{
-                    labels: ['SAT Math', 'SAT Reading', 'GPA', 'Course Rigor', 'Summer Experience', 'Community Service', 'Extracurriculars'],
-                    datasets: [{
-                        label: '# of votes',
-                        data: [props.satM, props.satR, props.gpa, props.cr, props.se, props.cs, props.ec],
-                    }],
-                }}
-                height = {400}
-                width = {60}
-                options = {{
-                    maintainAspectRatio: false,
-                    indexAxis: 'y'
-                }}
-            />
+            <div>
+                <Bar 
+                    data = {{
+                        labels: ['SAT Math', 'SAT English'],
+                        datasets: [{
+                            label: 'Your score',
+                            data: [props.satM[0], props.satR[0]],
+                            backgroundColor: 'rgba(30, 60, 255, 0.2)',
+                            borderColor: 'rgb(30, 60, 255)',
+                            borderWidth: 1
+                        },
+                        {
+                            label: 'School average',
+                            data: [props.satM[1], props.satR[1]],
+                            backgroundColor: 'rgba(255, 30, 60, 0.2)',
+                            borderColor: 'rgb(255, 30, 60)',
+                            borderWidth: 1
+                        }],
+                    }}
+                    height = {200}
+                    width = {60}
+                    options = {{
+                        maintainAspectRatio: false,
+                        indexAxis: 'y'
+                    }}
+                />
+            </div>
+            <div>
+                <Bar 
+                        data = {{
+                            labels: ['Extracurriculars', 'Summer Experience', 'Community Service'],
+                            datasets: [{
+                                label: 'Your score',
+                                data: [props.ec[0], props.se[0], props.cs[0]],
+                                backgroundColor: 'rgba(30, 60, 255, 0.2)',
+                                borderColor: 'rgb(30, 60, 255)',
+                                borderWidth: 1
+                            },
+                            {
+                                label: 'School average',
+                                data: [props.ec[1], props.se[1], props.cs[1]],
+                                backgroundColor: 'rgba(255, 30, 60, 0.2)',
+                                borderColor: 'rgb(255, 30, 60)',
+                                borderWidth: 1
+                            }],
+                        }}
+                        height = {300}
+                        width = {60}
+                        options = {{
+                            maintainAspectRatio: false,
+                            indexAxis: 'y'
+                        }}
+                    />                
+            </div>
+            <div>
+                <Bar 
+                        data = {{
+                            labels: ['GPA'],
+                            datasets: [{
+                                label: 'Your score',
+                                data: [props.gpa[0]],
+                                backgroundColor: 'rgba(30, 60, 255, 0.2)',
+                                borderColor: 'rgb(30, 60, 255)',
+                                borderWidth: 1
+                            },
+                            {
+                                label: 'School average',
+                                data: [props.gpa[1]],
+                                backgroundColor: 'rgba(255, 30, 60, 0.2)',
+                                borderColor: 'rgb(255, 30, 60)',
+                                borderWidth: 1
+                            }],
+                        }}
+                        height = {100}
+                        width = {60}
+                        options = {{
+                            maintainAspectRatio: false,
+                            indexAxis: 'y'
+                        }}
+                    />                
+            </div>
+            <div>
+                <Bar 
+                        data = {{
+                            labels: ['Course Rigor'],
+                            datasets: [{
+                                label: 'Your score',
+                                data: [props.cr[0]],
+                                backgroundColor: 'rgba(30, 60, 255, 0.2)',
+                                borderColor: 'rgb(30, 60, 255)',
+                                borderWidth: 1
+                            },
+                            {
+                                label: 'School average',
+                                data: [props.cr[1]],
+                                backgroundColor: 'rgba(255, 30, 60, 0.2)',
+                                borderColor: 'rgb(255, 30, 60)',
+                                borderWidth: 1
+                            }],
+                        }}
+                        height = {100}
+                        width = {60}
+                        options = {{
+                            maintainAspectRatio: false,
+                            indexAxis: 'y'
+                        }}
+                    />                
+            </div>
         </div>
     )
 }

@@ -30,6 +30,7 @@ export default function App() {
   const [satERBW, setSatERBW] = useState("0")
   const [availableAPs, setAvailableAPs] = useState("0")
   const [takenAPs, setTakenAPs] = useState("0")
+  const [courseRigor, setCourseRigor] = useState("0")
   // Whether report is shown (only if school and scores are valid)
   const [isShown, setIsShown] = useState(false)
 
@@ -127,13 +128,13 @@ export default function App() {
     const pd = parseInt(e)
     
     if (pd) {
-      if (pd > 4) {
+      if (pd > 2) {
         return 5
       }
-      if (pd <= 4 && pd > 2) {
+      if (pd <= 2 && pd > 1) {
         return 4
       }
-      if (pd > 0 && pd <= 2) {
+      if (pd > 0 && pd <= 1) {
         return 2
       }
     }
@@ -150,6 +151,7 @@ export default function App() {
     }
     if (eAPs) {
       var rigor = tAPs/eAPs
+      setCourseRigor(rigor)
       if (rigor == 1){
         return 5
       }
@@ -394,17 +396,26 @@ export default function App() {
           </div>
         <button onClick={printScoresVolumeTwo}>Show report</button>
     </div>
-    <PrintScoresTwo 
+    {isShown && <PrintScoresTwo 
     // SATmath, SATeng, ECs, SumEx, CS, GPA, Rigor
-      satM = {parseInt(scores[0])} 
-      satR = {parseInt(scores[1])} 
-      gpa = {parseFloat(scores[5])} 
-      ec = {parseInt(scores[2])} 
-      cs = {parseInt(scores[4])} 
-      se = {parseInt(scores[3])}
-      cr = {parseInt(scores[6])}
-      school = {schoolSelection}
+      //satM = {parseInt(scores[0])} 
+      //satR = {parseInt(scores[1])} 
+      //gpa = {parseFloat(scores[5])} 
+      //ec = {parseInt(scores[2])} 
+      //cs = {parseInt(scores[4])} 
+      //se = {parseInt(scores[3])}
+      //cr = {parseInt(scores[6])}
+
+      sch = {Schools[SchoolNameArr.indexOf(schoolSelection)]}
+      satM = {[satMath, Schools[SchoolNameArr.indexOf(schoolSelection)].math]} 
+      satR = {[satERBW, Schools[SchoolNameArr.indexOf(schoolSelection)].erbw]} 
+      gpa = {[gpaAverage, Schools[SchoolNameArr.indexOf(schoolSelection)].gpa]} 
+      ec = {[extraCurricular, 6]}  
+      cs = {[communityServiceHours, 2]} 
+      se = {[summerHours, 20]} 
+      cr = {[courseRigor, .75]}
       />
+    }
     {isShown && <PrintReport />}
     <p>{finalText}</p>
 
