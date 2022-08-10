@@ -22,7 +22,7 @@ export default function App() {
   const [scores, setScores] = useState([0, 0, 0, 0, 0, 0, 0])
   const [satScore, setSatScore] = useState("0")
   const [gpaAverage, setGpaAverage] = useState("0")
-  const [schoolSelection, setSchoolSelection] = useState("None")
+  const [schoolSelection, setSchoolSelection] = useState("Arizona State University")
   const [extraCurricular, setExtraCurricular] = useState("0")
   const [summerHours, setSummerHours] = useState("0")
   const [communityServiceHours, setCommunityServiceHours] = useState("0")
@@ -188,7 +188,7 @@ export default function App() {
   )
 */
 
-  const [finalText, setFinalText] = useState("Not Applicable Account")
+  const [finalText, setFinalText] = useState("Press the button below to print a report")
 
   const SchoolNameArr = Schools.map((schools) => {return (schools.name)})
 /*
@@ -308,7 +308,7 @@ export default function App() {
       setFinalText("We Estimate your score to be " + (fin).toString())
     }
     else {
-      setFinalText("Not Available School. Please Enter All Valid Information")
+      setFinalText("Please enter valid values")
     }
     
   }
@@ -319,6 +319,22 @@ export default function App() {
         <h1>Akala: Chance-Me Feature</h1>
       </div>
       <div className="App">
+        <div className = 'collegeSelect'>
+          <p>Please Select The College you want</p>
+          <select
+            name="choose school"
+            options={SchoolNameArr}
+            value={schoolSelection}
+            onChange = {(e) => setSchoolSelection(e.target.value)}>
+              {Schools.map((option) => (
+                <option key={option.name}>
+                  {option.name}
+                </option>
+              ))}
+            </select>
+          <p>{finalText}</p>
+          <button onClick={printScoresVolumeTwo}>Show report</button>
+        </div>
         <div className="SatClass">
           <h3>Standardized Test Scores</h3>
           <p>Please input your SAT ERBW here</p>
@@ -380,22 +396,7 @@ export default function App() {
               value = {communityServiceHours} 
           />
         </div>
-          <div className = 'collegeSelect'>
-            <p>Please Select The College you want</p>
-            <select
-              name="choose school"
-              options={SchoolNameArr}
-              value={schoolSelection}
-              onChange = {(e) => setSchoolSelection(e.target.value)}>
-                {Schools.map((option) => (
-                  <option key={option.name}>
-                    {option.name}
-                  </option>
-                ))}
-              </select>
-          </div>
-        <button onClick={printScoresVolumeTwo}>Show report</button>
-    </div>
+      </div>
     {isShown && <PrintScoresTwo 
     // SATmath, SATeng, ECs, SumEx, CS, GPA, Rigor
       //satM = {parseInt(scores[0])} 
@@ -417,7 +418,7 @@ export default function App() {
       />
     }
     {isShown && <PrintReport />}
-    <p>{finalText}</p>
+
 
     </div>
     
