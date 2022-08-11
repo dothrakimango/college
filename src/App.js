@@ -24,7 +24,7 @@ export default function App() {
     <p key="1">We calculate that you're <b>probably not in the conversation.</b> Sign up with AKALA today to improve your chances!</p>,
     <p key="2">We calculate that you're <b>probably not in the conversation.</b> Sign up with AKALA today to improve your chances!</p>,
     <p key="3">We calculate that you <b>might be in the conversation.</b> Sign up with AKALA today to improve your chances!</p>,
-    <p key="4">We calculate that you're <b>probably in the conversation.</b> Sign up with AKALA today to improve your chances!</p>,
+    <p key="4">We calculate that you're <b>in the conversation.</b> Sign up with AKALA today to improve your chances!</p>,
     <p key="5">We calculate that you're <b>definitely in the conversation.</b> Sign up with AKALA today to improve your chances!</p>
   ]
   // SATmath, SATeng, ECs, SumEx, CS, GPA, Rigor
