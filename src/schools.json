@@ -8,7 +8,10 @@
     "math": 670,
     "actLower": 21,
     "actUpper": 28,
-    "weights": [0.3, 0.4, 2, 2, 2]
+    "weights": [0.3, 0.4, 2, 2, 2],
+    "ecCutoffs": [1, 2],
+    "seCutoffs": [1, 2],
+    "csCutoffs": [1, 4]
   },
   {
     "name": "Babson College",

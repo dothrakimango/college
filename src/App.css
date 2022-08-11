@@ -63,6 +63,10 @@
   border-style:solid; 
 }
 
+.report{
+  text-align: center;
+}
+
 .erbwBox {
   float:left;
 }
@@ -89,7 +93,7 @@
 }
 
 .head {
-  background: #090d59;
+  background: #090d58;
   color: white;
   padding: 15px;
   font-family: Arial, Helvetica, sans-serif;
