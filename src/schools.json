@@ -775,9 +775,9 @@
     "actLower": 30,
     "actUpper": 33,
     "weights": [0.3, 0.4, 2, 2, 2],
-    "ecCutoffs": [10, 15],
-    "seCutoffs": [80, 120],
-    "csCutoffs": [2, 3]
+    "ecCutoffs": [5, 10],
+    "seCutoffs": [40, 80],
+    "csCutoffs": [0.5, 1]
   },
   {
     "name": "University of Arizona",
@@ -1042,7 +1042,7 @@
     "actUpper": 33,
     "weights": [0.3, 0.4, 2, 2, 2],
     "ecCutoffs": [5, 10],
-    "seCutoffs": [40, 80],
+    "seCutoffs": [5, 80],
     "csCutoffs": [0, 1]
   },
   {
@@ -1139,8 +1139,8 @@
     "actLower": 33,
     "actUpper": 35,
     "weights": [0.3, 0.4, 2, 2, 2],
-    "ecCutoffs": [10, 15],
-    "seCutoffs": [80, 120],
+    "ecCutoffs": [5, 10],
+    "seCutoffs": [40, 80],
     "csCutoffs": [2, 3]
   },
   {
@@ -1182,7 +1182,7 @@
     "actUpper": 35,
     "weights": [0.3, 0.4, 2, 2, 2],
     "ecCutoffs": [10, 15],
-    "seCutoffs": [80, 120],
+    "seCutoffs": [40, 80],
     "csCutoffs": [2, 3]
   },
   {
