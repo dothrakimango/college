@@ -33,8 +33,7 @@ export default function PrintScoresTwo (props) {
                     height = {200}
                     width = {60}
                     options = {{
-                        maintainAspectRatio: false,
-                        indexAxis: 'y'
+                        maintainAspectRatio: false
                     }}
                 />
             </div>

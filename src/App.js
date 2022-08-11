@@ -1,13 +1,8 @@
 import './App.css';
 import React, {useState} from "react";
 import Schools from "./schools.json";
-import TabHolder from './TabHolder.js';
 import PrintScoresTwo from './ReturnComponents/PrintScoresTwo';
 
-//Define Score Values
-var ECScore = 0
-var SummerScore = 0
-var ServiceScore = 0
 
 export default function App() {
 
@@ -35,7 +30,6 @@ export default function App() {
   const [isShown, setIsShown] = useState(false)
 
   //Score Calculating Functions
-
   function calculateSATMath(satM, schoolName) {
     if (satM && schoolName){
       if (satM >= schoolName.math) {
@@ -321,29 +315,22 @@ export default function App() {
       <div className="App">
         <div className="SatClass">
           <h3>Standardized Test Scores</h3>
-          <p>Please input your SAT ERBW here</p>
-          <input type = "text" 
-            name = "erbwBox" 
-            onChange = {(e) => setSatERBW(e.target.value)} 
-            value = {satERBW} 
-            autoFocus
-            />
-          <p>Please input your SAT Math here</p>
-          <input type = "text" 
-            name = "mathBox" 
-            onChange = {(e) => setSatMath(e.target.value)} 
-            value = {satMath} 
-            autoFocus
-          />
+          <div className = "topRowSat">
+            <p>Please input your SAT ERBW here</p>
+            <input type = "text" name = "erbwBox" onChange = {(e) => setSatERBW(e.target.value)} value = {satERBW}/>
+            <p>Please input your SAT Math here</p>
+            <input type = "text" name = "mathBox" onChange = {(e) => setSatMath(e.target.value)} value = {satMath}/>
+          </div>
         </div>
-        <div className="GpaClass">
+
+
+        <div className="SatClass">
           <h3>Academics</h3>
+          <div className = "topRowSat">
           <p>Enter your GPA (out of 4.33)</p>
-          <input type = "text" 
-              name = "gpaBox" 
-              onChange = {(e) => setGpaAverage(e.target.value)} 
+            <input type = "text" name = "gpaBox" onChange = {(e) => setGpaAverage(e.target.value)} 
               value = {gpaAverage} 
-          />
+            />
           <p>How many AP (or equivalent) classes will you be eligible to take by the end of your senior year?</p>
           <input type = "text" 
               name = "APBox1" 
@@ -356,9 +343,11 @@ export default function App() {
               onChange = {(e) => setTakenAPs(e.target.value)} 
               value = {takenAPs}
           />
+          </div>
         </div>
-        <div className="EcClass">
+        <div className="SatClass">
           <h3>Extracurriculars</h3>
+          <div className = "topRowSat">
           <p>Enter your extracurricular hours per week on average</p>
           <input type = "text" 
               name = "ecBox" 
@@ -379,6 +368,7 @@ export default function App() {
               onChange = {(e) => setCommunityServiceHours(e.target.value)} 
               value = {communityServiceHours} 
           />
+          </div>
         </div>
           <div className = 'collegeSelect'>
             <p>Please Select The College you want</p>
@@ -397,14 +387,6 @@ export default function App() {
         <button onClick={printScoresVolumeTwo}>Show report</button>
     </div>
     {isShown && <PrintScoresTwo 
-    // SATmath, SATeng, ECs, SumEx, CS, GPA, Rigor
-      //satM = {parseInt(scores[0])} 
-      //satR = {parseInt(scores[1])} 
-      //gpa = {parseFloat(scores[5])} 
-      //ec = {parseInt(scores[2])} 
-      //cs = {parseInt(scores[4])} 
-      //se = {parseInt(scores[3])}
-      //cr = {parseInt(scores[6])}
 
       sch = {Schools[SchoolNameArr.indexOf(schoolSelection)]}
       satM = {[satMath, Schools[SchoolNameArr.indexOf(schoolSelection)].math]} 
