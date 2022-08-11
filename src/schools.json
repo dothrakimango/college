@@ -9,9 +9,9 @@
     "actLower": 21,
     "actUpper": 28,
     "weights": [0.3, 0.4, 2, 2, 2],
-    "ecCutoffs": [1, 2],
-    "seCutoffs": [1, 2],
-    "csCutoffs": [1, 4]
+    "ecCutoffs": [1, 5],
+    "seCutoffs": [5, 15],
+    "csCutoffs": [0.5, 2]
   },
   {
     "name": "Babson College",

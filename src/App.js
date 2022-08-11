@@ -21,9 +21,9 @@ export default function App() {
                       ]
   // SATmath, SATeng, ECs, SumEx, CS, GPA, Rigor
   const [scores, setScores] = useState([0, 0, 0, 0, 0, 0, 0])
-  const [ecCutoffs, setEcCutoffs] = useState([0, 0])
-  const [csCutoffs, setCsCutoffs] = useState([0, 0])
-  const [seCutoffs, setSeCutoffs] = useState([0, 0])
+  const [ecAvg, setEcAvg] = useState("0")
+  const [csAvg, setCsAvg] = useState("0")
+  const [seAvg, setSeAvg] = useState("0")
   const [gpaAverage, setGpaAverage] = useState("0")
   const [schoolSelection, setSchoolSelection] = useState("Arizona State University")
   const [extraCurricular, setExtraCurricular] = useState("0")
@@ -70,19 +70,17 @@ export default function App() {
   }
 
   function calculateECValue(e, schoolName) {
-    const pd = parseInt(e)
-    setEcCutoffs(schoolName.ecCutoffs)
+    const pd = parseFloat(e)
+    const ecCutoffs = schoolName.ecCutoffs
+    setEcAvg(schoolName.ecCutoffs[1])
     if (pd) {
-      if (pd > 10){
+      if (pd > ecCutoffs[1]) {
         return 5
       }
-      if (pd <= 10 && pd > 6) {
+      if (pd <= ecCutoffs[1] && pd > ecCutoffs[0]) {
         return 4
       }
-      if (pd <= 6 && pd > 3) {
-        return 3
-      }
-      if (pd > 0 && pd <= 3) {
+      if (pd > 0 && pd <= ecCutoffs[0]) {
         return 2
       }
     }
@@ -90,19 +88,20 @@ export default function App() {
   }
 
   function calculateSummerScore(e, schoolName) {
-    const pd = parseInt(e)
-    setSeCutoffs(schoolName.seCutoffs)
+    const pd = parseFloat(e)
+    const seCutoffs = schoolName.seCutoffs
+    setSeAvg(schoolName.seCutoffs[1])
+    console.log(schoolName)
+    console.log(schoolName.seCutoffs[1])
+    console.log(seCutoffs[1])
     if (pd) {
-      if (pd > 30) {
+      if (pd > seCutoffs[1]) {
         return 5
       }
-      if (pd <= 30 && pd > 20) {
+      if (pd <= seCutoffs[1] && pd > seCutoffs[0]) {
         return 4
       }
-      if (pd <= 20 && pd > 10) {
-        return 3
-      }
-      if (pd > 0 && pd <= 10) {
+      if (pd > 0 && pd <= seCutoffs[0]) {
         return 2
       }
     }
@@ -110,8 +109,9 @@ export default function App() {
   }
 
   function calculateServiceScore(e, schoolName) {
-    const pd = parseInt(e)
-    setCsCutoffs(schoolName.csCutoffs)
+    const pd = parseFloat(e)
+    const csCutoffs = (schoolName.csCutoffs)
+    setCsAvg(schoolName.csCutoffs[1])
     if (pd) {
       if (pd > csCutoffs[1]) {
         return 5
@@ -292,7 +292,6 @@ export default function App() {
       if (iSatE >= sch.erbw - 50 && iSatM < sch.erbw - 20) {
         fin += 1
       }
-
       setScores([calculateSATMath(iSatM, sch),
                   calculateSATEnglish(iSatE, sch),
                   calculateECValue(iECs, sch),
@@ -408,9 +407,9 @@ export default function App() {
       satM = {[satMath, Schools[SchoolNameArr.indexOf(schoolSelection)].math]} 
       satR = {[satERBW, Schools[SchoolNameArr.indexOf(schoolSelection)].erbw]} 
       gpa = {[gpaAverage, Schools[SchoolNameArr.indexOf(schoolSelection)].gpa]} 
-      ec = {[extraCurricular, 6]}  
-      cs = {[communityServiceHours, 2]} 
-      se = {[summerHours, 20]} 
+      ec = {[extraCurricular, ecAvg]}  
+      cs = {[communityServiceHours, csAvg]} 
+      se = {[summerHours, seAvg]} 
       cr = {[courseRigor, .75]}
       />
     }
