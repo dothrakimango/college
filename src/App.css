@@ -65,6 +65,47 @@
 
 .report{
   text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  align-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.satReport{
+  border: 3px;
+  height: auto;
+  width: 40rem;
+  margin: 1rem auto 1rem;
+  padding: 1rem 1rem;
+  border-radius: 3px;
+  background: rgba(0, 128, 0, 0.2);
+  border-color: green;
+  border-style:solid; 
+}
+
+.ecReport{
+  border: 3px;
+  height: auto;
+  width: 40rem;
+  margin: 1rem auto 1rem;
+  padding: 1rem 1rem;
+  border-radius: 3px;
+  background: rgba(255, 165, 0, 0.2);
+  border-color: orange;
+  border-style:solid; 
+}
+
+.academicReport{
+  border: 3px;
+  height: auto;
+  width: 40rem;
+  margin: 1rem auto 1rem;
+  padding: 1rem 1rem;
+  border-radius: 3px;
+  background: rgba(128, 0, 128, 0.2);
+  border-color: purple;
+  border-style:solid; 
 }
 
 .erbwBox {

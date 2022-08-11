@@ -13,12 +13,20 @@ export default function App() {
 
   //Define States i.e. the values of the numbers
   const scoreDesc = ["N/A",
-                      "Needs improvement",
-                      "Needs improvement",
-                      "Okay",
-                      "Good",
-                      "Excellent!",
+                      "To get in, you'll need to work on this area.",
+                      "Your chances aren't great in this area, but there's always room to improve!",
+                      "You might be in the conversation, but you could work to improve in this area.",
+                      "This area is strong, but could be improved.",
+                      "Excellent! Your chances are high in this area.",
                       ]
+  const finalScore = [
+    <p key="0">We calculate that you're <b>not in the conversation.</b> Sign up with AKALA today to improve your chances!</p>,
+    <p key="1">We calculate that you're <b>probably not in the conversation.</b> Sign up with AKALA today to improve your chances!</p>,
+    <p key="2">We calculate that you're <b>probably not in the conversation.</b> Sign up with AKALA today to improve your chances!</p>,
+    <p key="3">We calculate that you <b>might be in the conversation.</b> Sign up with AKALA today to improve your chances!</p>,
+    <p key="4">We calculate that you're <b>probably in the conversation.</b> Sign up with AKALA today to improve your chances!</p>,
+    <p key="5">We calculate that you're <b>definitely in the conversation.</b> Sign up with AKALA today to improve your chances!</p>
+  ]
   // SATmath, SATeng, ECs, SumEx, CS, GPA, Rigor
   const [scores, setScores] = useState([0, 0, 0, 0, 0, 0, 0])
   const [ecAvg, setEcAvg] = useState("0")
@@ -244,20 +252,26 @@ export default function App() {
   function PrintReport(satM, satE, ecH, sumH, serH, rig, sch) {
     return(
       <div className="report">
-        <h3>SAT Math</h3>
-          <p>{scoreDesc[scores[0]]}</p>
-        <h3>SAT English</h3>
-          <p>{scoreDesc[scores[1]]}</p>
-        <h3>Extracurriculars</h3>
-          <p>{scoreDesc[scores[2]]}</p>
-        <h3>Summer Experience</h3>
-          <p>{scoreDesc[scores[3]]}</p>
-        <h3>Community Service</h3>
-          <p>{scoreDesc[scores[4]]}</p>
-        <h3>GPA</h3>
-          <p>{scoreDesc[scores[5]]}</p>          
-        <h3>Course Rigor</h3>
-          <p>{scoreDesc[scores[6]]}</p>
+        <div className="satReport">
+          <h3>SAT Math</h3>
+            <p>{scoreDesc[scores[0]]}</p>
+          <h3>SAT English</h3>
+            <p>{scoreDesc[scores[1]]}</p>
+        </div>
+        <div className="ecReport">
+          <h3>Extracurriculars</h3>
+            <p>{scoreDesc[scores[2]]}</p>
+          <h3>Summer Experience</h3>
+            <p>{scoreDesc[scores[3]]}</p>
+          <h3>Community Service</h3>
+            <p>{scoreDesc[scores[4]]}</p>
+        </div>
+        <div className="academicReport">
+          <h3>GPA</h3>
+            <p>{scoreDesc[scores[5]]}</p>          
+          <h3>Course Rigor</h3>
+            <p>{scoreDesc[scores[6]]}</p>
+        </div>
       </div>
     )
     }
@@ -301,7 +315,8 @@ export default function App() {
                   calculateRigor(iEAP, iTAP)])
       console.log(scoreDesc[5])
       setIsShown(true)
-      setFinalText("We Estimate your score to be " + (fin).toString())
+      var scoreAvg = scores.reduce((a, b) => a + b) / scores.length;
+      setFinalText(finalScore[parseInt(scoreAvg)])
     }
     else {
       setFinalText("Please enter valid values")
@@ -414,7 +429,6 @@ export default function App() {
       />
     }
     {isShown && <PrintReport />}
-
 
     </div>
     
