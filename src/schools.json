@@ -22,7 +22,10 @@
     "math": 750,
     "actLower": 27,
     "actUpper": 32,
-    "weights": [0.3, 0.4, 2, 2, 2]
+    "weights": [0.3, 0.4, 2, 2, 2],
+    "ecCutoffs": [1, 5],
+    "seCutoffs": [5, 15],
+    "csCutoffs": [0.5, 2]
   },
   {
     "name": "Bard College",
@@ -33,7 +36,10 @@
     "math": 710,
     "actLower": 27,
     "actUpper": 32,
-    "weights": [0.3, 0.4, 2, 2, 2]
+    "weights": [0.3, 0.4, 2, 2, 2],
+    "ecCutoffs": [1, 5],
+    "seCutoffs": [5, 15],
+    "csCutoffs": [0.5, 2]
   },
   {
     "name": "Barnard College",
@@ -44,7 +50,11 @@
     "math": 770,
     "actLower": 31,
     "actUpper": 34,
-    "weights": [0.3, 0.4, 2, 2, 2]
+    "weights": [0.3, 0.4, 2, 2, 2],
+    "ecCutoffs": [10, 15],
+    "seCutoffs": [80, 120],
+    "csCutoffs": [2, 3]
+
   },
   {
     "name": "Bates College",
@@ -55,7 +65,10 @@
     "math": 740,
     "actLower": 27,
     "actUpper": 33,
-    "weights": [0.3, 0.4, 2, 2, 2]
+    "weights": [0.3, 0.4, 2, 2, 2],
+    "ecCutoffs": [1, 5],
+    "seCutoffs": [5, 15],
+    "csCutoffs": [0.5, 2]
   },
   {
     "name": "Baylor University",
@@ -66,7 +79,10 @@
     "math": 700,
     "actLower": 26,
     "actUpper": 31,
-    "weights": [0.3, 0.4, 2, 2, 2]
+    "weights": [0.3, 0.4, 2, 2, 2],
+    "ecCutoffs": [1, 5],
+    "seCutoffs": [5, 15],
+    "csCutoffs": [0.5, 2]
   },
   {
     "name": "Boston College",
@@ -77,7 +93,10 @@
     "math": 770,
     "actLower": 31,
     "actUpper": 34,
-    "weights": [0.3, 0.4, 2, 2, 2]
+    "weights": [0.3, 0.4, 2, 2, 2],
+    "ecCutoffs": [5, 10],
+    "seCutoffs": [40, 80],
+    "csCutoffs": [0, 1]
   },
   {
     "name": "Boston University",
@@ -88,7 +107,10 @@
     "math": 780,
     "actLower": 30,
     "actUpper": 34,
-    "weights": [0.3, 0.4, 2, 2, 2]
+    "weights": [0.3, 0.4, 2, 2, 2],
+    "ecCutoffs": [5, 10],
+    "seCutoffs": [40, 80],
+    "csCutoffs": [0, 1]
   },
   {
     "name": "Bowdoin College",
@@ -99,7 +121,10 @@
     "math": 770,
     "actLower": 30,
     "actUpper": 34,
-    "weights": [0.3, 0.4, 2, 2, 2]
+    "weights": [0.3, 0.4, 2, 2, 2],
+    "ecCutoffs": [5, 10],
+    "seCutoffs": [40, 80],
+    "csCutoffs": [0, 1]
   },
   {
     "name": "Brandeis University",
@@ -110,7 +135,10 @@
     "math": 790,
     "actLower": 31,
     "actUpper": 33,
-    "weights": [0.3, 0.4, 2, 2, 2]
+    "weights": [0.3, 0.4, 2, 2, 2],
+    "ecCutoffs": [5, 10],
+    "seCutoffs": [40, 80],
+    "csCutoffs": [0, 1]
   },
   {
     "name": "Brown University",
@@ -121,7 +149,11 @@
     "math": 790,
     "actLower": 33,
     "actUpper": 35,
-    "weights": [0.3, 0.4, 2, 2, 2]
+    "weights": [0.3, 0.4, 2, 2, 2],
+    "ecCutoffs": [10, 15],
+    "seCutoffs": [80, 120],
+    "csCutoffs": [2, 3]
+
   },
   {
     "name": "Bucknell University",
@@ -132,7 +164,10 @@
     "math": 730,
     "actLower": 27,
     "actUpper": 31,
-    "weights": [0.3, 0.4, 2, 2, 2]
+    "weights": [0.3, 0.4, 2, 2, 2],
+    "ecCutoffs": [5, 10],
+    "seCutoffs": [40, 80],
+    "csCutoffs": [0, 1]
   },
   {
     "name": "California Institute of Technology",
@@ -143,7 +178,11 @@
     "math": 800,
     "actLower": 35,
     "actUpper": 36,
-    "weights": [0.3, 0.4, 2, 2, 2]
+    "weights": [0.3, 0.4, 2, 2, 2],
+    "ecCutoffs": [10, 15],
+    "seCutoffs": [80, 120],
+    "csCutoffs": [2, 3]
+
   },
   {
     "name": "Carleton College",
@@ -154,7 +193,10 @@
     "math": 770,
     "actLower": 30,
     "actUpper": 34,
-    "weights": [0.3, 0.4, 2, 2, 2]
+    "weights": [0.3, 0.4, 2, 2, 2],
+    "ecCutoffs": [5, 10],
+    "seCutoffs": [40, 80],
+    "csCutoffs": [0, 1]
   },
   {
     "name": "Carnegie Mellon University",
@@ -165,7 +207,11 @@
     "math": 800,
     "actLower": 33,
     "actUpper": 35,
-    "weights": [0.3, 0.4, 2, 2, 2]
+    "weights": [0.3, 0.4, 2, 2, 2],
+    "ecCutoffs": [10, 15],
+    "seCutoffs": [80, 120],
+    "csCutoffs": [2, 3]
+
   },
   {
     "name": "Case Western Reserve University",
@@ -176,7 +222,10 @@
     "erbw": 730,
     "math": 790,
     "actUpper": 34,
-    "weights": [0.3, 0.4, 2, 2, 2]
+    "weights": [0.3, 0.4, 2, 2, 2],
+    "ecCutoffs": [5, 10],
+    "seCutoffs": [40, 80],
+    "csCutoffs": [0, 1]
   },
   {
     "name": "Chapman University",
@@ -187,7 +236,10 @@
     "math": 680,
     "actLower": 25,
     "actUpper": 30,
-    "weights": [0.3, 0.4, 2, 2, 2]
+    "weights": [0.3, 0.4, 2, 2, 2],
+    "ecCutoffs": [1, 5],
+    "seCutoffs": [5, 15],
+    "csCutoffs": [0.5, 2]
   },
   {
     "name": "Claremont McKenna College",
@@ -198,7 +250,10 @@
     "math": 770,
     "actLower": 31,
     "actUpper": 34,
-    "weights": [0.3, 0.4, 2, 2, 2]
+    "weights": [0.3, 0.4, 2, 2, 2],
+    "ecCutoffs": [5, 10],
+    "seCutoffs": [40, 80],
+    "csCutoffs": [0, 1]
   },
   {
     "name": "Colby College",
@@ -209,7 +264,10 @@
     "math": 780,
     "actLower": 32,
     "actUpper": 34,
-    "weights": [0.3, 0.4, 2, 2, 2]
+    "weights": [0.3, 0.4, 2, 2, 2],
+    "ecCutoffs": [5, 10],
+    "seCutoffs": [40, 80],
+    "csCutoffs": [0, 1]
   },
   {
     "name": "Colgate University",
@@ -220,7 +278,10 @@
     "math": 750,
     "actLower": 30,
     "actUpper": 33,
-    "weights": [0.3, 0.4, 2, 2, 2]
+    "weights": [0.3, 0.4, 2, 2, 2],
+    "ecCutoffs": [5, 10],
+    "seCutoffs": [40, 80],
+    "csCutoffs": [0, 1]
   },
   {
     "name": "Columbia University",
@@ -231,7 +292,11 @@
     "math": 800,
     "actLower": 34,
     "actUpper": 35,
-    "weights": [0.3, 0.4, 2, 2, 2]
+    "weights": [0.3, 0.4, 2, 2, 2],
+    "ecCutoffs": [10, 15],
+    "seCutoffs": [80, 120],
+    "csCutoffs": [2, 3]
+
   },
   {
     "name": "Cornell University",
@@ -242,7 +307,11 @@
     "math": 790,
     "actLower": 32,
     "actUpper": 35,
-    "weights": [0.3, 0.4, 2, 2, 2]
+    "weights": [0.3, 0.4, 2, 2, 2],
+    "ecCutoffs": [10, 15],
+    "seCutoffs": [80, 120],
+    "csCutoffs": [2, 3]
+
   },
   {
     "name": "Dartmouth College",
@@ -253,7 +322,11 @@
     "math": 790,
     "actLower": 32,
     "actUpper": 35,
-    "weights": [0.3, 0.4, 2, 2, 2]
+    "weights": [0.3, 0.4, 2, 2, 2],
+    "ecCutoffs": [10, 15],
+    "seCutoffs": [80, 120],
+    "csCutoffs": [2, 3]
+
   },
   {
     "name": "Davidson College",
@@ -264,7 +337,10 @@
     "math": 740,
     "actLower": 30,
     "actUpper": 33,
-    "weights": [0.3, 0.4, 2, 2, 2]
+    "weights": [0.3, 0.4, 2, 2, 2],
+    "ecCutoffs": [5, 10],
+    "seCutoffs": [40, 80],
+    "csCutoffs": [0, 1]
   },
   {
     "name": "Duke University",
@@ -275,7 +351,11 @@
     "math": 800,
     "actLower": 33,
     "actUpper": 35,
-    "weights": [0.3, 0.4, 2, 2, 2]
+    "weights": [0.3, 0.4, 2, 2, 2],
+    "ecCutoffs": [10, 15],
+    "seCutoffs": [80, 120],
+    "csCutoffs": [2, 3]
+
   },
   {
     "name": "Emory University",
@@ -286,7 +366,11 @@
     "math": 790,
     "actLower": 31,
     "actUpper": 34,
-    "weights": [0.3, 0.4, 2, 2, 2]
+    "weights": [0.3, 0.4, 2, 2, 2],
+    "ecCutoffs": [10, 15],
+    "seCutoffs": [80, 120],
+    "csCutoffs": [2, 3]
+
   },
   {
     "name": "Fordham University",
@@ -297,7 +381,10 @@
     "math": 710,
     "actLower": 29,
     "actUpper": 33,
-    "weights": [0.3, 0.4, 2, 2, 2]
+    "weights": [0.3, 0.4, 2, 2, 2],
+    "ecCutoffs": [5, 10],
+    "seCutoffs": [40, 80],
+    "csCutoffs": [0, 1]
   },
   {
     "name": "George Washington University",
@@ -308,7 +395,10 @@
     "math": 730,
     "actLower": 29,
     "actUpper": 33,
-    "weights": [0.3, 0.4, 2, 2, 2]
+    "weights": [0.3, 0.4, 2, 2, 2],
+    "ecCutoffs": [5, 10],
+    "seCutoffs": [40, 80],
+    "csCutoffs": [0, 1]
   },
   {
     "name": "Georgetown University",
@@ -319,7 +409,10 @@
     "math": 790,
     "actLower": 31,
     "actUpper": 35,
-    "weights": [0.3, 0.4, 2, 2, 2]
+    "weights": [0.3, 0.4, 2, 2, 2],
+    "ecCutoffs": [10, 15],
+    "seCutoffs": [80, 120],
+    "csCutoffs": [2, 3]
   },
   {
     "name": "Gonzaga University",
@@ -330,7 +423,10 @@
     "math": 680,
     "actLower": 25,
     "actUpper": 30,
-    "weights": [0.3, 0.4, 2, 2, 2]
+    "weights": [0.3, 0.4, 2, 2, 2],
+    "ecCutoffs": [1, 5],
+    "seCutoffs": [5, 15],
+    "csCutoffs": [0.5, 2]
   },
   {
     "name": "Grinnell College",
@@ -341,7 +437,10 @@
     "math": 790,
     "actLower": 30,
     "actUpper": 34,
-    "weights": [0.3, 0.4, 2, 2, 2]
+    "weights": [0.3, 0.4, 2, 2, 2],
+    "ecCutoffs": [5, 10],
+    "seCutoffs": [40, 80],
+    "csCutoffs": [0, 1]
   },
   {
     "name": "Hamilton College",
@@ -352,7 +451,10 @@
     "math": 760,
     "actLower": 32,
     "actUpper": 34,
-    "weights": [0.3, 0.4, 2, 2, 2]
+    "weights": [0.3, 0.4, 2, 2, 2],
+    "ecCutoffs": [5, 10],
+    "seCutoffs": [40, 80],
+    "csCutoffs": [0, 1]
   },
   {
     "name": "Harvard College",
@@ -363,7 +465,10 @@
     "math": 800,
     "actLower": 33,
     "actUpper": 35,
-    "weights": [0.3, 0.4, 2, 2, 2]
+    "weights": [0.3, 0.4, 2, 2, 2],
+    "ecCutoffs": [10, 15],
+    "seCutoffs": [80, 120],
+    "csCutoffs": [2, 3]
   },
   {
     "name": "Harvey Mudd College",
@@ -374,7 +479,10 @@
     "math": 800,
     "actLower": 34,
     "actUpper": 35,
-    "weights": [0.3, 0.4, 2, 2, 2]
+    "weights": [0.3, 0.4, 2, 2, 2],
+    "ecCutoffs": [10, 15],
+    "seCutoffs": [80, 120],
+    "csCutoffs": [2, 3]
   },
   {
     "name": "Haverford College",
@@ -385,7 +493,10 @@
     "math": 780,
     "actLower": 32,
     "actUpper": 35,
-    "weights": [0.3, 0.4, 2, 2, 2]
+    "weights": [0.3, 0.4, 2, 2, 2],
+    "ecCutoffs": [5, 10],
+    "seCutoffs": [40, 80],
+    "csCutoffs": [0, 1]
   },
   {
     "name": "Indiana University, Bloomington",
@@ -396,7 +507,10 @@
     "math": 680,
     "actLower": 24,
     "actUpper": 31,
-    "weights": [0.3, 0.4, 2, 2, 2]
+    "weights": [0.3, 0.4, 2, 2, 2],
+    "ecCutoffs": [1, 5],
+    "seCutoffs": [5, 15],
+    "csCutoffs": [0.5, 2]
   },
   {
     "name": "Johns Hopkins University",
@@ -407,7 +521,10 @@
     "math": 800,
     "actLower": 33,
     "actUpper": 35,
-    "weights": [0.3, 0.4, 2, 2, 2]
+    "weights": [0.3, 0.4, 2, 2, 2],
+    "ecCutoffs": [10, 15],
+    "seCutoffs": [80, 120],
+    "csCutoffs": [2, 3]
   },
   {
     "name": "Lafayette College",
@@ -418,7 +535,10 @@
     "math": 730,
     "actLower": 28,
     "actUpper": 33,
-    "weights": [0.3, 0.4, 2, 2, 2]
+    "weights": [0.3, 0.4, 2, 2, 2],
+    "ecCutoffs": [5, 10],
+    "seCutoffs": [40, 80],
+    "csCutoffs": [0, 1]
   },
   {
     "name": "Lehigh University",
@@ -429,7 +549,10 @@
     "math": 740,
     "actLower": 29,
     "actUpper": 33,
-    "weights": [0.3, 0.4, 2, 2, 2]
+    "weights": [0.3, 0.4, 2, 2, 2],
+    "ecCutoffs": [5, 10],
+    "seCutoffs": [40, 80],
+    "csCutoffs": [0, 1]
   },
   {
     "name": "Lewis & Clark College",
@@ -440,7 +563,10 @@
     "math": 680,
     "actLower": 27,
     "actUpper": 31,
-    "weights": [0.3, 0.4, 2, 2, 2]
+    "weights": [0.3, 0.4, 2, 2, 2],
+    "ecCutoffs": [5, 10],
+    "seCutoffs": [40, 80],
+    "csCutoffs": [0, 1]
   },
   {
     "name": "Loyola Marymount University",
@@ -450,7 +576,10 @@
     "math": 700,
     "actLower": 27,
     "actUpper": 31,
-    "weights": [0.3, 0.4, 2, 2, 2]
+    "weights": [0.3, 0.4, 2, 2, 2],
+    "ecCutoffs": [5, 10],
+    "seCutoffs": [40, 80],
+    "csCutoffs": [0, 1]
   },
   {
     "name": "Marquette University",
@@ -461,7 +590,10 @@
     "math": 700,
     "actLower": 25,
     "actUpper": 30,
-    "weights": [0.3, 0.4, 2, 2, 2]
+    "weights": [0.3, 0.4, 2, 2, 2],
+    "ecCutoffs": [1, 5],
+    "seCutoffs": [5, 15],
+    "csCutoffs": [0.5, 2]
   },
   {
     "name": "Massachusetts Institute of Technology",
@@ -472,7 +604,10 @@
     "math": 800,
     "actLower": 34,
     "actUpper": 36,
-    "weights": [0.3, 0.4, 2, 2, 2]
+    "weights": [0.3, 0.4, 2, 2, 2],
+    "ecCutoffs": [10, 15],
+    "seCutoffs": [80, 120],
+    "csCutoffs": [2, 3]
   },
   {
     "name": "Michigan State University",
@@ -483,7 +618,10 @@
     "math": 660,
     "actLower": 23,
     "actUpper": 29,
-    "weights": [0.3, 0.4, 2, 2, 2]
+    "weights": [0.3, 0.4, 2, 2, 2],
+    "ecCutoffs": [1, 5],
+    "seCutoffs": [5, 15],
+    "csCutoffs": [0.5, 2]
   },
   {
     "name": "New York University",
