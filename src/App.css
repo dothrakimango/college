@@ -75,7 +75,7 @@
 .satReport{
   border: 3px;
   height: auto;
-  width: 40rem;
+  width: 30rem;
   margin: 1rem auto 1rem;
   padding: 1rem 1rem;
   border-radius: 3px;
@@ -87,7 +87,7 @@
 .ecReport{
   border: 3px;
   height: auto;
-  width: 40rem;
+  width: 30rem;
   margin: 1rem auto 1rem;
   padding: 1rem 1rem;
   border-radius: 3px;
@@ -99,7 +99,7 @@
 .academicReport{
   border: 3px;
   height: auto;
-  width: 40rem;
+  width: 30rem;
   margin: 1rem auto 1rem;
   padding: 1rem 1rem;
   border-radius: 3px;
@@ -134,12 +134,15 @@
 }
 
 .head {
-  background: #090d58;
+  background: #203444;
   color: white;
   padding: 15px;
   font-family: Arial, Helvetica, sans-serif;
   font-family: sofia-pro;
+  text-align: center;
 }
+
+
 .inputs {
   padding: 20px;
 }
