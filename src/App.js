@@ -12,12 +12,15 @@ export default function App() {
                       "Needs improvement",
                       "Okay",
                       "Good",
-                      "Excellent!"]
+                      "Excellent!",
+                      ]
   // SATmath, SATeng, ECs, SumEx, CS, GPA, Rigor
   const [scores, setScores] = useState([0, 0, 0, 0, 0, 0, 0])
-  const [satScore, setSatScore] = useState("0")
+  const [ecCutoffs, setEcCutoffs] = useState([0, 0])
+  const [csCutoffs, setCsCutoffs] = useState([0, 0])
+  const [seCutoffs, setSeCutoffs] = useState([0, 0])
   const [gpaAverage, setGpaAverage] = useState("0")
-  const [schoolSelection, setSchoolSelection] = useState("None")
+  const [schoolSelection, setSchoolSelection] = useState("Arizona State University")
   const [extraCurricular, setExtraCurricular] = useState("0")
   const [summerHours, setSummerHours] = useState("0")
   const [communityServiceHours, setCommunityServiceHours] = useState("0")
@@ -42,7 +45,7 @@ export default function App() {
         return 1
       }
     }
-    return 0
+    return 1
   }
 
   function calculateSATEnglish(satE, schoolName) {
@@ -57,11 +60,12 @@ export default function App() {
         return 1
       }
     }
-    return 0
+    return 1
   }
 
-  function calculateECValue(e) {
+  function calculateECValue(e, schoolName) {
     const pd = parseInt(e)
+    setEcCutoffs(schoolName.ecCutoffs)
     if (pd) {
       if (pd > 10){
         return 5
@@ -76,11 +80,12 @@ export default function App() {
         return 2
       }
     }
-    return 0
+    return 1
   }
 
-  function calculateSummerScore(e) {
+  function calculateSummerScore(e, schoolName) {
     const pd = parseInt(e)
+    setSeCutoffs(schoolName.seCutoffs)
     if (pd) {
       if (pd > 30) {
         return 5
@@ -95,7 +100,24 @@ export default function App() {
         return 2
       }
     }
-    return 0
+    return 1
+  }
+
+  function calculateServiceScore(e, schoolName) {
+    const pd = parseInt(e)
+    setCsCutoffs(schoolName.csCutoffs)
+    if (pd) {
+      if (pd > csCutoffs[1]) {
+        return 5
+      }
+      if (pd <= csCutoffs[1] && pd > csCutoffs[0]) {
+        return 4
+      }
+      if (pd > 0 && pd <= csCutoffs[0]) {
+        return 2
+      }
+    }
+    return 1
   }
 
   function calculateGPAScore(gpa, schoolName){
@@ -118,30 +140,12 @@ export default function App() {
     return 1
   }
 
-  function calculateServiceScore(e) {
-    const pd = parseInt(e)
-    
-    if (pd) {
-      if (pd > 2) {
-        return 5
-      }
-      if (pd <= 2 && pd > 1) {
-        return 4
-      }
-      if (pd > 0 && pd <= 1) {
-        return 2
-      }
-    }
-    return 0
-  }
-  
-
   function calculateRigor(eligible, taken) {
     const eAPs = parseInt(eligible)
     const tAPs = parseInt(taken)
     console.log(tAPs/eAPs)
     if (eAPs == 0 && tAPs == 0){
-      return 0
+      return 5
     }
     if (eAPs) {
       var rigor = tAPs/eAPs
@@ -162,7 +166,7 @@ export default function App() {
         return 1
       }
     }
-    return 0
+    return 1
   }
 
 
@@ -182,7 +186,7 @@ export default function App() {
   )
 */
 
-  const [finalText, setFinalText] = useState("Not Applicable Account")
+  const [finalText, setFinalText] = useState("Press the button below to print a report")
 
   const SchoolNameArr = Schools.map((schools) => {return (schools.name)})
 /*
@@ -233,7 +237,7 @@ export default function App() {
   // Describes each score
   function PrintReport(satM, satE, ecH, sumH, serH, rig, sch) {
     return(
-      <div>
+      <div className="report">
         <h3>SAT Math</h3>
           <p>{scoreDesc[scores[0]]}</p>
         <h3>SAT English</h3>
@@ -283,18 +287,11 @@ export default function App() {
         fin += 1
       }
 
-
-      console.log(iGPA)
-
-      fin = fin + calculateECValue(iECs)
-      fin = fin + calculateSummerScore(iSh)
-      fin = fin + calculateServiceScore(iCS)
-      fin += calculateRigor(iEAP, iTAP)
       setScores([calculateSATMath(iSatM, sch),
                   calculateSATEnglish(iSatE, sch),
-                  calculateECValue(iECs),
-                  calculateSummerScore(iSh),
-                  calculateServiceScore(iCS),
+                  calculateECValue(iECs, sch),
+                  calculateSummerScore(iSh, sch),
+                  calculateServiceScore(iCS, sch),
                   calculateGPAScore(iGPA, sch),
                   calculateRigor(iEAP, iTAP)])
       console.log(scoreDesc[5])
@@ -302,7 +299,7 @@ export default function App() {
       setFinalText("We Estimate your score to be " + (fin).toString())
     }
     else {
-      setFinalText("Not Available School. Please Enter All Valid Information")
+      setFinalText("Please enter valid values")
     }
     
   }
@@ -310,9 +307,25 @@ export default function App() {
   return(
     <div className = "chance-me">
       <div className = 'head'>
-        <h1>Akala: Chance-Me Feature</h1>
+        <h1>AKALA: Chance-Me Feature</h1>
       </div>
       <div className="App">
+        <div className = 'collegeSelect'>
+          <p>Please Select The College you want</p>
+          <select
+            name="choose school"
+            options={SchoolNameArr}
+            value={schoolSelection}
+            onChange = {(e) => setSchoolSelection(e.target.value)}>
+              {Schools.map((option) => (
+                <option key={option.name}>
+                  {option.name}
+                </option>
+              ))}
+            </select>
+          <p>{finalText}</p>
+          <button onClick={printScoresVolumeTwo}>Show report</button>
+        </div>
         <div className="SatClass">
           <h3>Standardized Test Scores</h3>
           <div className = "topRowSat">
@@ -370,22 +383,7 @@ export default function App() {
           />
           </div>
         </div>
-          <div className = 'collegeSelect'>
-            <p>Please Select The College you want</p>
-            <select
-              name="choose school"
-              options={SchoolNameArr}
-              value={schoolSelection}
-              onChange = {(e) => setSchoolSelection(e.target.value)}>
-                {Schools.map((option) => (
-                  <option key={option.name}>
-                    {option.name}
-                  </option>
-                ))}
-              </select>
-          </div>
-        <button onClick={printScoresVolumeTwo}>Show report</button>
-    </div>
+      </div>
     {isShown && <PrintScoresTwo 
 
       sch = {Schools[SchoolNameArr.indexOf(schoolSelection)]}
@@ -399,7 +397,7 @@ export default function App() {
       />
     }
     {isShown && <PrintReport />}
-    <p>{finalText}</p>
+
 
     </div>
     

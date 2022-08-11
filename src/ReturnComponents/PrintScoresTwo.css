@@ -1,0 +1,23 @@
+.graph-container {
+    padding: 5%;
+}
+
+.graph-row{
+    display: flex;
+    height: 100%;
+}
+
+.left{
+    flex: 1 1 1px;
+    min-width: 0;
+}
+
+.center{
+    flex: 1 1 1px;
+    min-width: 0;
+}
+
+.right{
+    flex: 1 1 1px;
+    min-width: 0;
+}
