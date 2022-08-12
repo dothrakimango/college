@@ -250,28 +250,12 @@ export default function App() {
   return(
     <div className = "chance-me">
       <div className = 'head'>
-        <h1>AKALA: Chance-Me Feature</h1>
+        <img className="logo" src="//images.squarespace-cdn.com/content/v1/5fb2d7c43404f055488e88c6/1605556361904-5TQM3B4PEU4IL4ME4ZDH/logo_name_white.png?format=1500w"/>
+        <h1 className="title">AKALA: Chance-Me Feature</h1>
       </div>
-      <div className="App">
-        <div className="SatClass">
-          <h3>Standardized Test Scores</h3>
-          <p>Enter your SAT ERBW score</p>
-          <input type = "text" 
-            name = "erbwBox" 
-            onChange = {(e) => setSatERBW(e.target.value)} 
-            value = {satERBW} 
-            autoFocus
-            />
-          <p>Enter your SAT Math score</p>
-          <input type = "text" 
-            name = "mathBox" 
-            onChange = {(e) => setSatMath(e.target.value)} 
-            value = {satMath} 
-            autoFocus
-          />
-        </div>
+      <div className="InputsContainer">
         <div className="GpaClass">
-          <h3>Academics</h3>
+          <h3>Classes</h3>
           <p>Enter your GPA (out of 4.33)</p>
           <input type = "text" 
               name = "gpaBox" 
@@ -300,6 +284,18 @@ export default function App() {
               value = {extraCurricular} 
 
           />
+        </div>
+        <div className="CsClass">
+          <h3>Community Service</h3>
+          <p>Enter your community service hours per week on average</p>
+          <input type = "text" 
+              name = "ecBox" 
+              onChange = {(e) => setCommunityServiceHours(e.target.value)} 
+              value = {communityServiceHours} 
+          />
+        </div>
+        <div className="SeClass">
+          <h3>Summer Experience</h3>
           <p>Enter how many hours you spent on activities this past summer</p>
           <input type = "text" 
               name = "ecBox" 
@@ -307,13 +303,23 @@ export default function App() {
               value = {summerHours} 
 
           />
-          <p>Enter your community service hours per week on average</p>
+        </div>
+        <div className="SatClass">
+          <h3>Tests</h3>
+          <p>Enter your SAT ERBW score</p>
           <input type = "text" 
-              name = "ecBox" 
-              onChange = {(e) => setCommunityServiceHours(e.target.value)} 
-              value = {communityServiceHours} 
+            name = "erbwBox" 
+            onChange = {(e) => setSatERBW(e.target.value)} 
+            value = {satERBW}
+            />
+          <p>Enter your SAT Math score</p>
+          <input type = "text" 
+            name = "mathBox" 
+            onChange = {(e) => setSatMath(e.target.value)} 
+            value = {satMath}
           />
-        </div><div className = 'collegeSelect'>
+        </div>
+        <div className = 'collegeSelect'>
           <p>Please select the college you want</p>
           <select
             name="choose school"
