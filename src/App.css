@@ -192,6 +192,14 @@
   width: auto;
 }
 
+input {
+  width: 100px;
+  outline: none;
+  border: 2px solid #282c34;
+  border-radius: 4px;
+  padding: 8px;
+}
+
 .inputs {
   padding: 20px;
 }
