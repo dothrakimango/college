@@ -1,5 +1,5 @@
 import './App.css';
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import Schools from "./schools.json";
 import PrintScoresTwo from './ReturnComponents/PrintScoresTwo';
 
@@ -220,6 +220,8 @@ export default function App() {
     )
     }
 
+    
+
   // Calculates scores
   function printScoresVolumeTwo () {
     const iSatM = parseInt(satMath)
@@ -239,16 +241,18 @@ export default function App() {
                   calculateServiceScore(iCS, sch),
                   calculateGPAScore(iGPA, sch),
                   calculateRigor(iEAP, iTAP)])
-      console.log(scoreDesc[5])
       setIsShown(true)
-      var scoreAvg = scores.reduce((a, b) => a + b) / scores.length;
-      setFinalText(finalScore[parseInt(scoreAvg)])
     }
     else {
       setFinalText("Please enter valid values")
     }
     
   }
+
+  useEffect(() => {
+    var scoreAvg = scores.reduce((a, b) => a + b) / scores.length;
+    if (!!scoreAvg) setFinalText(finalScore[parseInt(scoreAvg)]);
+  }, [scores])
 
   return(
     <div>
