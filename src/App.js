@@ -45,7 +45,7 @@ export default function App() {
   // Whether report is shown (only if school and scores are valid)
   const [isShown, setIsShown] = useState(false)
   // Final report
-  const [finalText, setFinalText] = useState("Press the button below to print a report")
+  const [finalText, setFinalText] = useState(<p key="start">Press the button below to print a report</p>)
   // Array of names of schools in database
   const SchoolNameArr = Schools.map((schools) => {return (schools.name)})
 
@@ -192,25 +192,29 @@ export default function App() {
   function PrintReport() {
     return(
       <div className="report">
-        <div className="satReport">
-          <h3>SAT Math</h3>
-            <p>{scoreDesc[scores[0]]}</p>
-          <h3>SAT English</h3>
-            <p>{scoreDesc[scores[1]]}</p>
-        </div>
         <div className="academicReport">
           <h3>GPA</h3>
-            <p>{scoreDesc[scores[5]]}</p>          
+          {scoreDesc[scores[5]]}       
           <h3>Course Rigor</h3>
-            <p>{scoreDesc[scores[6]]}</p>
+          {scoreDesc[scores[6]]}
         </div>
         <div className="ecReport">
           <h3>Extracurriculars</h3>
-            <p>{scoreDesc[scores[2]]}</p>
-          <h3>Summer Experience</h3>
-            <p>{scoreDesc[scores[3]]}</p>
+          {scoreDesc[scores[2]]}
+        </div>
+        <div className="csReport">
           <h3>Community Service</h3>
-            <p>{scoreDesc[scores[4]]}</p>
+          {scoreDesc[scores[4]]}
+        </div>
+        <div className="seReport">
+          <h3>Summer Experience</h3>
+          {scoreDesc[scores[3]]}
+        </div>
+        <div className="satReport">
+          <h3>SAT Math</h3>
+            {scoreDesc[scores[0]]}
+          <h3>SAT English</h3>
+            {scoreDesc[scores[1]]}
         </div>
       </div>
     )
@@ -247,114 +251,120 @@ export default function App() {
   }
 
   return(
-    <div className = "chance-me">
+    <div>
       <div className = 'head'>
         <img className="logo" src="//images.squarespace-cdn.com/content/v1/5fb2d7c43404f055488e88c6/1605556361904-5TQM3B4PEU4IL4ME4ZDH/logo_name_white.png?format=1500w"/>
         <h1 className="title">AKALA: Chance-Me Feature</h1>
       </div>
-      <div className="InputsContainer">
-        <div className="GpaClass">
-          <h2>Classes</h2>
-          <p>Enter your GPA (out of 4.33)</p>
-          <input type = "text" 
-              name = "gpaBox" 
-              placeholder = "GPA (unweighted)"
-              onChange = {(e) => setGpaAverage(e.target.value)} 
-              value = {gpaAverage} 
-          />
-          <p>How many AP (or equivalent) classes will you be eligible to take by the end of your senior year?</p>
-          <input type = "text" 
-              name = "APBox1" 
-              placeholder = "Availible APs"
-              onChange = {(e) => setAvailableAPs(e.target.value)} 
-              value = {availableAPs} 
-          />
-          <p>How many will you have taken by the end of your senior year?</p>
-          <input type = "text" 
-              name = "APBox2" 
-              placeholder = "APs Completed"
-              onChange = {(e) => setTakenAPs(e.target.value)} 
-              value = {takenAPs}
-          />
-        </div>
-        <div className="EcClass">
-          <h3>Extracurriculars</h3>
-          <p>Enter your extracurricular hours per week on average</p>
-          <input type = "text" 
-              name = "ecBox" 
-              placeholder = "ECs completed"
-              onChange = {(e) => setExtraCurricular(e.target.value)} 
-              value = {extraCurricular} 
-
-          />
-        </div>
-        <div className="CsClass">
-          <h3>Community Service</h3>
-          <p>Enter your community service hours per week on average</p>
-          <input type = "text" 
-              name = "ecBox" 
-              placeholder = "Service Hours"
-              onChange = {(e) => setCommunityServiceHours(e.target.value)} 
-              value = {communityServiceHours} 
-          />
-        </div>
-        <div className="SeClass">
-          <h3>Summer Experience</h3>
-          <p>Enter how many hours you spent on activities this past summer</p>
-          <input type = "text" 
-              placeholder='Summer Hours'
-              name = "ecBox" 
-              onChange = {(e) => setSummerHours(e.target.value)} 
-              value = {summerHours} 
-
-          />
-        </div>
-        <div className="SatClass">
-          <h3>Tests</h3>
-          <p>Enter your SAT ERBW score</p>
-          <input type = "text" 
-            name = "erbwBox" 
-            onChange = {(e) => setSatERBW(e.target.value)} 
-            value = {satERBW}
+      <div className = "chance-me">
+        <div className="InputsContainer">
+          <div className="GpaClass">
+            <h2>Classes</h2>
+            <p>Enter your GPA (out of 4.33)</p>
+            <input type = "text" 
+                name = "gpaBox" 
+                placeholder = "GPA (unweighted)"
+                onChange = {(e) => setGpaAverage(e.target.value)} 
+                value = {gpaAverage} 
             />
-          <p>Enter your SAT Math score</p>
-          <input type = "text" 
-            name = "mathBox" 
-            onChange = {(e) => setSatMath(e.target.value)} 
-            value = {satMath}
-          />
+            <p>How many AP (or equivalent) classes will you be eligible to take by the end of your senior year?</p>
+            <input type = "text" 
+                name = "APBox1" 
+                placeholder = "Available APs"
+                onChange = {(e) => setAvailableAPs(e.target.value)} 
+                value = {availableAPs} 
+            />
+            <p>How many will you have taken by the end of your senior year?</p>
+            <input type = "text" 
+                name = "APBox2" 
+                placeholder = "APs Completed"
+                onChange = {(e) => setTakenAPs(e.target.value)} 
+                value = {takenAPs}
+            />
+          </div>
+          <div className="EcClass">
+            <h3>Extracurriculars</h3>
+            <p>Enter your extracurricular hours per week on average</p>
+            <input type = "text" 
+                name = "ecBox" 
+                placeholder = "EC Hours"
+                onChange = {(e) => setExtraCurricular(e.target.value)} 
+                value = {extraCurricular} 
+
+            />
+          </div>
+          <div className="CsClass">
+            <h3>Community Service</h3>
+            <p>Enter your community service hours per week on average</p>
+            <input type = "text" 
+                name = "ecBox" 
+                placeholder = "Service Hours"
+                onChange = {(e) => setCommunityServiceHours(e.target.value)} 
+                value = {communityServiceHours} 
+            />
+          </div>
+          <div className="SeClass">
+            <h3>Summer Experience</h3>
+            <p>Enter how many hours you spent on activities this past summer</p>
+            <input type = "text" 
+                placeholder="Summer Hours"
+                name = "ecBox" 
+                onChange = {(e) => setSummerHours(e.target.value)} 
+                value = {summerHours} 
+
+            />
+          </div>
+          <div className="SatClass">
+            <h3>Tests</h3>
+            <p>Enter your SAT ERBW score</p>
+            <input type = "text" 
+              placeholder = "SAT English Score"
+              name = "erbwBox" 
+              onChange = {(e) => setSatERBW(e.target.value)} 
+              value = {satERBW}
+              />
+            <p>Enter your SAT Math score</p>
+            <input type = "text" 
+              placeholder = "SAT Math Score"
+              name = "mathBox" 
+              onChange = {(e) => setSatMath(e.target.value)} 
+              value = {satMath}
+            />
+          </div>
         </div>
-        <div className = 'collegeSelect'>
-          <p>Please select the college you want</p>
-          <select
-            name="choose school"
-            options={SchoolNameArr}
-            value={schoolSelection}
-            onChange = {(e) => setSchoolSelection(e.target.value)}>
-              {Schools.map((option) => (
-                <option key={option.name}>
-                  {option.name}
-                </option>
-              ))}
-            </select>
-          <p>{finalText}</p>
-          <button onClick={printScoresVolumeTwo}>Click here to show report</button>
+
+        <div className="ReportContainer">
+          <div className = 'collegeSelect'>
+              <p>Please select the college you want</p>
+              <select
+                name="choose school"
+                options={SchoolNameArr}
+                value={schoolSelection}
+                onChange = {(e) => setSchoolSelection(e.target.value)}>
+                  {Schools.map((option) => (
+                    <option key={option.name}>
+                      {option.name}
+                    </option>
+                  ))}
+                </select>
+              {finalText}
+              <button onClick={printScoresVolumeTwo}>Click here to show report</button>
+            </div>
+          {isShown && <PrintReport />}
+          
+          {isShown && <PrintScoresTwo 
+            sch = {Schools[SchoolNameArr.indexOf(schoolSelection)]}
+            satM = {[satMath, Schools[SchoolNameArr.indexOf(schoolSelection)].math]} 
+            satR = {[satERBW, Schools[SchoolNameArr.indexOf(schoolSelection)].erbw]} 
+            gpa = {[gpaAverage, Schools[SchoolNameArr.indexOf(schoolSelection)].gpa]} 
+            ec = {[extraCurricular, ecAvg]}  
+            cs = {[communityServiceHours, csAvg]} 
+            se = {[summerHours, seAvg]} 
+            cr = {[courseRigor, .75]}
+            />
+          }
         </div>
       </div>
-
-    {isShown && <PrintReport />}
-    
-    {isShown && <PrintScoresTwo 
-      sch = {Schools[SchoolNameArr.indexOf(schoolSelection)]}
-      satM = {[satMath, Schools[SchoolNameArr.indexOf(schoolSelection)].math]} 
-      satR = {[satERBW, Schools[SchoolNameArr.indexOf(schoolSelection)].erbw]} 
-      gpa = {[gpaAverage, Schools[SchoolNameArr.indexOf(schoolSelection)].gpa]} 
-      ec = {[extraCurricular, ecAvg]}  
-      cs = {[communityServiceHours, csAvg]} 
-      se = {[summerHours, seAvg]} 
-      cr = {[courseRigor, .75]}
-      />
-    }
     </div>
     
   )

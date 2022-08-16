@@ -1,19 +1,37 @@
 .chance-me{
   background: #ecf0f5;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .InputsContainer {
   text-align: center;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
-  align-content: flex-start;
+  min-width: 30rem;
+  flex: 1, 1, 33%;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
   flex-wrap: wrap;
   list-style: none;
-  padding: 0;
+  padding: 1rem;
   border-color: rgb(57, 204, 204);
-  border-style:solid; 
+  border-style: solid;
+}
+
+.ReportContainer{
+  text-align: center;
+  display: flex;
+  flex: 1;
+  min-width: 50rem;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 1rem;
+  border-color: rgb(57, 204, 204);
+  border-style: solid;
 }
 
 .App-logo {
@@ -25,65 +43,66 @@
   border: 3px;
   font-family: 'Abril Fatface';
   height: auto;
-  width: 50rem;
+  width: calc(100% - 4rem);
   margin: 1rem 1rem;
   padding: 1rem 1rem;
   border-radius: 3px;
   background: rgba(0, 115, 183, 0.2);
   border-color: rgb(0, 115, 183);
-  /*border-style:solid;*/ 
+  border-style:solid;
 }
 
 .EcClass {
   border: 3px;
   height: auto;
+  width: calc(100% - 4rem);
   font-family: 'Abril Fatface';
-  width: 50rem;
   margin: 1rem 1rem;
   padding: 1rem 1rem;
   border-radius: 3px;
   background: rgba(255, 133, 27, 0.2);
   border-color: rgb(255, 133, 27);
-  /*border-style:solid;*/ 
+  border-style:solid;
 }
 
 .CsClass{
   border: 3px;
   height: auto;
+  width: calc(100% - 4rem);
   font-family: 'Abril Fatface';
-  width: 50rem;
   margin: 1rem 1rem;
   padding: 1rem 1rem;
   border-radius: 3px;
   background: rgba(0, 166, 90, 0.2);
   border-color: rgb(0, 166, 90);
-  /*border-style:solid;*/ 
+  border-style:solid;
 }
 
 .SeClass{
   border: 3px;
   height: auto;
+  width: calc(100% - 4rem);
   font-family: 'Abril Fatface';
-  width: 50rem;
   margin: 1rem 1rem;
   padding: 1rem 1rem;
   border-radius: 3px;
   background: rgba(221, 75, 57, 0.2);
   border-color: rgb(221, 75, 57);
-  /*border-style:solid;*/ 
+  border-style:solid; 
 }
 
 .SatClass {
   border: 3px;
   height: auto;
+  width: calc(100% - 4rem);
   font-family: 'Abril Fatface';
-  width: 50rem;
+  width: calc(100% - 4rem);
   margin: 1rem 1rem;
   padding: 1rem 1rem;
   border-radius: 3px;
   background: rgba(57, 204, 204, 0.2);
   border-color: rgb(57, 204, 204);
-  /*border-style:solid;*/ 
+  border-style:solid;
 }
 
 
@@ -91,62 +110,86 @@
   text-align: center;
   border: 3px;
   height: auto;
-  width: 50rem;
+  width: calc(100% - 4rem);
   font-family: 'Abril Fatface';
   margin: 1rem 1rem;
   padding: 1rem 1rem;
   border-radius: 3px;
   background: rgba(96, 92, 168, 0.2);
   border-color: rgb(96, 92, 168);
-  /*border-style:solid;*/ 
+  border-style:solid;
 }
 
 .report{
-  text-align: center;
+  font-family: 'Abril Fatface';
   display: flex;
-  font-family: 'Abril Fatface';
-  flex-direction: row;
-  align-items: flex-start;
-  align-content: flex-start;
-  flex-wrap: wrap;
-}
-
-.satReport{
-  border: 3px;
-  height: auto;
-  width: 30rem;
-  margin: 1rem auto 1rem;
-  font-family: 'Abril Fatface';
-  padding: 1rem 1rem;
-  border-radius: 3px;
-  background: rgba(0, 128, 0, 0.2);
-  border-color: green;
-  border-style:solid; 
-}
-
-.ecReport{
-  border: 3px;
-  height: auto;
-  width: 30rem;
-  margin: 1rem auto 1rem;
-  font-family: 'Abril Fatface';
-  padding: 1rem 1rem;
-  border-radius: 3px;
-  background: rgba(255, 165, 0, 0.2);
-  border-color: orange;
-  border-style:solid; 
+  flex-direction: column;
+  width: 100%;
 }
 
 .academicReport{
   border: 3px;
   height: auto;
-  width: 30rem;
-  margin: 1rem auto 1rem;
+  width: calc(100% - 4rem);
+  margin: 1rem 1rem;
   font-family: 'Abril Fatface';
   padding: 1rem 1rem;
   border-radius: 3px;
-  background: rgba(128, 0, 128, 0.2);
-  border-color: purple;
+  background: rgba(0, 115, 183, 0.2);
+  border-color: rgb(0, 115, 183);
+  border-style:solid; 
+}
+
+
+.ecReport{
+  border: 3px;
+  height: auto;
+  width: calc(100% - 4rem);
+  margin: 1rem 1rem;
+  font-family: 'Abril Fatface';
+  padding: 1rem 1rem;
+  border-radius: 3px;
+  background: rgba(255, 133, 27, 0.2);
+  border-color: rgb(255, 133, 27);
+  border-style:solid; 
+}
+
+.csReport{
+  border: 3px;
+  height: auto;
+  width: calc(100% - 4rem);
+  margin: 1rem 1rem;
+  font-family: 'Abril Fatface';
+  padding: 1rem 1rem;
+  border-radius: 3px;
+  background: rgba(0, 166, 90, 0.2);
+  border-color: rgb(0, 166, 90);
+  border-style:solid; 
+}
+
+.seReport{
+  border: 3px;
+  height: auto;
+  width: calc(100% - 4rem);
+  margin: 1rem 1rem;
+  font-family: 'Abril Fatface';
+  padding: 1rem 1rem;
+  border-radius: 3px;
+  background: rgba(221, 75, 57, 0.2);
+  border-color: rgb(221, 75, 57);
+  border-style:solid; 
+}
+
+.satReport{
+  border: 3px;
+  height: auto;
+  width: calc(100% - 4rem);
+  margin: 1rem 1rem;
+  font-family: 'Abril Fatface';
+  padding: 1rem 1rem;
+  border-radius: 3px;
+  background: rgba(57, 204, 204, 0.2);
+  border-color: rgb(57, 204, 204);
   border-style:solid; 
 }
 
@@ -221,4 +264,13 @@ input {
   to {
     transform: rotate(360deg);
   }
+}
+
+/* latin */
+@font-face {
+  font-family: 'Abril Fatface';
+  font-style: normal;
+  font-weight: 400;
+  src: url(http://fonts.gstatic.com/s/abrilfatface/v19/zOL64pLDlL1D99S8g8PtiKchq-dmjQ.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }

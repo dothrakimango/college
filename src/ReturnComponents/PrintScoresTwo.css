@@ -1,10 +1,11 @@
 .graph-container {
     padding: 5%;
+    width: calc(100% - 4rem);
 }
 
 .graph-row{
     display: flex;
-    height: 100%;
+    max-height: 300rem;
 }
 
 .left{
