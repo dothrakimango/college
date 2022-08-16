@@ -1,7 +1,6 @@
 import './App.css';
 import React, {useState} from "react";
 import Schools from "./schools.json";
-import TabHolder from './TabHolder.js';
 import PrintScoresTwo from './ReturnComponents/PrintScoresTwo';
 
 //Define Score Values
@@ -33,15 +32,15 @@ export default function App() {
   const [ecAvg, setEcAvg] = useState("0")
   const [csAvg, setCsAvg] = useState("0")
   const [seAvg, setSeAvg] = useState("0")
-  const [gpaAverage, setGpaAverage] = useState("0")
+  const [gpaAverage, setGpaAverage] = useState("")
   const [schoolSelection, setSchoolSelection] = useState("Arizona State University")
-  const [extraCurricular, setExtraCurricular] = useState("0")
-  const [summerHours, setSummerHours] = useState("0")
-  const [communityServiceHours, setCommunityServiceHours] = useState("0")
-  const [satMath, setSatMath] = useState("0")
-  const [satERBW, setSatERBW] = useState("0")
-  const [availableAPs, setAvailableAPs] = useState("0")
-  const [takenAPs, setTakenAPs] = useState("0")
+  const [extraCurricular, setExtraCurricular] = useState("")
+  const [summerHours, setSummerHours] = useState("")
+  const [communityServiceHours, setCommunityServiceHours] = useState("")
+  const [satMath, setSatMath] = useState("")
+  const [satERBW, setSatERBW] = useState("")
+  const [availableAPs, setAvailableAPs] = useState("")
+  const [takenAPs, setTakenAPs] = useState("")
   const [courseRigor, setCourseRigor] = useState("0")
   // Whether report is shown (only if school and scores are valid)
   const [isShown, setIsShown] = useState(false)
@@ -255,22 +254,25 @@ export default function App() {
       </div>
       <div className="InputsContainer">
         <div className="GpaClass">
-          <h3>Classes</h3>
+          <h2>Classes</h2>
           <p>Enter your GPA (out of 4.33)</p>
           <input type = "text" 
               name = "gpaBox" 
+              placeholder = "GPA (unweighted)"
               onChange = {(e) => setGpaAverage(e.target.value)} 
               value = {gpaAverage} 
           />
           <p>How many AP (or equivalent) classes will you be eligible to take by the end of your senior year?</p>
           <input type = "text" 
               name = "APBox1" 
+              placeholder = "Availible APs"
               onChange = {(e) => setAvailableAPs(e.target.value)} 
               value = {availableAPs} 
           />
           <p>How many will you have taken by the end of your senior year?</p>
           <input type = "text" 
               name = "APBox2" 
+              placeholder = "APs Completed"
               onChange = {(e) => setTakenAPs(e.target.value)} 
               value = {takenAPs}
           />
@@ -280,6 +282,7 @@ export default function App() {
           <p>Enter your extracurricular hours per week on average</p>
           <input type = "text" 
               name = "ecBox" 
+              placeholder = "ECs completed"
               onChange = {(e) => setExtraCurricular(e.target.value)} 
               value = {extraCurricular} 
 
@@ -290,6 +293,7 @@ export default function App() {
           <p>Enter your community service hours per week on average</p>
           <input type = "text" 
               name = "ecBox" 
+              placeholder = "Service Hours"
               onChange = {(e) => setCommunityServiceHours(e.target.value)} 
               value = {communityServiceHours} 
           />
@@ -298,6 +302,7 @@ export default function App() {
           <h3>Summer Experience</h3>
           <p>Enter how many hours you spent on activities this past summer</p>
           <input type = "text" 
+              placeholder='Summer Hours'
               name = "ecBox" 
               onChange = {(e) => setSummerHours(e.target.value)} 
               value = {summerHours} 

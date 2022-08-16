@@ -99,17 +99,17 @@ export default function PrintScoresTwo (props) {
                 <div className="left">
                     <Bar 
                             data = {{
-                                labels: ['Extracurriculars', 'Community Service'],
+                                labels: ['Extracurriculars'],
                                 datasets: [{
                                     label: 'Your hours',
-                                    data: [props.ec[0], props.cs[0]],
+                                    data: [props.ec[0]],
                                     backgroundColor: 'rgba(30, 60, 255, 0.2)',
                                     borderColor: 'rgb(30, 60, 255)',
                                     borderWidth: 1
                                 },
                                 {
                                     label: 'Average',
-                                    data: [props.ec[1], props.cs[1]],
+                                    data: [props.ec[1]],
                                     backgroundColor: 'rgba(255, 30, 60, 0.2)',
                                     borderColor: 'rgb(255, 30, 60)',
                                     borderWidth: 1
@@ -122,6 +122,33 @@ export default function PrintScoresTwo (props) {
                                 indexAxis: 'x'
                             }}
                     />
+                </div>
+                <div className="center">
+                    <Bar 
+                            data = {{
+                                labels: ['Community Service'],
+                                datasets: [{
+                                    label: 'Your score',
+                                    data: [props.cs[0]],
+                                    backgroundColor: 'rgba(30, 60, 255, 0.2)',
+                                    borderColor: 'rgb(30, 60, 255)',
+                                    borderWidth: 1
+                                },
+                                {
+                                    label: 'School average',
+                                    data: [props.cs[1]],
+                                    backgroundColor: 'rgba(255, 30, 60, 0.2)',
+                                    borderColor: 'rgb(255, 30, 60)',
+                                    borderWidth: 1
+                                }],
+                            }}
+                            height = {300}
+                            width = {60}
+                            options = {{
+                                maintainAspectRatio: false,
+                                indexAxis: 'x'
+                            }}
+                        />                
                 </div>
                 <div className="right">
                     <Bar 

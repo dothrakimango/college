@@ -23,6 +23,7 @@
 
 .GpaClass {
   border: 3px;
+  font-family: 'Abril Fatface';
   height: auto;
   width: 50rem;
   margin: 1rem 1rem;
@@ -36,6 +37,7 @@
 .EcClass {
   border: 3px;
   height: auto;
+  font-family: 'Abril Fatface';
   width: 50rem;
   margin: 1rem 1rem;
   padding: 1rem 1rem;
@@ -48,6 +50,7 @@
 .CsClass{
   border: 3px;
   height: auto;
+  font-family: 'Abril Fatface';
   width: 50rem;
   margin: 1rem 1rem;
   padding: 1rem 1rem;
@@ -60,6 +63,7 @@
 .SeClass{
   border: 3px;
   height: auto;
+  font-family: 'Abril Fatface';
   width: 50rem;
   margin: 1rem 1rem;
   padding: 1rem 1rem;
@@ -72,6 +76,7 @@
 .SatClass {
   border: 3px;
   height: auto;
+  font-family: 'Abril Fatface';
   width: 50rem;
   margin: 1rem 1rem;
   padding: 1rem 1rem;
@@ -87,6 +92,7 @@
   border: 3px;
   height: auto;
   width: 50rem;
+  font-family: 'Abril Fatface';
   margin: 1rem 1rem;
   padding: 1rem 1rem;
   border-radius: 3px;
@@ -98,6 +104,7 @@
 .report{
   text-align: center;
   display: flex;
+  font-family: 'Abril Fatface';
   flex-direction: row;
   align-items: flex-start;
   align-content: flex-start;
@@ -109,6 +116,7 @@
   height: auto;
   width: 30rem;
   margin: 1rem auto 1rem;
+  font-family: 'Abril Fatface';
   padding: 1rem 1rem;
   border-radius: 3px;
   background: rgba(0, 128, 0, 0.2);
@@ -121,6 +129,7 @@
   height: auto;
   width: 30rem;
   margin: 1rem auto 1rem;
+  font-family: 'Abril Fatface';
   padding: 1rem 1rem;
   border-radius: 3px;
   background: rgba(255, 165, 0, 0.2);
@@ -133,6 +142,7 @@
   height: auto;
   width: 30rem;
   margin: 1rem auto 1rem;
+  font-family: 'Abril Fatface';
   padding: 1rem 1rem;
   border-radius: 3px;
   background: rgba(128, 0, 128, 0.2);
@@ -193,7 +203,7 @@
 }
 
 input {
-  width: 100px;
+  width: 150px;
   outline: none;
   border: 2px solid #282c34;
   border-radius: 4px;
