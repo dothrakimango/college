@@ -352,7 +352,7 @@ export default function App() {
                   ))}
                 </select>
               {finalText}
-              <button onClick={printScoresVolumeTwo}>Click here to show report</button>
+              <button className = "butt" onClick={printScoresVolumeTwo}>Click here to show report</button>
             </div>
           {/*isShown && <PrintReport />*/}
           
