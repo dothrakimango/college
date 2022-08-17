@@ -41,7 +41,7 @@
 
 .GpaClass {
   border: 3px;
-  font-family: 'Abril Fatface';
+  font-family: 'Georgia';
   height: auto;
   width: calc(100% - 4rem);
   margin: 1rem 1rem;
@@ -56,7 +56,7 @@
   border: 3px;
   height: auto;
   width: calc(100% - 4rem);
-  font-family: 'Abril Fatface';
+  font-family: 'Georgia';
   margin: 1rem 1rem;
   padding: 1rem 1rem;
   border-radius: 3px;
@@ -69,7 +69,7 @@
   border: 3px;
   height: auto;
   width: calc(100% - 4rem);
-  font-family: 'Abril Fatface';
+  font-family: 'Georgia';
   margin: 1rem 1rem;
   padding: 1rem 1rem;
   border-radius: 3px;
@@ -82,7 +82,7 @@
   border: 3px;
   height: auto;
   width: calc(100% - 4rem);
-  font-family: 'Abril Fatface';
+  font-family: 'Georgia';
   margin: 1rem 1rem;
   padding: 1rem 1rem;
   border-radius: 3px;
@@ -95,7 +95,7 @@
   border: 3px;
   height: auto;
   width: calc(100% - 4rem);
-  font-family: 'Abril Fatface';
+  font-family: 'Georgia';
   width: calc(100% - 4rem);
   margin: 1rem 1rem;
   padding: 1rem 1rem;
@@ -111,7 +111,7 @@
   border: 3px;
   height: auto;
   width: calc(100% - 4rem);
-  font-family: 'Abril Fatface';
+  font-family: 'Georgia';
   margin: 1rem 1rem;
   padding: 1rem 1rem;
   border-radius: 3px;
@@ -121,7 +121,7 @@
 }
 
 .report{
-  font-family: 'Abril Fatface';
+  font-family: 'Georgia';
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -132,7 +132,7 @@
   height: auto;
   width: calc(100% - 4rem);
   margin: 1rem 1rem;
-  font-family: 'Abril Fatface';
+  font-family: 'Georgia';
   padding: 1rem 1rem;
   border-radius: 3px;
   background: rgba(0, 115, 183, 0.2);
@@ -146,7 +146,7 @@
   height: auto;
   width: calc(100% - 4rem);
   margin: 1rem 1rem;
-  font-family: 'Abril Fatface';
+  font-family: 'Georgia';
   padding: 1rem 1rem;
   border-radius: 3px;
   background: rgba(255, 133, 27, 0.2);
@@ -159,7 +159,7 @@
   height: auto;
   width: calc(100% - 4rem);
   margin: 1rem 1rem;
-  font-family: 'Abril Fatface';
+  font-family: 'Georgia';
   padding: 1rem 1rem;
   border-radius: 3px;
   background: rgba(0, 166, 90, 0.2);
@@ -172,7 +172,7 @@
   height: auto;
   width: calc(100% - 4rem);
   margin: 1rem 1rem;
-  font-family: 'Abril Fatface';
+  font-family: 'Georgia';
   padding: 1rem 1rem;
   border-radius: 3px;
   background: rgba(221, 75, 57, 0.2);
@@ -185,7 +185,7 @@
   height: auto;
   width: calc(100% - 4rem);
   margin: 1rem 1rem;
-  font-family: 'Abril Fatface';
+  font-family: 'Georgia';
   padding: 1rem 1rem;
   border-radius: 3px;
   background: rgba(57, 204, 204, 0.2);
@@ -264,13 +264,4 @@ input {
   to {
     transform: rotate(360deg);
   }
-}
-
-/* latin */
-@font-face {
-  font-family: 'Abril Fatface';
-  font-style: normal;
-  font-weight: 400;
-  src: url(http://fonts.gstatic.com/s/abrilfatface/v19/zOL64pLDlL1D99S8g8PtiKchq-dmjQ.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
