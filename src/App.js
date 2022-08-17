@@ -45,7 +45,7 @@ export default function App() {
   // Whether report is shown (only if school and scores are valid)
   const [isShown, setIsShown] = useState(false)
   // Final report
-  const [finalText, setFinalText] = useState(<p key="start">Press the button below to print a report</p>)
+  const [finalText, setFinalText] = useState(<p key="start"></p>)
   // Array of names of schools in database
   const SchoolNameArr = Schools.map((schools) => {return (schools.name)})
 
@@ -341,6 +341,7 @@ export default function App() {
           <div className = 'collegeSelect'>
               <p>Please select the college you want</p>
               <select
+                className="dropdown"
                 name="choose school"
                 options={SchoolNameArr}
                 value={schoolSelection}
