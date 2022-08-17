@@ -42,21 +42,20 @@ export default function PrintScoresTwo (props) {
                         </p>
                     }
                 </div>
-                <div className="graph-container">
                     <div className="graph">
                         <Bar 
                                 data = {{
-                                    labels: ['GPA'],
+                                    labels: ['GPA', 'Course Rigor'],
                                     datasets: [{
                                         label: 'Your score',
-                                        data: [props.gpa[0]],
+                                        data: [props.gpa[0], props.cr[0]],
                                         backgroundColor: 'rgba(30, 60, 255, 0.2)',
                                         borderColor: 'rgb(30, 60, 255)',
                                         borderWidth: 1
                                     },
                                     {
                                         label: 'School average',
-                                        data: [props.gpa[1]],
+                                        data: [props.gpa[1], props.cr[1]],
                                         backgroundColor: 'rgba(255, 30, 60, 0.2)',
                                         borderColor: 'rgb(255, 30, 60)',
                                         borderWidth: 1
@@ -70,34 +69,6 @@ export default function PrintScoresTwo (props) {
                                 }}
                             />                
                     </div>
-                    <div className="graph">
-                        <Bar 
-                                data = {{
-                                    labels: ['Course Rigor'],
-                                    datasets: [{
-                                        label: 'Your score',
-                                        data: [props.cr[0]],
-                                        backgroundColor: 'rgba(30, 60, 255, 0.2)',
-                                        borderColor: 'rgb(30, 60, 255)',
-                                        borderWidth: 1
-                                    },
-                                    {
-                                        label: 'School average',
-                                        data: [props.cr[1]],
-                                        backgroundColor: 'rgba(255, 30, 60, 0.2)',
-                                        borderColor: 'rgb(255, 30, 60)',
-                                        borderWidth: 1
-                                    }],
-                                }}
-                                height = {200}
-                                width = {60}
-                                options = {{
-                                    maintainAspectRatio: false,
-                                    indexAxis: 'y'
-                                }}
-                            />
-                    </div>
-                </div>
             </div>
 
             <div className="ecReport">
