@@ -28,7 +28,7 @@ export default function App() {
     <p key="5">We calculate that you're <b>definitely in the conversation.</b> Sign up with AKALA today to improve your chances!</p>
   ]
   // SATmath, SATeng, ECs, SumEx, CS, GPA, Rigor
-  const [scores, setScores] = useState([0, 0, 0, 0, 0, 0, 0])
+  const [globalScores, setGlobalScores] = useState([0, 0, 0, 0, 0, 0, 0])
   const [ecAvg, setEcAvg] = useState("0")
   const [csAvg, setCsAvg] = useState("0")
   const [seAvg, setSeAvg] = useState("0")
@@ -194,27 +194,27 @@ export default function App() {
       <div className="report">
         <div className="academicReport">
           <h3>GPA</h3>
-          {scoreDesc[scores[5]]}       
+          {scoreDesc[globalScores[5]]}       
           <h3>Course Rigor</h3>
-          {scoreDesc[scores[6]]}
+          {scoreDesc[globalScores[6]]}
         </div>
         <div className="ecReport">
           <h3>Extracurriculars</h3>
-          {scoreDesc[scores[2]]}
+          {scoreDesc[globalScores[2]]}
         </div>
         <div className="csReport">
           <h3>Community Service</h3>
-          {scoreDesc[scores[4]]}
+          {scoreDesc[globalScores[4]]}
         </div>
         <div className="seReport">
           <h3>Summer Experience</h3>
-          {scoreDesc[scores[3]]}
+          {scoreDesc[globalScores[3]]}
         </div>
         <div className="satReport">
           <h3>SAT Math</h3>
-            {scoreDesc[scores[0]]}
+            {scoreDesc[globalScores[0]]}
           <h3>SAT English</h3>
-            {scoreDesc[scores[1]]}
+            {scoreDesc[globalScores[1]]}
         </div>
       </div>
     )
@@ -234,25 +234,25 @@ export default function App() {
     const iTAP = parseInt(takenAPs)
     if (iSatM && iSatE && iGPA && iECs && iSh && iCS && SchoolNameArr.includes(schoolSelection)) {
       const sch = Schools[SchoolNameArr.indexOf(schoolSelection)]
-      setScores([calculateSATMath(iSatM, sch),
+      const scores = [calculateSATMath(iSatM, sch),
                   calculateSATEnglish(iSatE, sch),
                   calculateECValue(iECs, sch),
                   calculateSummerScore(iSh, sch),
                   calculateServiceScore(iCS, sch),
                   calculateGPAScore(iGPA, sch),
-                  calculateRigor(iEAP, iTAP)])
+                  calculateRigor(iEAP, iTAP)]
       setIsShown(true)
+      var scoreAvg = scores.reduce((a, b) => a + b) / scores.length;
+      if (!!scoreAvg) setFinalText(finalScore[parseInt(scoreAvg)]);
+      setGlobalScores(scores)
     }
     else {
-      setFinalText("Please enter valid values")
+      setFinalText(<p>Please enter valid values</p>)
     }
     
   }
 
-  useEffect(() => {
-    var scoreAvg = scores.reduce((a, b) => a + b) / scores.length;
-    if (!!scoreAvg) setFinalText(finalScore[parseInt(scoreAvg)]);
-  }, [scores])
+
 
   return(
     <div>
