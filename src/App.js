@@ -20,12 +20,12 @@ export default function App() {
                       ]
   // Describe overall chances                     
   const finalScore = [
-    <p key="0">We calculate that you're <b>not in the conversation.</b> Sign up with AKALA today to improve your chances!</p>,
-    <p key="1">We calculate that you're <b>probably not in the conversation.</b> Sign up with AKALA today to improve your chances!</p>,
-    <p key="2">We calculate that you're <b>probably not in the conversation.</b> Sign up with AKALA today to improve your chances!</p>,
-    <p key="3">We calculate that you <b>might be in the conversation.</b> Sign up with AKALA today to improve your chances!</p>,
-    <p key="4">We calculate that you're <b>in the conversation.</b> Sign up with AKALA today to improve your chances!</p>,
-    <p key="5">We calculate that you're <b>definitely in the conversation.</b> Sign up with AKALA today to improve your chances!</p>
+    <p key="0">We calculate that you're <b>not in the conversation.</b> <a href="https://app.goakala.com/about/signup/">Sign up with AKALA today</a> to improve your chances!</p>,
+    <p key="1">We calculate that you're <b>probably not in the conversation.</b> <a href="https://app.goakala.com/about/signup/">Sign up with AKALA today</a> to improve your chances!</p>,
+    <p key="2">We calculate that you're <b>probably not in the conversation.</b> <a href="https://app.goakala.com/about/signup/">Sign up with AKALA today</a> to improve your chances!</p>,
+    <p key="3">We calculate that you <b>might be in the conversation.</b> <a href="https://app.goakala.com/about/signup/">Sign up with AKALA today</a> to improve your chances!</p>,
+    <p key="4">We calculate that you're <b>in the conversation.</b> <a href="https://app.goakala.com/about/signup/">Sign up with AKALA today</a> to improve your chances!</p>,
+    <p key="5">We calculate that you're <b>definitely in the conversation.</b> <a href="https://app.goakala.com/about/signup/">Sign up with AKALA today</a> to improve your chances!</p>
   ]
   // SATmath, SATeng, ECs, SumEx, CS, GPA, Rigor
   const [globalScores, setGlobalScores] = useState([0, 0, 0, 0, 0, 0, 0])
@@ -232,7 +232,7 @@ export default function App() {
     const iCS = parseInt(communityServiceHours)
     const iEAP = parseInt(availableAPs)
     const iTAP = parseInt(takenAPs)
-    if (iSatM && iSatE && iGPA && iECs && iSh && iCS && SchoolNameArr.includes(schoolSelection)) {
+    if (iSatM && iSatE && iGPA && SchoolNameArr.includes(schoolSelection)) {
       const sch = Schools[SchoolNameArr.indexOf(schoolSelection)]
       const scores = [calculateSATMath(iSatM, sch),
                   calculateSATEnglish(iSatE, sch),
@@ -354,7 +354,7 @@ export default function App() {
               {finalText}
               <button onClick={printScoresVolumeTwo}>Click here to show report</button>
             </div>
-          {isShown && <PrintReport />}
+          {/*isShown && <PrintReport />*/}
           
           {isShown && <PrintScoresTwo 
             sch = {Schools[SchoolNameArr.indexOf(schoolSelection)]}
@@ -365,6 +365,8 @@ export default function App() {
             cs = {[communityServiceHours, csAvg]} 
             se = {[summerHours, seAvg]} 
             cr = {[courseRigor, .75]}
+            globalScores = {globalScores}
+            scoreDesc = {scoreDesc}
             />
           }
         </div>

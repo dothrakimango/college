@@ -1,24 +1,108 @@
 .graph-container {
+    width: 50%;
+}
+
+.graph{
     padding: 5%;
-    width: calc(100% - 4rem);
+    flex: 1;
 }
 
-.graph-row{
+.reports{
+    font-family: 'Georgia';
     display: flex;
-    max-height: 300rem;
-}
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: calc(100% - 4rem);
+  }
+  
 
-.left{
-    flex: 1 1 1px;
-    min-width: 0;
-}
+.academicReport{
+    display: inline-flex;
+    border: 3px;
+    height: auto;
+    width: calc(100% - 4rem);
+    margin: 1rem 1rem;
+    font-family: 'Georgia';
+    padding: 1rem 1rem;
+    border-radius: 3px;
+    background: rgba(0, 115, 183, 0.2);
+    border-color: rgb(0, 115, 183);
+    border-style:solid; 
+  }
+  
+  .academicDesc{
+    width: 50%;
+  }
+  
+  
+  .ecReport{
+    display: inline-flex;
+    border: 3px;
+    height: auto;
+    width: calc(100% - 4rem);
+    margin: 1rem 1rem;
+    font-family: 'Georgia';
+    padding: 1rem 1rem;
+    border-radius: 3px;
+    background: rgba(255, 133, 27, 0.2);
+    border-color: rgb(255, 133, 27);
+    border-style:solid; 
+  }
 
-.center{
-    flex: 1 1 1px;
-    min-width: 0;
-}
+  .ecDesc{
+    width: 50%
+  }
+  
+  .csReport{
+    display: inline-flex;
+    border: 3px;
+    height: auto;
+    width: calc(100% - 4rem);
+    margin: 1rem 1rem;
+    font-family: 'Georgia';
+    padding: 1rem 1rem;
+    border-radius: 3px;
+    background: rgba(0, 166, 90, 0.2);
+    border-color: rgb(0, 166, 90);
+    border-style:solid; 
+  }
+  
+  .csDesc{
+    width: 50%
+  }
 
-.right{
-    flex: 1 1 1px;
-    min-width: 0;
-}
+  .seReport{
+    display: inline-flex;
+    border: 3px;
+    height: auto;
+    width: calc(100% - 4rem);
+    margin: 1rem 1rem;
+    font-family: 'Georgia';
+    padding: 1rem 1rem;
+    border-radius: 3px;
+    background: rgba(221, 75, 57, 0.2);
+    border-color: rgb(221, 75, 57);
+    border-style:solid; 
+  }
+  
+  .seDesc{
+    width: 50%
+  }
+
+  .satReport{
+    display: inline-flex;
+    border: 3px;
+    height: auto;
+    width: calc(100% - 4rem);
+    margin: 1rem 1rem;
+    font-family: 'Georgia';
+    padding: 1rem 1rem;
+    border-radius: 3px;
+    background: rgba(57, 204, 204, 0.2);
+    border-color: rgb(57, 204, 204);
+    border-style:solid; 
+  }
+  
+  .satDesc{
+    width: 50%
+  }
