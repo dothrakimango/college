@@ -73,7 +73,7 @@
 
 .GpaClass {
   border: 3px;
-  font-family: 'Georgia';
+  font-family: 'Alice';
   height: auto;
   width: calc(100% - 4rem);
   margin: 1rem 1rem;
@@ -88,7 +88,7 @@
   border: 3px;
   height: auto;
   width: calc(100% - 4rem);
-  font-family: 'Georgia';
+  font-family: 'Alice';
   margin: 1rem 1rem;
   padding: 1rem 1rem;
   border-radius: 3px;
@@ -101,7 +101,7 @@
   border: 3px;
   height: auto;
   width: calc(100% - 4rem);
-  font-family: 'Georgia';
+  font-family: 'Alice';
   margin: 1rem 1rem;
   padding: 1rem 1rem;
   border-radius: 3px;
@@ -114,7 +114,7 @@
   border: 3px;
   height: auto;
   width: calc(100% - 4rem);
-  font-family: 'Georgia';
+  font-family: 'Alice';
   margin: 1rem 1rem;
   padding: 1rem 1rem;
   border-radius: 3px;
@@ -127,7 +127,7 @@
   border: 3px;
   height: auto;
   width: calc(100% - 4rem);
-  font-family: 'Georgia';
+  font-family: 'Alice';
   width: calc(100% - 4rem);
   margin: 1rem 1rem;
   padding: 1rem 1rem;
@@ -143,7 +143,7 @@
   border: 3px;
   height: auto;
   width: calc(100% - 4rem);
-  font-family: 'Georgia';
+  font-family: 'Alice';
   margin: 1rem 1rem;
   padding: 1rem 1rem;
   border-radius: 3px;
@@ -153,7 +153,7 @@
 }
 
 .report{
-  font-family: 'Georgia';
+  font-family: 'Alice';
   display: flex;
   flex-direction: column;
   width: 100%;
